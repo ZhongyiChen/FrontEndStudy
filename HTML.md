@@ -16,7 +16,9 @@ tabindex————值必须是一个整数。指定按下tab键时，元素(�
 title————有关元素的附加说明信息，一般鼠标移到标签上方时，信息会通过工具提示条显示出来。
 
 # A
+```
 <a href="https://www.google.com">这是一个超链接</a>
+```
 创建一个到达其他网页、文件、同一页面内的位置、电子邮件地址或任何其他URL的超链接。
 download————此属性指示浏览器下载URL而不是导航到URL，因此将提示用户将其保存为本地文件。（HTML5）
 href————指定超文本链接来源。表示链接目标的URL或URL片段（URL片段是由一个hash符号(＃)，它指定一个内部目标在当前文档中的位置(ID)开头的名字）。
@@ -28,31 +30,39 @@ type————指定在一个 MIME type 链接目标的形式的媒体类型�
 注意事项：A 不能与 A 产生嵌套关系。否则会被解析成非嵌套关系。
 
 # ABBR
+```
 <abbr title="Internationalization">I18N</abbr>
+```
 用于向搜索引擎解析这是一个缩写词并通过title属性提供完整的描述。
 这个元素只有全局属性。
 注意事项：在默认样式方面，一般的浏览器就会跟 SPAN 一样。Opera、Firefox和其他一些浏览器给这个元素的内容添加一条点状下划线 。一些浏览器不仅添加点状下划线，而且还把元素的内容添加小写大写字母的样式。为了避免这个样式，在CSS中添加font-variant: none 。
 
 # ACRONYM
+```
 <acronym title="World Wide Web">WWW</acronym>
+```
 功能基本和 ABBR 一致。已过时，请使用 ABBR 代替。
 
 # ADDRESS
+```
 <address>
     <p>Chris Mills, Manchester, The Grim North, UK</p>
     If you see any bugs, please <a href="mailto:webmaster@somedomain.com">contact webmaster</a>
 </address>
+```
 用于描述文章编写者或网站拥有者(组织)的联系信息。内容可包括物理地址，URL，email地址，电话号码，社交媒体链接，地理坐标等待。
 这个元素只有全局属性。
 注意事项：ADDRESS 不能与 ADDRESS 产生嵌套关系。
 
 # AREA
+```
 <img src="mm.jpg" alt="美女" usemap="#MM" width="256" height="191">
 <map id="MM" name="MM">
     <area shape="rect" coords="20,20,80,80" href="#rect" alt="矩形">
     <area shape="circle" coords="200,50,50" href="#circle" alt="圆形">
     <area shape="poly" coords="150,100,200,120,180,130,190,180,150,150,100,160,140,120,100,110" href="#poly" alt="多边形">
 </map>
+```
 结合 MAP 使用，用于为图片生成热点区域。
 可在标签内使用href属性添加跳转超链接，这可以解决前面 A 元素不能与 A 元素产生嵌套关系这个问题（但在单纯的文字超链接中，必须用一张透明的图片覆盖到文字上面，以实现浏览器兼容）。
 alt———— MAP 所指向的图片不显示时出现的文字。当使用href属性时，该属性是必须的。
@@ -67,6 +77,7 @@ target————指定在何处显示链接的资源。取值为标签（tab�
 注意事项：这个元素只能在 MAP 元素中使用（不必是直接子元素）。
 
 # ARTICLE
+```
 <article class="film_review">
     <header>
         <h2>头部信息，通常是标题</h2>
@@ -80,6 +91,7 @@ target————指定在何处显示链接的资源。取值为标签（tab�
         <p>Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.</p>
   </footer>
 </article>
+```
 用于表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构。例如 论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。
 这个元素只有全局属性。
 注意事项：
@@ -88,6 +100,7 @@ target————指定在何处显示链接的资源。取值为标签（tab�
 3、ARTICLE 元素的发布日期和时间可通过 TIME 元素的datetime属性表示（pubdate属性已废弃）。
 
 # ASIDE
+```
 <article>
     <p>The Disney movie <cite>The Little Mermaid</cite> was first released to theatres in 1989.</p>
     <aside>
@@ -95,11 +108,13 @@ target————指定在何处显示链接的资源。取值为标签（tab�
     </aside>
     <p>More info about the movie...</p>
 </article>
+```
 用于表示只与文档中主要内容间接相关的部分。该元素通常显示为侧边栏或导航栏。
 这个元素只有全局属性。
 注意事项：不要在圆括号中的文本中使用 ASIDE 标签，因为这种文本会被浏览器当做主要内容的一部分。
 
 # AUDIO
+```
 <audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
     Your browser does not support the <code>audio</code> element.
 </audio>
@@ -107,6 +122,7 @@ target————指定在何处显示链接的资源。取值为标签（tab�
     Your browser does not support the <code>audio</code> element.
     <source src="foo.wav" type="audio/wav">
 </audio>
+```
 用于向文档嵌入一个或多个声音内容。
 嵌入的方式包括在 AUDIO 标签上使用src属性或包含 SOURCE 元素（如果两种方式均存在，浏览器会选择最合适的一种）。
 autoplay————如果该属性存在（即使值设置成了"false"），不用等全部加载完成，声音便会自动播放。
@@ -124,13 +140,17 @@ volume————指定播放音量。范围是0.0(静音) - 1.0(最大音量)�
 3、VIDEO 标签可以通过嵌入 TRACK 元素包含子标题和字幕，但 AUDIO 不可以。
 
 # B
+```
 <b class="text_bold">这是加粗字体</b>
+```
 一个单纯的样式标签，指定文本要用粗体（用于吸引读者的注意）。
 这个元素只有全局属性。
 注意事项：如果是为了突出内容的重要性，那么建议使用 STRONG 代替。如果只是单纯为了加粗字体，才使用该标签（最好加以class属性来同时设置font-weight为"bold"值，以防止下一版本废弃该标签）。
 
 # BASE
+```
 <base target="_blank" href="http://www.example.com/">
+```
 用于指定所在文档的所有相对URL路径的基本URL路径。
 如果需要在JS代码中获取该路径，可以通过document.baseURI拿到。
 href————如果设置了该属性，那本元素必须放置在其他带有URL值的元素之前。该属性值允许绝对路径和相对路径。
@@ -140,21 +160,26 @@ target————为没有使用target引用属性的元素指定一个名字�
 2、OpenGraph元标签不认识 BASE 标签，因此需要一直使用全路径。
 
 # BDO
+```
 <bdo dir="rtl">感谢您对HTML的支持</bdo>
+```
 用于解析dir属性，即修改文字的方向。
 dir————值有两个："ltr"，文字从左到右；"rtl"，文字从右到左。
 注意事项：HTML4不支持对 BDO 标签添加事件监听器。
 
 # BLOCKQUOTE
+```
 <blockquote cite="http://developer.mozilla.org">
     <p>This is a quotation taken from the Mozilla Developer Center.</p>
 </blockquote>
+```
 用于表示其中的文字是引用内容。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上。
 通常在渲染时，这部分的内容会有一定的缩进。可以使用CSS中的margin属性来改变 BLOCKQUOTE 的缩进。
 cite————指定一个标注引用的信息的来源文档或者相关信息的URL。通常用来描述能够解释引文的上下文或者引用的信息。
 注意事项：如果想要使用短引用（行间引用），可以使用 Q 标签。若要以文本的形式告知读者引文的出处（引用出处）时，可以通过 CITE 元素。
 
 # BODY
+```
 <html>
     <head>
         <title>Document title</title>
@@ -163,6 +188,7 @@ cite————指定一个标注引用的信息的来源文档或者相关信�
         <p>This is a paragraph</p>
     </body>
 </html>
+```
 用于表示一个HTML文档的内容。
 一个文档只能拥有一个 BODY 标签，而且必须是 HTML 标签的第二个元素。
 可以通过document.body访问该元素。
@@ -184,13 +210,17 @@ onundo————指定本文档在用户后退(历史记录)时的回调函数
 onunload————指定本文档在页面卸载时的回调函数。
 
 # BR
+```
 <br>
+```
 用于文本换行（相当于回车键）。
 这个元素只有全局属性。
 注意事项：如果只是单纯的为了增加文本段落之间的间隔，不要用 BR ，而应当用margin属性来实现。
 
 # BUTTON
+```
 <button type="submit" name="myButton" value="foo">Click me</button>
+```
 表示一个可点击的按钮。可用于表单或者其他需要按钮的地方。
 默认情况下，按钮会呈现与用户主机相似的样式，基于user agent。
 autofocus————指定当页面初始化时按钮必须自动获得输入焦点（只有一个表单关联元素可以指定该属性）。(HTML5)
@@ -211,9 +241,11 @@ value———— BOTTON 的初始值，它定义的值与表单数据的提交�
 4、火狐浏览器同样有几个特殊情况：::-moz-focus-inner样式设置了按钮获得焦点时出现小点边框(可通过修改该伪类的样式重置)、按钮动态变成disabled后刷新不能恢复可点击状态(可通过设置autocomplete属性为off来解决)、低于35版本的安卓版会默认设置了background-image渐变(可通过设置按钮的样式属性background-image为none来重置)。
 
 # CANVAS
+```
 <canvas id="canvas" width="300" height="300">
     <p>你的浏览器不支持画布哦</p>
 </canvas>
+```
 用于显示脚本（包括canvas脚本和webgl脚本）绘制的图形与动画。
 height————指定画布的高度值，单位是像素。默认值为150。
 width————指定画布的宽度值，单位是像素。默认值为300。
@@ -224,6 +256,7 @@ width————指定画布的宽度值，单位是像素。默认值为300。
 3、如果画布不需要使用透明度，则可以告诉浏览器该画布是非透明的以优化渲染效率。即将  var ctx = canvas.getContext('2d');  修改成  var ctx = canvas.getContext('2d', { alpha: false });  。
 
 # CAPTION
+```
 <table>
     <caption>这是表格的标题</caption>
     <tr>
@@ -235,12 +268,15 @@ width————指定画布的宽度值，单位是像素。默认值为300。
         <td>表项 2</td>
     </tr>
 </table>
+```
 用于 TABLE 元素上的标题（说明文字）。
 它的样式以及相对于表格的位置可以通过css的属性caption-size和text-align改变（不要再使用 CAPTION 的属性align）。
 注意事项：如果 TABLE 元素是 CAPTION 的父元素，而 CAPTION 又是 FIGURE 元素的唯一后代时，则应当使用 FIGCAPTION 元素替代 CAPTION 元素。
 
 # CITE
+```
 <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+```
 用于描述一个被引用的作品的相关信息，必须包含有该作品的标题或URL。相关信息也可能是一个根据合适的上下文的相关引用元数据而约定的简写形式。
 这个元素只有全局属性。
 注意事项：
@@ -250,12 +286,15 @@ width————指定画布的宽度值，单位是像素。默认值为300。
 4、CITE 元素的默认样式是font-style为italics。可以通过css设置font-style来重置该样式。
 
 # CODE
+```
 <p>The function <code>selectAll()</code> highlights all the text in the input field so the user can, for example, copy or delete the text.</p>
+```
 呈现一段计算机代码。默认情况下，它以浏览器的默认等宽字体显示。
 这个元素只有全局属性。
 注意事项：css规则可以覆盖浏览器默认的 CODE 标签字体样式。但用户设置的浏览器字体选项可能会超过css的优先级，使之无效。
 
 # COL
+```
 <table>
     <colgroup>
         <col style="background-color: #0f0">
@@ -272,6 +311,7 @@ width————指定画布的宽度值，单位是像素。默认值为300。
         <td>Orange</td>
     </tr>
 </table>
+```
 定义一个表格中的一列，并用于定义所有公共单元格上的公共语义。通常位于 COLGROUP 标签中。
 此元素允许使用CSS进行样式列，但只有少数属性将对该列产生影响。
 span————值为一个正整数，指定 COL 连续跨了多少列。默认值为"1"。
@@ -281,6 +321,7 @@ span————值为一个正整数，指定 COL 连续跨了多少列。默�
 3、关于同一列的text-align属性，如果 TABLE 里面（的 TD ）有设置colspan属性为n，也可以通过 td[colspan=n] { text-align: right; } 来实现。
 
 # COLGROUP
+```
 <table>
     <colgroup>
         <col style="background-color: #0f0">
@@ -297,6 +338,7 @@ span————值为一个正整数，指定 COL 连续跨了多少列。默�
         <td>Orange</td>
     </tr>
 </table>
+```
 用于在一个表格里面定义一组列。
 span————值为一个正整数，指定 COLGROUP 连续跨了多少列（如果 COLGROUP 里面有一个或多个 COL 标签，则此属性无效）。默认值为"1"。
 注意事项：和 COL 元素一样。
@@ -305,17 +347,20 @@ span————值为一个正整数，指定 COLGROUP 连续跨了多少列（
 已废弃，请用 SLOT 元素代替。
 
 # DATA
+```
 <p>新产品</p>
 <ul>
     <li><data value="3967381398">迷你番茄酱</data></li><!--value是该产品的39码-->
     <li><data value="3967381399">巨无霸番茄酱</data></li><!--value是该产品的39码-->
     <li><data value="3967381400">超级巨无霸番茄酱</data></li><!--value是该产品的39码-->
 </ul>
+```
 用于将给定内容关联到一个机器可读的翻译数据。（属于HTML5新增标签）
 如果该内容是与时间或日期相关的，则应当使用 TIME 元素。
 value————该属性指定元素内容对应的机器可读的翻译。
 
 # DATALIST
+```
 <label>
     Choose a browser from this list: 
     <input list="browsers" name="myBrowser" />
@@ -328,29 +373,35 @@ value————该属性指定元素内容对应的机器可读的翻译。
     <option value="Safari">
     <option value="Microsoft Edge">
 </datalist>
+```
 用于包含一个 OPTION 元素组成的集合，以提供其他表单可选值。
 这个元素只有全局属性。
 注意事项：该标签只在IE10以上的浏览器支持，为了提高兼容性，使用时应加入Polyfill：https://github.com/mfranzke/datalist-polyfill。
 
 # DD
+```
 <dl>
     <dt>Firefox</dt>
     <dd>A free, open source, cross-platform, graphical web browser</dd>
     <!-- other terms and definitions -->
 </dl>
+```
 用于指明一个描述列表 DL 元素中一个术语的描述。
 nowrap————"yes"表示描述文本不会被包裹。默认值为"no"。（此属性为非标准属性）
 注意事项：该元素只能作为 DL 元素的子元素出现，并且必须跟着一个 DT 元素。
 
 # DEL
+```
 <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
+```
 用于展示文档中被删除了的文本。（元素 INS 则恰好相反：用户标识文档中新增的文本）
 在样式上，这个元素通常会被渲染上一根划过的线。
 cite————指定一个解释该变化的源头的URI。
 datetime————指定变化的日期以及时间。值必须是一个有效的日期时间字符串。
 
 # DETAILS
+```
 <details>
     <p>这里没有指定摘要或标签信息，因此标签会使用浏览器提供的默认信息：英文是"Details"，中文则是"详细信息"。</p>
 </details>
@@ -362,6 +413,7 @@ datetime————指定变化的日期以及时间。值必须是一个有效
     <summary>这是摘要</summary>
     <p>本小部件指定了open属性，因此会自动展开，并显示这段文本。</p>
 </details>
+```
 用于创建一个公开更多内容的小部件（当该小部件的状态变成"open"时，更多的信息才可见）。
 标签会提供一个三角形用于改变小部件的显示状态。可以通过 SUMMARY 元素提供摘要或标签信息。
 如果 DETAILS 标签的第一个元素是 SUMMARY 的话，该 SUMMARY 的内容将会被用作小部件的标签信息(label)。
@@ -369,10 +421,12 @@ open————指定是否显示详情。默认值为"false"，即 DETAILS 不
 注意事项：现在有一个bug，即 DETAILS 带有css的animation值的时候，改变open属性是无法打开详情的。
 
 # DFN
+```
 <p><strong>HTML定义元素</strong>(<strong><dfn id"definition-dfn">&lt;dfn&gt;</dfn></strong>)用于指定一个定义语句或段落的被定义术语。</p>
 <p>你可以通过点击<code><a href="#definition-dfn">&lt;dfn&gt;</a></code>元素跳到相应词条的解析。</p>
 <p><dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn>是指美国宇航局发射的在轨超过了20年的太空探测科学装备。</p><!--这是定义也语句-->
 <p><abbr title="Hubble Space Telescope">HST</abbr>比之前发射的其他深空探测装备先进很多。</p><!--这不是定义也语句-->
+```
 用于指定一个定义语句或段落的被定义术语。 DFN 元素的最近祖先标签包括了 P 标签、DT/DD 标签对、SECTION 标签，这些标签用于包裹对 DFN 含有的被定义术语的解析。
 从功能上说，该标签没有太大的作用。（主要目的就是为了使文档更符合语义化）
 title————该属性比较特殊：当该标签内是一个缩列词时，值可以是缩列词的完整形式，因此值就是被定义术语；当标签内的词有一个单独的子元素 ABBR 时(连其他文本也没有)，ABBR 上的title属性值就是被定义术语；否则，DFN 标签上的文本就是被定义术语。若 DFN 包含了本属性，则 DFN 必须只含有被定义的术语，而不能其他文本。
@@ -381,6 +435,7 @@ title————该属性比较特殊：当该标签内是一个缩列词时，
 2、被定义术语的具体值需根据title属性及其标签包含的内容决定：DFN 标签有title属性，那么被定义术语就是该title属性的值；若 DFN 标签包含有 ABBR 元素且 ABBR 元素含有title属性，则被定义术语是 ABBR 元素上的title属性的值；否则，被定义术语就 DFN 包含的文本。
 
 # DIALOG
+```
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog open id="favDialog">
     <form method="dialog">
@@ -419,6 +474,7 @@ title————该属性比较特殊：当该标签内是一个缩列词时，
     });
 })();
 </script>
+```
 用于展示一个对话盒子或其他交互组件，例如一个监视器或窗口。
 现阶段除了Chrome和Opera，其他浏览器均不支持，因此，如果需要使用，应当引入一下Polyfill：https://github.com/GoogleChrome/dialog-polyfill。
 open————指定对话框是否处于活跃状态或是否可用于交互。但该属性没有设置时，对话框不应当对用户显示。
@@ -428,10 +484,12 @@ open————指定对话框是否处于活跃状态或是否可用于交互�
 3、DIALOG 元素的css伪类::backdrop可以被样式化，例如在对话框处于活跃状态时使不可访问的内容变得灰暗。
 
 # DIV
+```
 <div id="textBox">
     <p>Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!</p>
     <p>Some other text here.</p>
 </div>
+```
 用于流内容的一般性容器。
 默认不设置任何样式。
 其使用目的不是用来展示任何东西，而是作为内容的分组以便于应用class、id、lang等属性。
@@ -439,6 +497,7 @@ open————指定对话框是否处于活跃状态或是否可用于交互�
 注意事项：DIV 元素只应在完全找不到合适的语义化标签（例如 ARTICLE 或 NAV ）时才使用。
 
 # DL
+```
 <dl>
     <dt>Name</dt>    
     <dd>Godzilla</dd>
@@ -468,17 +527,20 @@ open————指定对话框是否处于活跃状态或是否可用于交互�
         <dd>Green</dd>
     </div>
 </dl>
+```
 用于展示一个个描述内容所组成的列表。
 该元素包含了一系列的术语（通常使用 DT 标签）与描述（通常使用 DD 标签）的组合。通常用于实现一个词汇表或展示元数据（一个键值对所组成的列表）。
 这个元素只有全局属性。
 注意事项：根据语义化的原则，不要拿 DL 或 UL 元素仅仅用于实现内容的在页面的缩进（应当通过css样式来实现）。
 
 # DT
+```
 <dl>
     <dt>Firefox</dt>
     <dd>A free, open source, cross-platform, graphical web browser</dd>
     <!-- other terms and definitions -->
 </dl>
+```
 用于指定一个描述或定义列表的术语。
 这个元素只有全局属性。
 注意事项：
@@ -486,9 +548,11 @@ open————指定对话框是否处于活跃状态或是否可用于交互�
 2、多个 DT 元素出现在同一行则意味着它们都被接下来的 DD 元素所定义。
 
 # EM
+```
 <p>
     In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.
 </p>
+```
 用于标记需要强调(突出)的文本。（EM 元素可以相互嵌套，内部的 EM 标签包含的文本的强调等级比外部的更高）
 该元素主要用在语句某个词上以改变句子的侧重（通常意味着话中有话，人或软件在读该词时，会提现一种强调的语气）。
 这个元素只有全局属性。
@@ -500,7 +564,9 @@ open————指定对话框是否处于活跃状态或是否可用于交互�
 5、和 I 标签的比较：EM 标签压力强调其包含的内容；I 标签则表示从正常的散文中区分出的文本，一个外来词(通常有别于文本主要语言)，虚构的人物思考，或者当文本指的是一个词的定义而不是其本身代表的语义。如果是电影或书籍的名字，则应当使用 CITE 标签。
 
 # EMBED
+```
 <embed type="video/quicktime" src="movie.mov" width="640" height="480">
+```
 用于在文档中特点的位置嵌入外部的内容。
 外部的内容由外部的软件或其他可交互的内容来源(例如浏览器插件)提供。
 width————资源展示的宽度。（只支持绝对值如像素，不支持百分比）
@@ -512,6 +578,7 @@ type————通过指定MIME类型来告诉浏览器实例化时所需要的
 2、不同浏览器之间显示有差异。Blink内核浏览器（Chrome，Opera）会显示HTML资源的内容，但Firefox会显示一条通知消息，指出内容需要一个插件。建议使用 OBJECT 或 IFRAME 元素。
 
 # FIELDSET
+```
 <form action="test.php" method="post">
     <fieldset>
         <legend>标题</legend>
@@ -519,6 +586,7 @@ type————通过指定MIME类型来告诉浏览器实例化时所需要的
         <label for="radio">点我</label>
     </fieldset>
 </form>
+```
 用于在一个网页表单里面将几个控件(controls)以及标签(labels)划分为一组。
 disabled————如果设置了该属性，则其后代表单控件（除了它的第一个可选的 LEGEND 子元素），将被禁用(如不能编辑、无法接收鼠标点击或聚焦的相关事件、控件变灰等)。(HTML5)
 form————用于关联 FORM 元素的id属性。默认值为最近的 FORM 祖先标签的id属性值。(HTML5)
@@ -529,15 +597,18 @@ name————分组相关的名称(name)。(HTML5)
 3、在IE11中，并不是所有在设置了禁用属性的 FIELDSET 元素中的表单控件都会合适地被禁用：例如input[type="file"]在设置了禁用的 FIELDSET 中就不被禁用，input[type="text"]也可以继续编辑。
 
 # FIGCAPTION
+```
 <figure>
     <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
     <p>"If debugging is the process of removing software bugs,<br />then programming must be the process of putting them in"</p>
 </figure>
+```
 用于标记一句与一副图像或一则说明(插画)（图像、插画、说明通常跟随在 FIGCAPTION 标签后面）相关的说明/标题，FIGURE 标签就是 FIGCAPTION 标签的直接父元素。
 这意味着 FIGCAPTION 标签在 FIGURE 块里是第一个或最后一个子元素。同时 FIGCAPTION 元素是可选的；如果没有该元素，这个父节点的图片只是会没有说明/标题。
 这个元素只有全局属性。
 
 # FIGURE
+```
 <!-- Just a figure -->
 <figure>
     <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
@@ -549,6 +620,7 @@ name————分组相关的名称(name)。(HTML5)
     <figcaption>MDN Logo</figcaption>
 </figure>
 <p>这也是文件流的一部分。</p>
+```
 用于表示一段独立的内容，通常带有一个标题(caption)，并且作为一个独立的引用单元。（标题包含在 FIGCAPTION 中）
 这个元素只有全局属性。
 注意事项：
@@ -556,9 +628,11 @@ name————分组相关的名称(name)。(HTML5)
 2、作为一个分片内容的根，FIGURE 元素内容的纲要是被文档的主纲要排除在外的。
 
 # FOOTER
+```
 <footer>
     Some copyright info or perhaps some author info for an &lt;article&gt;?
 </footer>
+```
 用于表示离本元素最近的分片内容或分片内容的根的页脚。本标签通常包含所在分片的作者、版权数据或文档的相关链接。
 这个元素只有全局属性。
 注意事项：
@@ -566,12 +640,14 @@ name————分组相关的名称(name)。(HTML5)
 2、FOOTER 元素并不属于分片内容，因此不会为文档纲要引入一个新的章节。
 
 # FORM
+```
 <!-- Simple form which will send a POST request -->
 <form action="" method="post">
     <label for="POST-name">名字：</label>
     <input id="POST-name" type="text" name="name">
     <input type="submit" value="保存">
 </form>
+```
 用于表示一个包含有可交互控件并能提交数据到一个网络服务器的文档部分。
 可以对 FORM 元素应用:valid和:invalid这几个css伪类。
 accept-charset————指定服务器接受的一个字符编码列表(用空格或逗号隔开)。默认值为"UNKNOWN"，即参考所在文档的字符编码。HTML5以前，字符编码项可以用空格或逗号隔开，HTML5以后，只允许用空格隔开。
@@ -592,12 +668,14 @@ target————值为一个名称或关键词，用来指定在何处显示�
 # H4
 # H5
 # H6
+```
 <h1>Heading level 1</h1>
 <h2>Heading level 2</h2>
 <h3>Heading level 3</h3>
 <h4>Heading level 4</h4>
 <h5>Heading level 5</h5>
 <h6>Heading level 6</h6>
+```
 分别用于表示章节标题的六个层级。H1 是最高章节等级，而 H6 则是最低章节等级。
 这些元素只有全局属性。
 注意事项：
@@ -608,17 +686,20 @@ target————值为一个名称或关键词，用来指定在何处显示�
 5、H1 应该用来表示页面的标题，其他的标题当从 H2 开始。 使用 SECTION 元素的时候，应当在每个 SECTION 中都使用一个 H2 。
 
 # HEAD
+```
 <html>
     <head>
         <title>Document title</title>
     </head>
 </html>
+```
 用于为文档提供通用信息（例如元数据），包括了文档的标题、样式与脚步的链接等。
 这个元素只有全局属性。
 注意事项：
 1、如果在文档中省略了 HEAD 元素，现代的兼容HTML5的浏览器会自动为文档构建一个。（旧版的浏览器不支持这一点）
 
 # HEADER
+```
 <!--属于页面的 HEADER -->
 <header>
     <h1>Main Page Title</h1>
@@ -633,6 +714,7 @@ target————值为一个名称或关键词，用来指定在何处显示�
     <p>We live on a planet that's blue and green, with so many things still unseen.</p>
     <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
 </article>
+```
 用于展示介绍性的内容，通常是一组介绍性或导航性的帮助。
 该元素可能包含一些标题元素，也可能包括其他的例如一个图标、一个搜索表单、一个作者的姓名等等。
 这个元素只有全局属性。
@@ -640,24 +722,30 @@ target————值为一个名称或关键词，用来指定在何处显示�
 1、HEADER 元素不属于分片内容，因此不会为文档纲要引入一个新的章节。（也就是说，一个 HEADER 元素常常会被用来包含周围章节的标题(H1-H6元素)，但这并不是必须的）
 
 # HR
+```
 <p>This is the first paragraph of text.</p>
 <hr>
 <p>This is the second paragraph of text.</p>
+```
 用于在段落层级元素之间显示主题性的隔离。（例如一个故事的场景变换、一个话题的主题改变）
 历史上，这个元素会生成一根水平线（现在可能也会）。但这个元素由于被赋予了语义化功能，所以，如果你仅仅是希望画一根水平线，可以考虑用css样式来实现。
 这个元素只有全局属性。
 
 # HTML
+```
 <!DOCTYPE html>
 <html>
     <head>...</head>
     <body>...</body>
 </html>
+```
 用于表示一个HTML文档的根(最高层级元素)。所有其他元素都必须是 HTML 元素的后代。
 xmlns————指定文档的XML命名空间，默认值是"http://www.w3.org/1999/xhtml"。在XML解析器中，这个属性是必须的；在TEXT/HTML文档中，这个则是可选的。
 
 # I
+```
 <p>The Latin phrase <i class="latin">Veni, vidi, vici</i> is often mentioned in music, art, and literature.</p>
+```
 用于标记一些从正常文本中分离出来的词，例如：技术名词、外语单词或者虚构的人物思考。通常以斜体的方式显现。
 这个元素只有全局属性。
 注意事项：
@@ -671,9 +759,11 @@ xmlns————指定文档的XML命名空间，默认值是"http://www.w3.org
 3、用class属性来指出该元素为何被使用是一个好的做法。毕竟 I 标签现在不一定需要显示成斜体，程序员可以修改它的样式。
 
 # IFRAME
+```
 <iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300">
     <p>Your browser does not support iframes.</p>
 </iframe>
+```
 用于展示一个嵌入(在本文档中)的一个浏览上下文。（事实上，就是本页面中嵌套另外一个HTML页面）
 每一个浏览上下文都有它自己的session历史记录以及活跃文档。包含了嵌套内容的浏览上下文被称为父级浏览上下文。顶级浏览上下文(不再有父级)则通常是浏览器window本身。
 allowfullscreen————当该属性被设置为"true"时，可以同过元素的 Element.requestFullscreen() 方法将 IFRAME 标签所包含的页面扩展为全屏。（如果该属性不被设置，则元素无法进入全屏模式）
@@ -705,9 +795,11 @@ width————指定 IFRAME 元素的宽度（只支持像素单位）。
 4、脚本试图访问的框架内容必须遵守同源策略，并且无法访问非同源的window对象的几乎所有属性。同源策略同样适用于子窗体访问父窗体的window对象。跨域通信可以通过window.postMessage来实现。
 
 # IMG
+```
 <!--以下例子中，当浏览器支持srcset属性时，图像的src属性将被忽略。因为srcset属性的值包含了宽度描述符('w')-->
 <!--当媒体查询条件(max-width: 600px)命中时，图片将显示200px宽。其余情况下，图片将显示出视窗的一半的宽度-->
 <img src="clock-demo-thumb-200.png" alt="Clock" srcset="clock-demo-thumb-200.png 200w,clock-demo-thumb-400.png 400w" sizes="(max-width: 600px) 200px, 50vw">
+```
 用于在文档中嵌入一张图片。
 alt————用于定义描述图片的替代文本。如果图片地址错误、图片格式不被支持、图片没有完全下载好，这些文本就会显示出来。如果图片本身不是关键内容（可省略的那种），则应当设置值为空字符串""，那样，在非可视化浏览器中在渲染的时候可能会忽略它。
 crossorigin—————这是一个HTML5新增属性。表明是否必须使用CORS完成相关图像的抓取。启用CORS的图像在 CANVAS 元素中可以重复使用而不会被污染。允许的值有：
@@ -741,8 +833,10 @@ usemap————指定一个与图像地图(image map)关联的元素不完全
 4、当加载或渲染一张图片时，有几种情况会触发 IMG 元素的onerror事件：src属性没有设置或者设置为null；src属性值等于当前网页的URL；某些因素导致了图片的加载中止；图片的元数据加载被中止而导致图片没办法获取它的维度（宽度和高度），而且 IMG 元素的属性中也没设置相应的维度；用户代理（浏览器）压根不支持URL所指图片的格式。
 
 # INPUT
+```
 <label for="textInput">Note the red caret:</label>
 <input id="textInput" class="custom" size="32"/>
+```
 用于创建基于web表单的交互控件，以接收用户输入的数据。
 该元素可以创建的控件类型(type)包括但不限于以下几种。
 1、button：一个不带默认行为的按钮。
@@ -812,9 +906,18 @@ autocomplete————这是一个HTML5新增属性。用于指定控件的值
     注3：对于现代浏览器，无论autocomplete属性设置了什么值，都不能阻止浏览器询问用户是否保存登录数据(用户名和密码)，如果用户选择了同意，当其再次访问该页面时，浏览器自动将这些登录数据填充到相应的 INPUT 元素中。
 autofocus————用于指定页面刚加载完成时，某个表单控件是否应当拥有输入焦点（除非用户改变了输入焦点，例如在别的控件中打字）。一个表单只能有一个控件拥有autofocus属性。如果一个控件被隐藏了，那么它的autofocus属性失效。控件的获取焦点会在控件加载完成前发生。
 capture————当 INPUT 元素的type属性被设置为"file"时，该属性将会指定直接从设备环境中捕获accept指定的类型的媒体。例如下面的例子：
-    1、调用所在设备的照相机（user facing mode）：<input type="file" accept="image/*" capture="user">
-    2、调用所在设备的摄像机（environment facing mode）：<input type="file" accept="video/*" capture="environment">
-    3、调用所在设备的麦克风（default facing mode）：<input type="file" accept="audio/*" capture>
+    1、调用所在设备的照相机（user facing mode）：
+```
+    <input type="file" accept="image/*" capture="user">
+```
+    2、调用所在设备的摄像机（environment facing mode）：
+```
+    <input type="file" accept="video/*" capture="environment">
+```
+    3、调用所在设备的麦克风（default facing mode）：
+```
+    <input type="file" accept="audio/*" capture>
+```
 checked————当 INPUT 元素的type属性被设置为"radio"或"checkbox"时，该属性将指定本控件是否被默认选中。当选择动作发生后，该属性会被忽略。在FireFox浏览器中，INPUT 元素被设置为checked后，刷新页面会保持checked状态。可设置autocomplete属性为"off"来解决。
 disabled————用于指定表单控件是否可用于交互。特别的是，在禁用了的控件中，点击事件将不被分发。同样，一个禁用了的控件的值不会与表单中其他控件的值一起被提交。（对于FireFox中的一个bug，可参照autocomplete属性中的注2）
 form————用于指定 INPUT 元素所关联的 FORM 元素。该属性的值必须是当前文档的一个 FORM 元素的id属性值。如果不指定form属性，该 INPUT 元素必须是一个 FORM 元素的后代。该属性的使用目的就是为了使 INPUT 元素可放置于文档的任意位置而不必成为 FORM 元素的子元素。当然，一个 INPUT 元素只能关联一个 FORM 元素。(HTML5)
@@ -855,13 +958,16 @@ step————一个可以结合min和max属性来限制用户对数值和日�
 tabindex————已升级为全局属性。
 value————控件的初始值。该属性是可选属性。
     注1、在type为"radio"或"checkbox"时，该属性的值用于指定某项被选中，在提交表单时，name属性的值会与value属性的值一起组成键值对。
+```
         <!--情况1：radio带value属性-->
         <input type="radio" id="contactChoice1" name="contact" value="email"><!--如果该被选中，则提交表单时会产生键值对：[contact: email]-->
         <!--情况2：radio不带value属性-->
         <input type="radio" id="contactChoice2" name="contact"><!--如果该被选中，则提交表单时会产生键值对：[contact: on]-->
+```
         因此，相同name的radio有多项时，务必分别为每项设置value属性。
     注2、在重新加载页面前，如果value属性值发生了改变，那么刷新页面后，Gecko和IE类型浏览器会忽略HTML代码上的那个value属性指定的值。
 webkitdirectory————非标准属性（但浏览器支持良好，所有浏览器都支持）。当type属性的值为"file"时，用于指定是否只让用户选择目录。这能赋予脚步在该目录的操作权限：
+```
     <input id="dialog" type="file" webkitdirectory />
     <script>
         window.onload = function(){
@@ -882,6 +988,7 @@ webkitdirectory————非标准属性（但浏览器支持良好，所有�
             };
         }
     </script>
+```
 width————若 INPUT 元素的type属性的值为"image"，该属性将为按钮定义所要展示图片的宽度。(HTML5)
 注意事项：
 1、从Gecko 2.0开始，一个type属性值为"file"的 INPUT 元素必须通过调用click()方法来打开文件选择器并让用户选择相应的文件。
@@ -890,12 +997,15 @@ width————若 INPUT 元素的type属性的值为"image"，该属性将为
 4、关于更多不同type的 INPUT 元素的细节，请到 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input 中选择相应的章节查看。
 
 # INS
+```
 <ins>This text has been inserted</ins>
+```
 用于表示一些被添加(插入)到一个文档的文本。与 DEL 元素相对。
 cite————用于指定这些变化（为何需要插入这些文本）的解释资料的URI。例如一个会议纪要的链接(a link to meeting minutes)或者一个故障诊断系统的客服(a ticket in a troubleshooting sytem)。
 datetime————用于指定变化的日期和时间。值必须是一个有效的日期（时间是可选的）字符串。如果值不能被解析为一个可附带时间的日期的字符串，那么 INS 元素不会拥有一个管理的时间戳。
 
 # KBD
+```
 <!--单独使用-->
 <p>使用命令 <kbd>help mycommand</kbd> 查看"mycommand"命令的文档。</p>
 <!--对应串联场景(1)-->
@@ -908,6 +1018,7 @@ datetime————用于指定变化的日期和时间。值必须是一个有
 <!--对应串联场景(3)-->
 <p>To create a new file, choose the menu option <kbd><kbd><samp>File</samp></kbd>⇒<kbd><samp>New Document</samp></kbd></kbd>.</p>
 <p>Don't forget to click the <kbd><samp>OK</samp></kbd> button to confirm once you've entered the name of the new file.</p>
+```
 HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键盘、语音设备或者任何其他文本输入设备输入指定的文本。该元素包含的文本默认以内联文本、浏览器的monospace字体（尽管这一点没有被HTML标准授权）为样式进行显示。
 KBD 元素可能被嵌套在 SAMP 元素（Sample Output）形成不同的组合，从而基于视觉线索表示各种输入形式或不同的输入内容。
 这个元素只有全局属性。
@@ -921,7 +1032,9 @@ KBD 元素可能被嵌套在 SAMP 元素（Sample Output）形成不同的组合
 被废弃了。勿用。
 
 # LABEL
+```
 <label>Click me <input type="text"></label>
+```
 表示用户界面中一个项目的标题。
 for————指定在同一文档中的可标记的form相关元素的id。在文档中，第一个符合这样条件的控件（其id匹配 LABEL 元素的for属性的值）是被该 LABEL 元素所标记的控件。LABEL 元素也可以在拥有for属性的同时，包含这一个控件元素（只要for属性指向该控件元素即可）。
 注意事项：
@@ -930,6 +1043,7 @@ for————指定在同一文档中的可标记的form相关元素的id。�
 3、当一个 LABEL 元素被点击或触碰时，若它关联了一个表单控件，则click事件也会出现在所关联的控件上。
 
 # LEGEND
+```
 <!-- Form with fieldset, legend, and label -->
 <form action="" method="post">
     <fieldset>
@@ -938,20 +1052,24 @@ for————指定在同一文档中的可标记的form相关元素的id。�
         <label for="radio">Click me</label>
     </fieldset>
 </form>
+```
 表示它的父级元素 FIELDSET 的内容的一个标题(caption)。
 这个元素只有全局属性。
 
 # LI
+```
 <ol>
     <li value="3">third item</li>
     <li>fourth item</li>
     <li>fifth item</li>
 </ol>
+```
 常常用于代表一个列表中的一项。
 LI 元素必须被包含在一个有序列表(OL)、一个无序列表(UL)、一个菜单(MENU)中。在菜单和无序列表中，列表项常常用着重点（实心圆点）来展示。在有序列表中，它们则常常在左边带有一个升序的计算器，例如一个数字或字母。
 value————值为一个整数，用于指定在 OL 元素中的当前列表项的原始值。不管列表是以罗马数字或字母来展示，该属性允许的值只能是一个数字。从该项开始的列表项将以该整数为始点进行递增（如果后面的列表项不包含value属性的话）。该属性对 UL 或 MENU 元素的列表没意义。该属性在HTML4规范中被移除，但在HTML5规范中又被重新引入。另外，在Gecko 9.0之前的版本，负值会被不正确地转换为0，但从Gecko 9.0开始，所有整数值都能被正确地解析。
 
 # LINK
+```
 <!--普通的使用方式-->
 <link href="style.css" rel="stylesheet">
 <!--带有title的使用方式，详见：https://developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets -->
@@ -961,6 +1079,7 @@ value————值为一个整数，用于指定在 OL 元素中的当前列�
 <!--rel属性值为"preload"的使用方式-->
 <link rel="preload" href="style.css" as="style">
 <link rel="preload" href="main.js" as="script">
+```
 用于指定一个外部资源与当前文档之间的关系。该元素的使用方式包括了为导航定义一个相关框架。最常使用的方式则是链接到样式表。
 as————该属性只有当 LINK 元素的rel属性设置为"preload"时才起作用。它指定了 LINK 元素所加载的内容的类型，这对于内容优化、请求匹配、应用正确的内容安全策略、设置正确的Accept请求头是很有必要的。
 crossorigin————该可枚举属性指定了当取回相关资源时，是否必须使用CORS。允许CORS的图片可以被 CANVAS 元素复用而不被污染。可能的值包括了：
@@ -986,13 +1105,14 @@ target————这是一个非标准属性（众多浏览器支持）。用�
 title————该属性在 LINK 元素中有专门的语义。当该属性被用在一个设置了rel属性为"stylesheet"的 LINK 元素中时，它指定了一个偏好或替代样式表（a preferred or an alternate stylesheet）。对该属性的不当使用可能导致样式表别忽略。
 type————用于定义链接到的内容的类型。该属性的值应当是一个MIME类型（例如 text/html、text/css 等等）。该属性最常用于定义被链接的样式表的类型，即最常见的值为"text/css"（用来指定一个级联样式表格式）。它也被用在rel属性为"preload"链接类型中，以确保浏览器只下载它支持的文件类型。
 注意事项：
-1、一个 LINK 标签可以出现在 HEAD 元素中或者 BODY 元素中（或者两者都有）。位置这个事情取决于它是否有一个"body-ok"的链接类型（详情见：https://html.spec.whatwg.org/multipage/links.html#body-ok ）。如rel为"stylesheet"就是body-ok的，那么<link rel="stylesheet">就可以被放置在 BODY 标签中。
+1、一个 LINK 标签可以出现在 HEAD 元素中或者 BODY 元素中（或者两者都有）。位置这个事情取决于它是否有一个"body-ok"的链接类型（详情见：https://html.spec.whatwg.org/multipage/links.html#body-ok ）。如rel为"stylesheet"就是body-ok的，那么< link rel="stylesheet">就可以被放置在 BODY 标签中。
 2、HTML 3.2版本中，只为 LINK 元素定义了 href、rel、rev（已废弃）、title 这几个属性。
 3、HTML 2版本中，为 LINK 元素定义了 href、methods、rel、rev（已废弃）、title、urn 这几个属性。其中，methods和urn属性被后来的规则移除了。
 4、HTML和XHTML规范都为 LINK 元素定义了事件句柄（event handlers），但没说清楚这些句柄应当如何使用。
-5、XHTML 1.0版本以前，空元素如 LINK 要求带有一个末尾斜杠：<link /> 。
+5、XHTML 1.0版本以前，空元素如 LINK 要求带有一个末尾斜杠：< link /> 。
 
 # MAIN
+```
 <!-- other content -->
 <main role="main"><!-- role的作用是为了让旧版的 IE 浏览器也能识别 MAIN 元素 -->
     <h1>Apples</h1>
@@ -1009,6 +1129,7 @@ type————用于定义链接到的内容的类型。该属性的值应当�
     </article>
 </main>
 <!-- other content -->
+```
 用于表示一个文本的 BODY 标签中的主体内容、一个文档中的部分内容、一个应用。主体内容区由与中心主题直接相关的内容，或者中心主题扩展的内容，或者一个文档，或者一个应用的核心功能所组成。
 在同一个页面中，可以使用多个 MAIN 元素。例如一个页面需要多个部分，每一个部分分别包含了特别的材料（如编辑框、广告等等），那么，为每个特别的部分包含一个 MAIN 元素来指出它们的主要内容，这是很有必要的。
 这个元素只有全局属性。
@@ -1021,15 +1142,18 @@ type————用于定义链接到的内容的类型。该属性的值应当�
     (2)、WHATWG规范允许 MAIN 元素在任何文档流允许存在的地方使用。但是，W3C规范版本就不允许 MAIN 元素作为 ARTICLE、ASIDE、FOOTER、HEADER、NAV 等元素的后代元素。
 
 # MAP
+```
 <map name="primary">
     <area shape="circle" coords="75,75,75" href="left.html">
     <area shape="circle" coords="275,75,75" href="right.html">
 </map>
 <img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+```
 与 AREA 元素共同使用以定义一个图片地图（image map），即一个可点击的链接区域。
 name————用于给地图（map）一个名称，这样它就能被关联了。该属性是必须出现的，而且必须有一个非空值（值也不能带有空格字符）。同一个文档中，同样的 MAP 元素中，该属性值不能(经过小写转换后)是同样的。如果id属性也存在，那么id和name的值必须是一模一样的。
 
 # MARK
+```
 <!--MARK元素用于引用块中，表示文本对用户有特别的意义-->
 <blockquote>
     It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil
@@ -1039,6 +1163,7 @@ name————用于给地图（map）一个名称，这样它就能被关联�
 <!--MARK元素用于其他地方，表示与用户活动相关的部分，例如搜索结果中匹配的关键词-->
 <p>It is a dark time for the Rebellion. Although the Death Star has been destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel forces from their hidden base and pursued them across the galaxy.</p>
 <p>Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the remote ice world of Hoth.</p>
+```
 用于表示在围住的上下文中，由于相关性或重要性而被作记号或被高亮的文本，以示引用或标记。
 这个元素只有全局属性。
 注意事项：
@@ -1054,10 +1179,52 @@ name————用于给地图（map）一个名称，这样它就能被关联�
 废弃元素，不要使用。
 
 # META
+```
+<meta charset="utf-8">
+<!-- Redirect page after 3 seconds -->
+<meta http-equiv="refresh" content="3;url=https://www.example.com">
+```
 用于表示不能被其他与元数据相关的元素（如 BASE、LINK、SCRIPT、STYLE、TITLE ）所表示的元数据。
 charset————用于声明一个页面的字符编码。值必须包含一个标准的字符编码的IANA MIME名称。鼓励使用"UTF-8"。
 content————用于包含：http-equiz属性或name属性的值的值。这取决于哪个被使用了。
-http-equiv————
+http-equiv————该属性用于包含一个HTTP头部的名称，因此被称为"http等价(警报)"。它可定义一个能改变服务器或用户代理（浏览器）行为的指令。指令的具体内容会放在content属性中，包括：
+    "content-security-policy"：允许程序员为当前页面定义一个内容策略。主要是帮维护人员指定所允许的服务器源以及脚步终端，以对抗跨站脚步攻击。
+    "refresh"：该指令能指定两点。一是当content属性只包含一个正整数时，页面会在这个秒数后重载。二是当content属性包含一个正整数加上";url="以及一个有效的URL地址时，页面会在这个秒数后重定向到该URL所指向的网页。
+name————该属性定义一块（段）文档级的元数据的名称。如果 META 标签上设置了 "itemprop"、"http-equiv"、"charset" 中的某一个，就不要再设置name属性了。该元数据名称所关联的值会包含在content属性中。name属性的可能值包括：
+    "application-name"：定义网页中在运行的应用的名称。它有可能被浏览器用来指定特定的应用。它跟 TITLE 元素常常只包含应用的名称不一样，它还包含一些像文档名称或一个状态等信息。（简单的网页不应当使用application-name）
+    "author"：文档作者的名字。
+    "description"：该网页内容的一个简短精确的摘要。FireFox以及Opera等浏览器会使用该项作为收藏书签页的默认描述。
+    "generator"：产生该网页的软件的识别码。
+    "keywords"：与网页内容相关的关键词。关键词之间用逗号分隔。
+    "referrer"：控制当前文档的请求中附加的 Referer HTTP 头部，这是一个实验性项。当几个冲突的策略同时被使用时，no-referrer策略将被应用。对应的content值可以为：
+        "no-referrer"、不发送 Referer HTTP 头部；
+        "origin"、发送当前文档的源；
+        "no-referrer-when-downgrade"、当请求的URL的安全等级与当前网页一致时（https -> https），将源作为一个referrer附加到请求头上。但是，如果请求的安全等级低于当前网页时（https -> http），则不发送。这是默认行为。
+        "origin-when-crossorigin"、对同源请求发送全URL（剥去了查询参数）。对于其他情况，则只发送源（协议 + Host + 端口）。
+        "unsafe-URL"、无论对同源还是跨源请求，都发送全URL（剥去了查询参数）。
+    从这里开始则是一些比较少用到的项。
+    "creator"：指定文档创建者的名字，例如一个组织或一个机构。如果创建者多于一个，则应当使用多 META 标签来分别指明。
+    "googlebot"："robots"的一个同义词，只对谷歌的索引爬虫有用。
+    "publisher"：指定文档发布者的名字。
+    "robots"：指定协作型爬虫（机器人）在本页面的行为。对应的content值可以是一个以逗号分隔的列表：
+        "index"、允许机器人添加该页面的索引（默认行为）。被所有搜索引擎支持。
+        "noindex"、要求机器人别添加该页面的索引。被所有搜索引擎支持。
+        "follow"、允许机器人追踪页面上的跳转链接（默认行为）。被所有搜索引擎支持。
+        "nofollow"、要求机器人别追踪页面上的跳转链接。被所有搜索引擎支持。
+        "none"、与"noindex,nofollow"等同。只被 Google 支持。
+        "noodp"、如果有的话，阻止使用[打开目录对象]描述。因为页面描述将作为搜索引擎的收录描述。只被 Google、Yahoo、Bing 支持。
+        "noarchive"、要求搜索引擎别缓存页面内容。只被 Google、Yahoo、Bing 支持。
+        "nosnippet"、阻止搜索引擎结果显示页面的任何描述。只被 Google、Bing 支持。
+        "noimageindex"、如果作为一个索引图片的相关页面，要求该页面不显示。只被 Google 支持。
+        "nocache"、"noarchive"的同义词。只被 Bing 支持。
+    "slurp"："robots"的一个同义词。但只对 Yahoo 搜索爬虫引擎Slurp有效。
+    "viewport"：提示视窗最初范围的尺寸。只用在移动设备中。对应的content属性的值包括：
+        "width"、等号后边可以跟着一个正整数或者文本"device-width"。定义你想网站被渲染到视窗的像素宽度。
+        "height"、等号后边可以跟着一个正整数或者文本"device-height"。定义视窗的像素高度。还没有被任何浏览器使用过。
+        "initial-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。定义设备尺寸与视窗大小的比例。当设备处于纵向时，是"device-width"与viewport值的比例；当设置处于横向时，是"device-height"与viewport值的比例。
+        "maximum-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。可缩放的最大倍数。首先，该项必须大于或等于"minimum-scale"的值，否则该项将失效。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
+        "minimum-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。可缩放的最小倍数。首先，该项必须小于或等于"maximum-scale"的值，否则该项将失效。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
+        "user-scalable"、等号后边可以跟着"yes"或者"no"。如果设置为"no"，用户则不能在网页中进行缩放。默认值为"yes"。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
 注意事项：
 1、全局属性的name属性在 META 元素中有专门的意义。当一个 META 元素存在name、http-equiv或charset属性时，一定不能再为其设置itemprop属性。
 2、不要使用不兼容ASCII的编码集，因为浏览器不认识这些编码时，有可能会将其解析为有害的内容（如将非HTML内容解析为HTML），这些编码包括："JIS_C6226-1983"、"JIS_X0212-1990"、"HZ-GB-2312"、"JOHAB"、"ISO-2022"家族、"EBCDIC"家族。
@@ -1065,4 +1232,10 @@ http-equiv————
 4、声明字符编码的 META 元素只是决定一个页面字符编码的算法的一部分。请求响应头部字段Content-Type以及任何字符命令标签都会覆盖该元素的声明。
 5、所声明的字符编码集必须匹配页面在编写保存时所应用的字符编码，以避免字符乱码以及安全漏洞。
 6、强烈推荐定义字符编码集。如果一个页面的编码是未定义的，那么（被）跨脚步技术（所攻击）是有可能的。
-7、一个声明了charset属性的 META 标签是等同于HTML5前的另一个标签的：<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">。IANAcharset指代charset的值。该标签依然可用，只是不推荐使用了。
+7、一个声明了charset属性的 META 标签是等同于HTML5前的另一个标签的：< meta http-equiv="Content-Type" content="text/html;charset=IANAcharset">。IANAcharset指代charset的值。该标签依然可用，只是不推荐使用了。
+8、别使用 META 标签设置为一个 XHTML 设置 MIME 类型。因为 META 元素不能改变 XHTML 文档或 HTML5 的XHTML序列化文档的文档类型。
+9、依赖于所设置的属性，元数据的种类可以分为：
+    一、如果设置了name属性，则其是文档级元数据，将被应用于整个网页；
+    二、如果设置了http-equiv属性，则其是编译指令，通常是由网站服务器给出的指导网页如何服务的信息；
+    三、如果设置了charset属性，则其是一个字符集声明，是网页使用的字符编码；
+    四、如果设置了itemprop属性，则其是用户定义元数据，当元数据的语义是用户指定时，其对于用户代理（浏览器）而言其是透明的。
