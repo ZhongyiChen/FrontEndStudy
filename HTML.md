@@ -23,7 +23,7 @@
 * download————此属性指示浏览器下载URL而不是导航到URL，因此将提示用户将其保存为本地文件。（HTML5）
 * href————指定超文本链接来源。表示链接目标的URL或URL片段（URL片段是由一个hash符号(＃)，它指定一个内部目标在当前文档中的位置(ID)开头的名字）。
 * hreflang————指定链接的资源所使用的人类语言（仅提供建议，并无内置功能）。
-* rel————指定了目标对象到链接对象的关系。该值是空格分隔的列表类型值(https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)。
+* rel————指定了目标对象到链接对象的关系。该值是空格分隔的列表类型值( https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types )。
 * target————指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。常用值包括：_self、_blank、_parent、_top。使用target时，考虑添加 rel="noopener norefferrer" 以防止针对 window.opener API 的恶意行为。
 * type————指定在一个 MIME type 链接目标的形式的媒体类型（仅提供建议，并无内置功能）。
 * 无障碍建议：锚点标签常常通过将 href 属性设置为 "#" 或 "javascript:void(0)" 来创造一个能阻止页面刷新的伪按钮的方式被滥用。 这些属性值会在拖动/复制链接时导致意外行为、在新窗口/新标签打开链接、加入书签以及JavaScript仍在下载时会出现错误或被禁用。这也会向辅助技术（如屏幕阅读器）传达不正确的语义。在这些情况下，推荐使用 BUTTON 来代替。通常情况下，您应该只将锚点用于正常的 URL 导航。 
@@ -71,7 +71,7 @@
 * href————在HTML4中，要么href出现，要么nohref（HTML已废弃该属性）出现。在HTML5中，和 A 元素的意义一样。
 * hreflang————指定链接的资源所使用的人类语言（仅提供建议，并无内置功能）。
 * media————指定链接的资源的媒体类型（默认为all）。
-* rel————指定了目标对象到链接对象的关系。该值是空格分隔的列表类型值(https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)。
+* rel————指定了目标对象到链接对象的关系。该值是空格分隔的列表类型值( https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types )。
 * shape————值包括了rect（矩形）、circle（圆形）、poly（多边形）。
 * target————指定在何处显示链接的资源。取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。常用值：_self、_blank、_parent、_top。使用target时，可添加 rel="noopener norefferrer" 以防止针对window.opener API的恶意行为。
 * 注意事项：这个元素只能在 MAP 元素中使用（不必是直接子元素）。
@@ -376,7 +376,7 @@
 ```
 * 用于包含一个 OPTION 元素组成的集合，以提供其他表单可选值。
 * 这个元素只有全局属性。
-* 注意事项：该标签只在IE10以上的浏览器支持，为了提高兼容性，使用时应加入Polyfill：https://github.com/mfranzke/datalist-polyfill。
+* 注意事项：该标签只在IE10以上的浏览器支持，为了提高兼容性，使用时应加入Polyfill：https://github.com/mfranzke/datalist-polyfill 。
 
 # DD
 ```
@@ -476,7 +476,7 @@
 </script>
 ```
 * 用于展示一个对话盒子或其他交互组件，例如一个监视器或窗口。
-* 现阶段除了Chrome和Opera，其他浏览器均不支持，因此，如果需要使用，应当引入一下Polyfill：https://github.com/GoogleChrome/dialog-polyfill。
+* 现阶段除了Chrome和Opera，其他浏览器均不支持，因此，如果需要使用，应当引入一下Polyfill： https://github.com/GoogleChrome/dialog-polyfill 。
 * open————指定对话框是否处于活跃状态或是否可用于交互。但该属性没有设置时，对话框不应当对用户显示。
 * 注意事项：
 * 1、DIALOG 元素一定不要使用tabindex属性。
@@ -1242,3 +1242,5 @@
     * 二、如果设置了http-equiv属性，则其是编译指令，通常是由网站服务器给出的指导网页如何服务的信息；
     * 三、如果设置了charset属性，则其是一个字符集声明，是网页使用的字符编码；
     * 四、如果设置了itemprop属性，则其是用户定义元数据，当元数据的语义是用户指定时，其对于用户代理（浏览器）而言其是透明的。
+
+# METER
