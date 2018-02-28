@@ -1335,3 +1335,55 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 3、OL 和 UL 都代表了一堆条目的列表。不同之处在于，对于 OL 元素而言，序号是有意义的。至于决定使用哪一个，可以这么考虑：尝试改变各项的顺序，如果整个列表的意思改变了，则应该使用 OL 标签，反之，使用 UL 是比较合适的。
 
 # OPTGROUP
+```
+<select>
+    <optgroup label="Group 1">
+        <option>Option 1.1</option>
+    </optgroup> 
+    <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option>Option 2.2</option>
+    </optgroup>
+    <optgroup label="Group 3" disabled>
+        <option>Option 3.1</option>
+        <option>Option 3.2</option>
+        <option>Option 3.3</option>
+    </optgroup>
+</select>
+```
+用于在 SELECT 元素内创建一组选项（options）。
+* disabled————如果设置了该布尔属性，组中的每一个选项都不可选。通常浏览器会使这样的控件变灰，从而使其无法接收任何浏览事件，如鼠标点击、获取焦点等。
+* label————该组选项的名称。当在其他用户界面标记该组选项时浏览器会用到。如果该元素被使用，该属性是强制要求定义的。
+* 注意事项：
+* 1、OPTGROUP 元素不应当嵌套使用。
+
+# OPTION
+```
+<!-- The second value will be selected initially -->
+<select name="text"> <!--Supplement an id here instead of using 'text'-->
+    <option value="value1">Value 1</option> 
+    <option value="value2" selected>Value 2</option>
+    <option value="value3">Value 3</option>
+</select>
+```
+用于在 SELECT、OPTGROUP 或 DATALIST 标签中定义一个选项。就其本身而言，OPTION 元素可以在一个HTML文档中表示弹出框中的菜单项以及其他条目列表。
+* disabled————如果设置了该布尔属性，该项将变成不可选的。通常浏览器会使这样的控件变灰，从而使其无法接收任何浏览事件，如鼠标点击、获取焦点等。如果其祖先元素 OPTGROUP 设置了disabled属性，即使本 OPTION 不设置该属性，也会变得不可用。
+* label————其文本值用于指出该项的意思。如果该属性没有定义，则 OPTION 元素包含的文本内容将作为label属性的值。
+* selected————若出现该布尔属性属性，则表明该选项在开始时是被选中的。如果 OPTION 元素是一个 SELECT 元素的后代，而 SELECT 元素又没有设置multiple属性的话，那么该 SELECT 元素的后代 OPTION 元素中只有一个可以拥有selected属性。
+* value————该属性的内容表示当本 OPTION 被选中时，其在表单中将被提交的值。如果省略了该属性，则 OPTION 元素包含的文本内容将作为value属性的值。
+
+# OUTPUT
+```
+<!--output将显示名称为a和b的控件的值的和，可尝试改变这两控件的值，会发现output元素的值会随之改变-->
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" name="b" value="50" /> +
+    <input type="number" name="a" value="10" /> =
+    <output name="result">60</output>
+</form>
+```
+一个容器元素。用于网站或APP中注入一个计算的结果或一个用户动作的输出。
+* for————值为其他元素的ID的值所组成的列表。指定那些元素可以提供输入值到计算中（或者说影响计算）。
+* form————指定与 OUTPUT 元素关联的 FROM 元素（即本 OUTPUT 元素属于哪一个 FORM 元素）。值为在同一个文档中的 FORM 元素的ID值。如果没定义该属性，则 OUTPUT 元素必须是一个 FORM 元素的后代。
+* name————本 OUTPUT 元素的名称。
+
+# P
