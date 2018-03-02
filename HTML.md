@@ -1387,3 +1387,54 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * name————本 OUTPUT 元素的名称。
 
 # P
+```
+<p>This is the first paragraph of text.
+  This is the first paragraph of text.</p>
+<p>This is the second paragraph.
+  This is the second paragraph.</p>
+```
+用于展示一段文本。段落通常显示为与相邻文本块由垂直空白空间分割（即换行）或首行缩进的文本块。段落是块级元素。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、align属性已经废弃。不要再使用它。
+
+# PARAM
+```
+<!-- Embed a flash movie with parameters -->
+<object data="movie.swf" type="application/x-shockwave-flash">
+    <param name="foo" value="bar">
+</object>
+```
+用于为 OBJECT 元素定义参数。
+* name————参数的名称。
+* value————为产生指定的值。
+
+# PICTURE
+```
+<!--通过media属性指定一个媒体查询，用户代理将根据屏幕尺寸决定是否选择该 SOURCE 元素。若媒体查询的结果为false，则 SOURCE 元素将被忽略-->
+<picture>
+    <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+    <img src="mdn-logo-narrow.png" alt="MDN">
+</picture>
+<!--通过type属性为 SOURCE 元素指定一个MIME类型。如果用户代理不支持该给定类型，则 SOURCE 元素会被忽略-->
+<picture>
+    <source srcset="mdn-logo.svg" type="image/svg+xml">
+    <img src="mdn-logo.png" alt="MDN">
+</picture>
+```
+作为零个至多个 SOURCE 元素以及后面跟着一个 IMG 标签的容器，以提供一张图片的不同尺寸版本。浏览器会根据每个 SOURCE 元素的所提供的图片来选择一张匹配得最好的，显示在 IMG 标签所占据的网页空间。如果没有匹配到合适的，则直接显示 IMG 标签所声明的图片（相当于回退功能）。为了选择到合适的图片，用户代理（浏览器）会检查每一个 SOURCE 元素的scrset、media和type属性，以匹配网页的当前布局、显示设备的特点等等。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、可以使用object-position属性在元素的框框内调整图片的定位。可以使用object-fit属性来控制图片以调整其在框框大小。
+
+# PRE
+```
+<!--显示CSS代码-->
+<pre>
+body {
+  color:red;
+}
+</pre>
+```
+用于原样显示写在HTML中（在 PRE 元素内）的文本。元素内部的文本默认以“非等比”字体(例如 等宽字体)渲染。空白（空格、制表符、回车）会原样显示，不会删减。
+* 这个元素只有全局属性。
