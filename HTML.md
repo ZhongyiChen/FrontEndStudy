@@ -1511,3 +1511,85 @@ body {
 用于表示一个ruby注释。ruby注释则用于显示东亚字符的读音。现代浏览器均支持该元素。在英语中，ruby除了作为红宝石的意思，还有细铅字的意思。
 * 这个元素只有全局属性。
 
+# S
+```
+<!--下面两行文字的显示效果是一样的-->
+<s>Today's Special: Salmon</s> SOLD OUT<br>
+<span style="text-decoration:line-through;">Today's Special: Salmon</span> SOLD OUT
+```
+即 Strikethrough 。渲染的效果就是用一根线来划过所包含的文本。S 元素主要用于表示某些东西不再相关或不再准确。但是 S 元素并不适用于指代文本编辑，DEL 元素更合适些。
+* 这个元素只有全局属性。
+
+# SAMP
+```
+<!--基础用法-->
+<p>
+    当这个过程完成后，屏幕将输出文本
+    <samp>扫描完成，<em>N</em>个结果被发现</samp>。
+    然后你可以继续下一步骤。
+</p>
+<!--包含用户输入的样例输出-->
+<pre>
+    <samp>
+        <span class="prompt">mike@interwebz:~$</span><kbd>md5 -s "Hello world"</kbd>
+        MD5 ("Hello world") = 3e25960a79dbc69b674cd4ec67a72c62
+        <span class="prompt">mike@interwebz:~$</span><span class="cursor">█</span>
+    </samp>
+</pre>
+```
+即 Sample 。用于包含从一段计算机程序中得出的样例（或援引）输出而成的内联文本。该标签的内容通常用浏览器的默认的等宽字体进行渲染。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、可用CSS规则（指CSS属性 font-family ）来覆盖浏览器对 SAMP 元素所使用的默认字体。但是，有可能浏览器的优先权会比你使用的CSS样式的优先权要高。
+* 2、如果你需要一个容器用于承载你的网站或APP的JavaScript代码的输出结果，你应当使用 OUTPUT 元素进行替代。
+
+# SCRIPT
+```
+<!-- HTML4 以及 XHTML 引入外部脚本的方式-->
+<script type="text/javascript" src="javascript.js"></script>
+<!-- HTML5 引入外部脚本的方式-->
+<script src="javascript.js"></script>
+```
+用于嵌入或引入可执行的代码。通常就用于嵌入或引入JavaScript代码。SCRIPT 元素也可用于其他语言，例如WebGL的GLSL着色编程语言。
+* async————该布尔属性用于指定浏览器是否应当（如果可以的话）异步地执行脚本。老旧的浏览器不支持该属性。
+* crossorigin————通常情况下，如果 SCRIPT 标签不能通过标准的CORS检查的话，则其会传递极少的信息到window.onerror中。为了允许使用了处于不同域的静态媒体的网站记录到该错误，可使用该属性。
+* defer————该布尔属性被设置来指定脚本将在整个文档解析完成后执行。但是，脚本也将在DOMContenLoaded事件触发前执行。为了对动态插入的脚本实现同样的效果，可以对这些脚本使用"async=false"，那么带有defer属性的 SCRIPT 标签的脚本将按照出现在文本的顺序执行。
+* integrity————该属性包含着内联元数据以协助用户代理验证所获取的资源是否被篡改过。具体内容可查看： https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity 。
+* nomodule————实验性属性，别用在产品上。该布尔属性被设置来指定脚本是否不应当被支持ES6模块化的浏览器执行。
+* nonce————在脚本地址的内容安全策略下的一份白名单。值为一个加密随机数（一个只用一次的数字）。每次服务器传送一份策略时，它都必须生成一个独一无二的nonce值。严格要求所提供的nonce值是不能被猜测的，否则传递一份资源的策略（证书）就变得毫无意义。
+* src————用于指定一份外部的脚本。该属性可用于替代在一份文档中直接嵌入一份脚本的方式。
+* text————像textContent属性一样，该属性是用于设置 SCRIPT 元素的文本内容的。但又跟textContent属性不同，在文本节点被插入到DOM中后，该属性的内容将作为可执行的代码。
+* type————指定脚本代表的类型。可能的值的种类包括，
+    * 省略不写或是一个JavaScript的MIME类型：对于兼容HTML5的浏览器而言，这类值就是表明脚本为JavaScript。HTML5规范强制要求网页作者省略该属性而不是提供一个累赘的MIME类型。对于早期的浏览器而言，这类值指定了嵌入或引入的代码（通过src属性）的脚本语言。
+    * module：对于兼容HTML5的浏览器而言，该标签内的代码将被看成是一个JavaScript模块。脚本内容的处理过程便不会被charset或defer属性所影响。（HTML5新增）
+    * 任意的其他的值：嵌入的内容将被当成一个不会被浏览器处理的数据块。开发者必须使用一个有效的不是一个JavaScript的MIME类型的MIME类型来指代数据块。应用了此类值后，src属性将被忽略。
+* 注意事项：
+* 1、如果src属性不存在时，async属性一定不能被使用，否则async属性会完全不起作用。
+* 2、动态插入的脚步默认是以异步的方式执行的。所以，如果希望其同步执行（即根据插入的顺序执行），那么应当为其设置"async=false"。
+* 3、如果src属性不存在时，defer属性一定不能被使用，否则defer属性会完全不起作用。
+* 4、如果一个 SCRIPT 元素已经指定了src属性，那么它的标签内就不应当再嵌有脚本代码。
+* 5、在火狐浏览器中，开发者可以在 SCRIPT 标签中通过一个非标准的version参数在type属性中指定JavaScript的版本，例如type="application/javascript;version=1.8"。最新的火狐浏览器（>59）已经去除了该功能。
+* 6、不带有async、defer属性的脚本，以及内联脚本，都会在获取后立即执行，执行完毕后才会继续解析后面的页面。
+* 7、脚本本应当带有MIME类型"text/javascript"。但浏览器是很宽容的，只有当脚本带上了一个图片类型"image/*"、一个视频类型"video/*"、一个音频类型"audio/*"或"text/csv"时，才会阻塞它们。如果脚本被阻塞住了，那么一个错误事件将被发送到元素中，否则，一个加载完成事件将被发送到元素中。
+
+# SECTION
+```
+<!--以前我们这么用-->
+<div>
+    <h1>Heading</h1>
+    <p>Bunch of awesome content</p>
+</div>
+<!--现在我们这么用-->
+<section>
+  <h1>Heading</h1>
+  <p>Bunch of awesome content</p>
+</section>
+```
+代表了一个独立的部分。要求所包含的内容没有更多语义化上的要求。通常但不是绝对的，SECTION 元素包含有一个头部 HEADING 元素。举例说，一个导航菜单就应当被包裹在一个 NAV 元素中，但是，一组搜索结果或者一份地图显示与控制控件就没有专门的元素去表示，那么它们便能被放置到一个 SECTION 元素中。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、每个 SECTION 元素都应当能被用户所辨识，通常就是让其包含一个标题（H1-H6 元素）。
+* 2、如果将一个 SECTION 元素的内容分别联合起来也是有意义的，那么请使用一个 ARTICLE 元素替代它。
+* 3、不要使用 SECTION 标签作为一个通用的容器。这个是 DIV 的职责所在，尤其是当这个部分只是用于赋予样式的目的时。一个很赞的规则是一个部分（SECTION）逻辑上应当出现在一个文档的大纲上。
+
+# SELECT
