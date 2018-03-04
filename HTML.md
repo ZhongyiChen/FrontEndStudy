@@ -923,7 +923,7 @@
 
 * checked————当 INPUT 元素的type属性被设置为"radio"或"checkbox"时，该属性将指定本控件是否被默认选中。当选择动作发生后，该属性会被忽略。在FireFox浏览器中，INPUT 元素被设置为checked后，刷新页面会保持checked状态。可设置autocomplete属性为"off"来解决。
 * disabled————用于指定表单控件是否可用于交互。特别的是，在禁用了的控件中，点击事件将不被分发。同样，一个禁用了的控件的值不会与表单中其他控件的值一起被提交。（对于FireFox中的一个bug，可参照autocomplete属性中的注2）
-* form————用于指定 INPUT 元素所关联的 FORM 元素。该属性的值必须是当前文档的一个 FORM 元素的id属性值。如果不指定form属性，该 INPUT 元素必须是一个 FORM 元素的后代。该属性的使用目的就是为了使 INPUT 元素可放置于文档的任意位置而不必成为 FORM 元素的子元* 素。当然，一个 INPUT 元素只能关联一个 FORM 元素。(HTML5)
+* form————用于指定 INPUT 元素所关联的 FORM 元素。该属性的值必须是当前文档的一个 FORM 元素的id属性值。如果不指定form属性，该 INPUT 元素必须是一个 FORM 元素的后代。该属性的使用目的就是为了使 INPUT 元素可放置于文档的任意位置而不必成为 FORM 元素的子元素。当然，一个 INPUT 元素只能关联一个 FORM 元素。(HTML5)
 * formaction————若 INPUT 元素是一个提交按钮或提交图片，表示处理该 INPUT 元素的信息的程序的URI。此属性将重写 INPUT 所在表单的action属性。(HTML5)
 * formenctype————若 INPUT 元素是一个提交按钮或提交图片，表示表单提交时该 INPUT 元素所使用的文本格式。常用值有："application/x-www-form-urlencoded"(默认值)、"multipart/form-data"(提交的内容含文件类型时使用)、"text/plain"。此属性将重写 INPUT 所在表单拥有者的enctype属性。(HTML5)
 * formmethod————若 INPUT 元素是一个提交按钮或提交图片，表示所属表单提交时所使用的HTTP方法。常用值有："post"、"get"。此属性将重写 INPUT 所在表单的method属性。(HTML5)
@@ -1593,3 +1593,59 @@ body {
 * 3、不要使用 SECTION 标签作为一个通用的容器。这个是 DIV 的职责所在，尤其是当这个部分只是用于赋予样式的目的时。一个很赞的规则是一个部分（SECTION）逻辑上应当出现在一个文档的大纲上。
 
 # SELECT
+```
+<!-- The second value will be selected initially -->
+<select name="text"> <!--Supplement an id here instead of using 'text'-->
+    <option value="value1">Value 1</option> 
+    <option value="value2" selected>Value 2</option>
+    <option value="value3">Value 3</option>
+</select>
+```
+表示一个提供一组选项的控件。
+* autofocus————值为布尔类型，用于指定页面刚加载完成时，某个表单控件是否应当拥有输入焦点（除非用户改变了输入焦点，例如在别的控件中打字）。一个表单只能有一个控件拥有autofocus属性。(HTML5)
+* disabled————该布尔属性用于指定用户能否与本控件交互。如果没指定该属性，本控件将从包含它的元素（例如 FIELDSET 元素）继承相关的设置。如果祖先元素也没有设置disabled属性，那么本控件就是可与用户交互的。
+* form————用于指定 SELECT 元素所关联的 FORM 元素。该属性的值必须是当前文档的一个 FORM 元素的id属性值。该属性的使用目的就是为了使 INPUT 元素可放置于文档的任意位置而不必成为 FORM 元素的子元素。(HTML5)
+* multiple————该布尔属性用于指定在列表中可以选中多个选项。如果 SELECT 元素没指定该属性，则一次只有一个选项能被选中。
+* name————指定本控件的名称。
+* required————该布尔属性用于指定一个带有非空字符串值的选项必须被选中。(HTML5)
+* size————如果本控件以一个可滚动列表盒子的形式出现，那么该属性表示选项列表中一次应显示的行数。浏览器并没有要求一个 SELECT 元素显示为一个滚动列表盒子。默认值为"0"。
+* 注意事项：
+* 1、根据HTML5规范，size属性的默认值应当为"1"。但在实际中，这种情况会影响到某些网站，因此暂时没有浏览器支持这一点。
+* 2、SELECT 元素的内容是静态的、不可编辑的。
+
+# SHADOW
+已废弃，勿用。
+
+# SLOT
+```
+<template id="my-paragraph">
+    <style>
+        p {
+        color: white;
+        background-color: #666;
+        padding: 5px;
+        }
+    </style>
+    <p>My paragraph</p>
+    <slot name="my-text">My default text</slot>
+</template>
+<my-paragraph>
+    <ul slot="my-text">
+        <li>Let's have some different text!</li>
+        <li>In a list!</li>
+    </ul>
+</my-paragraph>
+```
+该元素仍然属于实验性元素（IE完全不支持，火狐不支持name属性）。作为网站组件化技术套件的一部分，它是一个网页组件的占位符，可以让开发者在其位置填充所需的标签，从而使得组件实现分离后又能合并到一起显示。
+* name———— SLOT 元素的名称。一个命名位置即一个带有name属性的 SLOT 元素。
+* 注意事项：
+* 1、本元素的具体用法请参考（通常与 TEMPLATE 元素配套使用）： https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots 和 https://developer.mozilla.org/en-US/docs/Web/Web_Components 。
+
+# SMALL
+```
+<p>This is the first sentence. <small>This whole sentence is in small letters.</small></p>
+```
+用于使文本字体大小变小（例如使大号字体变成中号，使小号字体变成极小号），到浏览器支持的最小字号为止。在HTML5中，该元素被赋予新的用途，用于表示旁注（）和小号印刷字体，包括版权和法律声明。新用途与它的显示样式是独立的。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、尽管 SMALL 元素跟 B 和 I 元素一样，可能被认为破坏了"结构与样式分离"的原则，但是这三者在HTML5中都有效。笔者鼓励在是否使用 SMALL 元素还是CSS样式时，做出最优的判断后再进行抉择。
