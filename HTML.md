@@ -1716,3 +1716,68 @@ body {
 * title————该属性用于指定一个替代样式表集合。
 
 # SUB
+```
+<!--用于脚注-->
+<p>According to the computations by Nakamura, Johnson, and
+Mason<sub>1</sub> this will result in the complete annihilation
+of both particles.</p>
+<!--用于变量下标-->
+<p>The horizontal coordinates' positions along the X-axis are
+represented as <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var>.</p>
+<!--用于化学公式-->
+<p>Almost every developer's favorite molecule is
+C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is
+commonly known as "caffeine."</p>
+```
+用于单纯的排版，指定行内文本应当显示为下标。下标通常用一个更小的字号在更低的基线上渲染。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、只应由于排版上需要才使用 SUB 元素。不要仅仅因为显示或展现的原因而用该元素。例如，在企业商标上（的某些图案或文字）使用该元素实现就不合适，此时应使用CSS属性vertical-align来实现，或设置值为"sub"，或设置值为更精确的百分比或其他数字值。
+* 2、合适的用例包括但不限于，
+    * 1、标记脚注数值。
+    * 2、标记数学变量数字的下标。当然，开发者也可以使用MathML语言（ https://developer.mozilla.org/en-US/docs/Web/MathML ）来做到这一点，只是兼容性还不够好。
+    * 3、显示一个化学公式的原子的给定数字。
+
+# SUMMARY
+```
+<details open>
+    <summary>Overview</summary>
+    <ol>
+        <li>Cash on hand: $500.00</li>
+        <li>Current invoice: $75.30</li>
+        <li>Due date: 5/6/19</li>
+    </ol>
+</details>
+```
+指定一份摘要、说明文字或为一个 DETAILS 元素的公开盒子定义一段铭文（即一直会显示的内容）。点击 SUMMARY 元素会使父元素 DETAILS 不断的打开与关闭。该元素尚不能得到浏览器很好的支持。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、本元素的内容可以是任何标题内容（H1-H6）、平白文字（即不带有标签）或者可用在段落中的HTML文本。
+* 2、一个 SUMMARY 元素一般只用作一个 DETAILS 元素的第一子元素。当用户点击在 SUMMARY 上时，父级元素 DETAILS 将切换为打开或关闭状态，然后一个toggle事件将发送至 DETAILS 元素中以方便开发者监听状态的改变。
+* 3、如果一个 DETAILS 元素的第一子元素不是一个 SUMMARY 元素，用户代理会使用一个默认的字符串"Details"（中文状态下则是"详情"）作为公示盒子(disclosure box)的标签。
+* 4、在每个HTML规范中，SUMMARY 元素的默认样式都包括了"display: list-item;"。这使得改变或移除标签旁边的默认的公示小部件(disclosure widget)变得有可能（该小部件通常是一个三角形）。
+* 5、浏览器厂商尚不能很好的支持该元素（IE跟移动端的Safari完全不支持该元素，除了火狐外的浏览器均不支持修改"display: list-item;"）。因此，该元素未适合引入到产品中去。
+
+# SUP
+```
+<!--用于数学公式-->
+<p>One of the most common equations in all of physics is
+<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.<p>
+<!--用于序号-->
+<p>The ordinal number "fifth" can be abbreviated in various
+languages as follows:</p>
+<ul>
+    <li>English: 5<sup>th</sup></li>
+    <li>French: 5<sup>ème</sup></li>
+</ul>
+```
+用于单纯的排版，指定行内文本应当显示为上标。上标通常用一个更小的字号在更高的基线上渲染。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、只应由于排版上需要才使用 SUP 元素。不要仅仅因为显示或展现的原因而用该元素。例如，在企业商标上（的某些图案或文字）使用该元素实现就不合适，此时应使用CSS属性vertical-align来实现，或设置值为"sup"，或设置值为更精确的百分比或其他数字值。
+* 2、合适的用例包括但不限于，
+    * 1、展示指数，例如"X的3次方"。当然，开发者也可以使用MathML语言（ https://developer.mozilla.org/en-US/docs/Web/MathML ）来做到这一点，只是兼容性还不够好。
+    * 2、显示某些语言中的缩写的"更高级的字母"(superior lettering)。例如法语的单词"mademoiselle"的缩写形式，除了第一个字母是正常显示，其余的则显示成上标形式。
+    * 3、代表顺序数字，例如"第4"的数字加英文形式。
+
+# TABLE
