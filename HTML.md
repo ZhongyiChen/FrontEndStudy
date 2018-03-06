@@ -1798,6 +1798,7 @@ languages as follows:</p>
 * 1、该元素的专有属性（align、bgcolor、border、cellpadding、cellspacing、frame、rules、summary、width）均从规范中移除，不要再使用。
 
 # TBODY
+```
 <!--包含 THEAD 和 TBODY-->
 <table>
     <thead>
@@ -1864,6 +1865,7 @@ languages as follows:</p>
         </tr>
     </tbody>
 </table>
+```
 用于封装表格行 TR 元素的集合，即作为表格的主体(body)部分。TBODY 元素，跟其兄弟元素 THEAD 和 TFOOT 元素一起，在用于屏幕或打印机或其他可访问目的的渲染时，提供了有用的语义信息。
 * 这个元素只有全局属性。
 * 注意事项：
