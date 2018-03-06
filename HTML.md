@@ -1781,3 +1781,95 @@ languages as follows:</p>
     * 3、代表顺序数字，例如"第4"的数字加英文形式。
 
 # TABLE
+```
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>10</td>
+    </tr>
+</table>
+```
+用于表示表格类型的数据，即展示在一个由行和列组合成单元格（用于包含数据）的二维表格的信息。
+* 注意事项：
+* 1、该元素的专有属性（align、bgcolor、border、cellpadding、cellspacing、frame、rules、summary、width）均从规范中移除，不要再使用。
+
+# TBODY
+<!--包含 THEAD 和 TBODY-->
+<table>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Major</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3741255</td>
+            <td>Jones, Martha</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>3971244</td>
+            <td>Nim, Victor</td>
+            <td>Russian Literature</td>
+        </tr>
+    </tbody>
+</table>
+<!--包含多个 TBODY-->
+<table>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="2">Computer Science</th>
+        </tr>
+        <tr>
+            <td>3741255</td>
+            <td>Jones, Martha</td>
+        </tr>
+        <tr>
+            <td>4077830</td>
+            <td>Pierce, Benjamin</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="2">Russian Literature</th>
+        </tr>
+        <tr>
+            <td>3971244</td>
+            <td>Nim, Victor</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="2">Astrophysics</th>
+        </tr>
+        <tr>
+            <td>4100332</td>
+            <td>Petrov, Alexandra</td>
+        </tr>
+        <tr>
+            <td>8892377</td>
+            <td>Toyota, Hiroko</td>
+        </tr>
+    </tbody>
+</table>
+用于封装表格行 TR 元素的集合，即作为表格的主体(body)部分。TBODY 元素，跟其兄弟元素 THEAD 和 TFOOT 元素一起，在用于屏幕或打印机或其他可访问目的的渲染时，提供了有用的语义信息。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、该元素的专有属性（align、char、charoff、valign）均从规范中移除，不要再使用。属性bgcolor只有IE支持，也不应使用。
+* 2、如果表格包含了一个 THEAD 块（为了语义化地指定头部行），则 THEAD 块后面必须跟着 TBODY 块。
+* 3、如果使用了 TBODY 元素，则表格中不能同时存在直接的 TR 子元素（即 TR 元素只能出现在 TBODY、THEAD、TFOOT 标签内）。
+* 4、当打印一份含有多页表格的文档时，即使每页 TBODY 的内容各不相同，每页 THEAD 和 TFOOT 元素所指定的信息也应当保持相同（至少是类似的）。
+* 5、当一份表格是出现在屏幕上下文中（例如 window）而屏幕不能大到显示整个表格时，用户代理可能会让用户在同一个父级 TABLE 元素中分别滚动 THEAD、TBODY、TFOOT、CAPTION 的内容。
+* 6、开发者可以在一个 TABLE 元素中使用多个 TBODY 元素，只要所有的 TBODY 元素是连续的就好。这使得程序员可在一大表格中将各行分成不同的部分，而每部分可以根据需要采用不同的格式展示。
