@@ -131,7 +131,12 @@
 * loop————如果指定了该属性，则声音自动在播放结束后重新播放。
 * muted————"true"指定初始化时为静音，"false"指定初始化时为非静音。默认为"false"。
 * played————一个TimeRanges对象，示所有已播放的音频片段。
-* preload————"none"：指定声音不应当自动加载；"metadata"：指定只自动加载声音的元数据（例如声音长度信息）；"auto"：自动加载整个声音文件；""：跟"auto"一样。要注意的是，如果设置了autoplay属性，preload属性则无效。
+* preload————可能的值有：
+    * "none"：指定声音不应当自动加载。
+    * "metadata"：指定只自动加载声音的元数据（例如声音长度信息）。
+    * "auto"：自动加载整个声音文件。
+    * ""：跟"auto"一样。
+    * 注1：如果设置了autoplay属性，preload属性则无效。
 * src————指定音频的URL（可选项）。你也可以通过在 AUDIO 标签块中嵌入一个 SOURCE 标签来指定声音源，从而替代src属性。
 * volume————指定播放音量。范围是0.0(静音) - 1.0(最大音量)。
 * 注意事项：
@@ -227,7 +232,11 @@
 * disabled————当值为"true"时，用户不能与该按钮交互。若该属性没有设置，则从 FIELDSET 等包含元素中继承。默认值为"false"。
 * form————指定本按钮所属的 FORM 标签（值就是 FORM 的id）。若不设置该属性，则按钮归属于父级的 FORM 元素。因此设置了该属性可以让 BUTTON 元素出现在页面的任何位置。(HTML5)
 * formaction————表示程序处理 BUTTON 提交信息的URI。此属性将重写 BUTTON 所在表单的action属性。(HTML5)
-* formenctype————若按钮是提交类型，则指定所属表单提交时所使用的文本格式。常用值有："application/x-www-form-urlencoded"(默认值)、"multipart/form-data"(提交的内容含文件类型时使用)、"text/plain"。此属性将重写 BUTTON 表单拥有者的enctype属性。(HTML5)
+* formenctype————若按钮是提交类型，则指定所属表单提交时所使用的文本格式。常用值有：
+    * "application/x-www-form-urlencoded"(默认值)。
+    * "multipart/form-data"(提交的内容含文件类型时使用)。
+    * "text/plain"。
+    * 注1：此属性将重写 BUTTON 表单拥有者的enctype属性。(HTML5)
 * formmethod————若按钮是提交类型，则指定所属表单提交时所使用的HTTP方法。常用值有："post"、"get"。此属性将重写 BUTTON 表单拥有者的method属性。(HTML5)
 * formnovalidate—————若按钮是提交类型，则指定所属表单提交时不进行验证。此属性将重写 BUTTON 表单拥有者的novalidate属性。(HTML5)
 * formtarget————若按钮是提交类型，则指定所属表单提交时在何处显示返回结果。常用值有："_self"、"_blank"、"_parent"、"_top"。此属性将重写 BUTTON 表单拥有者的target属性。(HTML5)
@@ -651,9 +660,16 @@
 用于表示一个包含有可交互控件并能提交数据到一个网络服务器的文档部分。
 * 可以对 FORM 元素应用:valid和:invalid这几个css伪类。
 * accept-charset————指定服务器接受的一个字符编码列表(用空格或逗号隔开)。默认值为"UNKNOWN"，即参考所在文档的字符编码。HTML5以前，字符编码项可以用空格或逗号隔开，HTML5以后，只允许用空格隔开。
-* autocomplete————指定输入框元素是否默认被浏览器自动完成值的填写（当然，这个设定会被输入框本身的autocomplete属性值所覆盖）。有两个值。"off"：指定用户在每次使用输入框时，都必须明确地输入值，又或者文档本身提供自己的自动完成方法（浏览器是不会自动完成输入的）。"on"：浏览器会根据用户以前在改输入框中输入的内容，自动将其输入填充到输入框中。(html5)
-* enctype————当method属性被设置成"post"时，enctype就是用于指定要提交到服务器的表单的内容的MIME类型。常用值有："application/x-www-form-urlencoded"(默认值)、"multipart/form-data"(提交的内容含文件类型时使用)、"text/plain"。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
-* method————浏览器提交表单的HTTP方法。常用值有："post"(对应HTTP的"POST"方法。表单数据将被包含在表单体中，然后发送给服务器)、"get"(对应HTTP的"GET"方法。表单数据将附在要请求URI的查询位置中，即"?"后面，然后发送给服务器。这种方式要求表单没有副作用，并且数据需要进行URI编码)。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
+* autocomplete————这是一个HTML5新增属性。指定输入框元素是否默认被浏览器自动完成值的填写（当然，这个设定会被输入框或文本域本身的autocomplete属性值所覆盖）。可能的值有：
+    * "off"：指定用户在每次使用输入框时，都必须明确地输入值，又或者文档本身提供自己的自动完成方法（浏览器是不会自动完成输入的）。
+    * "on"：浏览器会根据用户以前在改输入框中输入的内容，自动将其输入填充到输入框中。。
+* enctype————当method属性被设置成"post"时，enctype就是用于指定要提交到服务器的表单的内容的MIME类型。常用值有：
+    * "application/x-www-form-urlencoded"(默认值)。
+    * "multipart/form-data"(提交的内容含文件类型时使用)。
+    * "text/plain"。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
+* method————浏览器提交表单的HTTP方法。常用值有：
+    * "post"(对应HTTP的"POST"方法。表单数据将被包含在表单体中，然后发送给服务器)、
+    * "get"(对应HTTP的"GET"方法。表单数据将附在要请求URI的查询位置中，即"?"后面，然后发送给服务器。这种方式要求表单没有副作用，并且数据需要进行URI编码)。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
 * name————表单的名称(name)。
 * novalidate————指定表单在提交时是否不要做验证。不指定该属性的情况下，表单是会被验证的。默认的设置可以被 BUTTON 和 INPUT 元素设置的formnovalidate属性覆盖。(html5)
 * target————值为一个名称或关键词，用来指定在何处显示提交表单后收到的返回信息。常用值有："_self"、"_blank"、"_parent"、"_top", 标签 IFRAME 的name属性值。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formtarget属性覆盖。
@@ -1875,3 +1891,114 @@ languages as follows:</p>
 * 4、当打印一份含有多页表格的文档时，即使每页 TBODY 的内容各不相同，每页 THEAD 和 TFOOT 元素所指定的信息也应当保持相同（至少是类似的）。
 * 5、当一份表格是出现在屏幕上下文中（例如 window）而屏幕不能大到显示整个表格时，用户代理可能会让用户在同一个父级 TABLE 元素中分别滚动 THEAD、TBODY、TFOOT、CAPTION 的内容。
 * 6、开发者可以在一个 TABLE 元素中使用多个 TBODY 元素，只要所有的 TBODY 元素是连续的就好。这使得程序员可在一大表格中将各行分成不同的部分，而每部分可以根据需要采用不同的格式展示。
+
+# TD
+```
+<table>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Major</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3741255</td>
+            <td>Jones, Martha</td>
+            <td>Computer Science</td>
+        </tr>
+    </tbody>
+</table>
+```
+用于定义表格的一个包含数据的单元格。单元格是表格模型的参与者、构造者。
+* colspan————值为非负整数。用于指定该单元格跨过多少列。默认值为"1"。如果设置的值大于"1000"时，会被认为是非法的，然后会被重置为默认值"1"。
+* headers————该属性包含了一个用空格隔开的字符串的列表，每个字符串分别对应于应用了该 TD 元素的 TH 元素的id属性值。
+* rowspan————值为非负整数。用于指定该单元格跨过多少行。默认值为"1"。如果设置的值为"0"，则该 TD 元素会一直跨越到表格部分（包括 THEAD、TBODY、TFOOT 元素）的末尾。如果设置的值大于"65534"，则值会被重置缩减为"65534"。
+
+# TEMPLATE
+```
+<table id="producttable">
+    <thead>
+        <tr>
+            <td>UPC_Code</td>
+            <td>Product_Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- existing data could optionally be included here -->
+    </tbody>
+</table>
+
+<template id="productrow">
+    <tr>
+        <td class="record"></td>
+        <td></td>
+    </tr>
+</template>
+
+<script>
+// Test to see if the browser supports the HTML template element by checking
+// for the presence of the template element's content attribute.
+if ('content' in document.createElement('template')) {
+    // Instantiate the table with the existing HTML tbody
+    // and the row with the template
+    var t = document.querySelector('#productrow'),
+    td = t.content.querySelectorAll("td");
+    td[0].textContent = "1235646565";
+    td[1].textContent = "Stuff";
+    // Clone the new row and insert it into the table
+    var tb = document.querySelector("tbody");
+    var clone = document.importNode(t.content, true);
+    tb.appendChild(clone);
+    // Create a new row
+    td[0].textContent = "0384928528";
+    td[1].textContent = "Acme Kidney Beans";
+    // Clone the new row and insert it into the table
+    var clone2 = document.importNode(t.content, true);
+    tb.appendChild(clone2);
+} else {
+    // Find another way to add the rows to the table because 
+    // the HTML template element is not supported.
+}
+</script>
+```
+用于一种保持客户端的内容在页面加载时不会被渲染但可以通过JavaScript在运行时不断实例化的机制。
+* 这个元素只有全局属性。
+
+# TEXTAREA
+```
+<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+```
+用于表示一个多行的平白文本编辑控件。
+* autocapitalize————非标准属性，只有 IOS 系统的浏览器支持。用于指定该控件能否与如何根据用户输入（编辑）的内容来自动使首字母大写化。以下值能被IOS5以上的系统支持：
+    * none：完全禁止自动使首字母大写化。
+    * sentences：自动使句子的首字母变成大写的。
+    * words：自动使单词的首字母都变成大写的。
+    * characters：使所有字母都自动变成大写的。
+* autocomplete————这是一个HTML5新增属性。指定文本域元素是否默认被浏览器自动完成值的填写。可能的值有：
+    * "off"：指定用户在每次使用文本域时，都必须明确地输入值，又或者文档本身提供自己的自动完成方法（浏览器是不会自动完成输入的）。
+    * "on"：浏览器会根据用户以前在改文本域中输入的内容，自动将其输入填充到输入框中。
+    * 注1：当 TEXTAREA 元素没有指定autocomplete属性时，浏览器会使用 TEXTAREA 元素所属的 FORM 元素的autocomplete属性。
+* autofocus————用于指定页面刚加载完成时，某个表单控件是否应当拥有输入焦点（除非用户改变了输入焦点，例如在别的控件中打字）。一个表单只能有一个控件拥有autofocus属性。(HTML5)
+* cols————用于指定文本的可见宽度（每单位指字符的平均宽度）。值必须为一个正整数。在HTML5中，该默认值为"20"。
+* disabled————该布尔属性用于指定用户能否与本控件交互。如果不指定该属性，则控件会从包含它的元素（例如 FIELDSET 元素）继承该设置。如果包含它的元素也没设置该属性，那么控件就是可用的。
+* form————用于指定 TEXTEREA 元素所关联的 FORM 元素。该属性的值必须是当前文档的一个 FORM 元素的id属性值。如果不指定form属性，该 TEXTEREA 元素必须是一个 FORM 元素的后代。该属性的使用目的就是为了使 TEXTEREA 元素可放置于文档的任意位置而不必成为 FORM 元素的子元素。当然，一个 TEXTEREA 元素只能关联一个 FORM 元素。(HTML5)
+* maxlength————用于指定用户可以输入的字符（Unicode编码）的最大数。如果没有为该属性指定有效值，则用户可以输入无限个字符。(HTML5)
+* minlength————用于指定用户至少应当输入多少个字符。(HTML5)
+* name————本控件的名称。
+* placeholder————一个在控件中告诉用户应当输入什么内容的提示。该提示文本的回车或换行在渲染时必须被当作分行符。
+* readonly————该布尔属性用于表示用户不能修改本控件的值。跟disabled属性不一样的是，readonly属性不会阻止用户在控件中的点击或选择操作。只读的控件的值仍然能随着表单一起被提交（到服务器）。
+* required————指出用户在提交一个表单之前，必须为该控件填充一个值。
+* rows————指定本控件的可见行数。
+* spellcheck————该属性值设置为"true"时，表示 TEXTAREA 元素需要进行拼写和语法检查。值为"default"时，指定元素根据默认的情况选择相应的检查行为（可能基于父级元素的spellcheck属性值）。值为"false"时，指定元素不应当进行检查。(HTML5)
+* wrap————这是一个HTML5新增属性。用于指定本控件如何缠绕文本。可能的值有：
+    * hard：浏览器自动插入换行符（CR+LF）以使每行的宽度都不会超过本控件的宽度。前提是必须设定了cols属性。
+    * soft：浏览器确保值中的所有换行都由CR+LF对组成，但不会插入任何额外的换行。（默认值）
+    * off：类似于"soft"，但会改变控件的面貌为"white-space: pre;"。所以当某行超出cols指定的宽度时，该行将不会包裹，从而该区域变成可以横向滚动的。
+* 注意事项：
+* 1、Gecko 2.0引入了对可重置大小的文本域的支持。该功能通过CSS属性resize控制。默认上，文本域是可重置大小的。
+* 2、从CSS角度来说，一个 TEXTAREA 是一个可被替代的元素。HTML规范并没有指定一个 TEXTAREA 标签的基线在哪里。不同的浏览器把基线设置在了不同的位置。对于Gecko引擎来说，文本域的基线就是里面第一行文本所在的基线。对于其他浏览器来说，文本域的基线可能被设置在了 TEXTAREA 盒子的底部。因此，不要在 TEXTAREA 元素上使用"vertical-align: baseline;"，否则其行为可能变得不可预测。
+* 3、跟光栅图片一样，一个文本域是有其内在尺寸的。
+
+# TFOOT
