@@ -130,7 +130,7 @@
 * controls————如果该属性出现在标签中，浏览器便会为读者提供控制条（通常包括音量、进度拖动条、暂停/重播）。
 * loop————如果指定了该属性，则声音自动在播放结束后重新播放。
 * muted————"true"指定初始化时为静音，"false"指定初始化时为非静音。默认为"false"。
-* played————一个TimeRanges对象，示所有已播放的音频片段。
+* played————一个TimeRanges对象，表示所有已播放的音频片段。
 * preload————可能的值有：
     * "none"：指定声音不应当自动加载。
     * "metadata"：指定只自动加载声音的元数据（例如声音长度信息）。
@@ -820,7 +820,7 @@
 * alt————用于定义描述图片的替代文本。如果图片地址错误、图片格式不被支持、图片没有完全下载好，这些文本就会显示出来。如果图片本身不是关键内容（可省略的那种），则应当设置值为空字符串""，那样，在非可视化浏览器中在渲染的时候可能会忽略它。
 * crossorigin—————这是一个HTML5新增属性。表明是否必须使用CORS完成相关图像的抓取。启用CORS的图像在 CANVAS 元素中可以重复使用而不会被污染。允许的值有：
     * 1、anonymous：执行一个跨域的请求（比如，请求头部带有 Origin: HTTP header）。但不发送证书（比如，没有 cookie，没有 X.509 证书，没有HTTP基本的授权认证）。如果服务器没有给源站证书（没有设置Access-Control-Allow-Origin: HTTP头），图像会被污染而且它的使用会被限制。
-    * 2、use-credentials：一个有证书的跨域请求（比如，请求头部带有 Origin: HTTP header）被发送 （比如，有 cookie, 有 certificate, a有HTTP基本的授权认证）。如果服务器没有给源站发送证书（通过Access-Control-Allow-Credentials: HTTP header），图像将会被污染，且它的使用会受限制。
+    * 2、use-credentials：一个有证书的跨域请求（比如，请求头部带有 Origin: HTTP header）被发送 （比如，有 cookie, 有 certificate, 有HTTP基本的授权认证）。如果服务器没有给源站发送证书（通过Access-Control-Allow-Credentials: HTTP header），图像将会被污染，且它的使用会受限制。
     * 3、不设置该属性：默认不使用CORS发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在 CANVAS 中的使用。
 * decoding————为浏览器提供一个解码的提示。可能只包括：
     * 1、sync：同步解码，在此期间，不渲染其他内容。
@@ -1348,7 +1348,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 注意事项：
 * 1、通常，有序列表条目以排序数字前置的方式显示，适合阿拉伯数字、字母、罗马数字甚至简单的子弹符号等任何形式。该排序数字样式并没有定义在页面的HTML描述中，但它与CSS的list-style-type属性相关。
 * 2、对于有序列表而言，是没有深度限制的。只按照能否实现来说的话，OL 和 UL 元素相互替代使用也是可以的。
-* 3、OL 和 UL 都代表了一堆条目的列表。不同之处在于，对于 OL 元素而言，序号是有意义的。至于决定使用哪一个，可以这么考虑：尝试改变各项的顺序，如果整个列表的意思改变了，则应该使用 OL 标签，反之，使用 UL 是比较合适的。
+* 3、OL 和 UL 都代表了一堆条目的列表。不同之处在于，对于 OL 元素而言，顺序是有意义的。至于决定使用哪一个，可以这么考虑：尝试改变各项的顺序，如果整个列表的意思改变了，则应该使用 OL 标签，反之，使用 UL 是比较合适的。
 
 # OPTGROUP
 ```
@@ -2002,3 +2002,281 @@ if ('content' in document.createElement('template')) {
 * 3、跟光栅图片一样，一个文本域是有其内在尺寸的。
 
 # TFOOT
+```
+<table>
+    <thead>
+        <tr>
+            <th>Header content 1</th>
+            <th>Header content 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Body content 1</td>
+            <td>Body content 2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Footer content 1</td>
+            <td>Footer content 2</td>
+        </tr>
+    </tfoot>
+</table>
+```
+用于包裹一个行的集合，来定义表格各列的总结、概括。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、该元素的专有属性（align、char、charoff、valign）均从规范中移除，不要再使用。属性bgcolor只有IE支持，也不应使用。
+
+# TH
+```
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+    </tr>
+</table>
+```
+用于定义一组表格单元格的头部（即表头）。该组的确切性质由属性scope和headers定义。
+* colspan————该属性的值为一个正整数，用于指定该单元格跨过多少列。默认值为"1"。值大于"1000"时，会自动被缩减为"1000"。
+* headers————该属性的值为一组以空格分隔的字符串，每一个对应于关联本 TH 元素的其他 TH 元素的id属性值。
+* rowspan————该属性的值为一个正整数，用于指定该单元格跨过多少行。默认值为"1"。值大于"65534"时，会自动被缩减为"65534"。
+* scope————该可枚举属性用于指定头部（定义在本 TH 元素中）所关联的单元格集合。可能的值包括：（注意，已经不建议再使用该属性了）
+    * row：表头关联到一行中所有的单元格。
+    * col：表头关联到一列中所有的单元格。
+    * rowgroup：表头关联到一个行组中所有的单元格。这些单元格可以根据 TABLE 元素中的dir属性值而被放置在头部的右边或左边。
+    * colgroup：表头关联到一个列组中所有的单元格。
+    * auto：自动。
+* 注意事项：
+* 1、colspan属性在以前是可以设为"0"的，则本 TH 单元格会跨到 COLGROUP 标签里面的最后一个元素。但主流浏览器均不支持"0"值了，因此一般看不到效果。
+* 2、rowspan属性在以前是可以设为"0"的，则本 TH 单元格会跨到表格部分（THEAD、THBODY、TFOOT 算是一个表格部分）的最后一个元素。但主流浏览器均不支持"0"值了，因此一般看不到效果。
+
+# THEAD
+```
+<table>
+    <thead>
+        <tr>
+            <th>Header content 1</th>
+            <th>Header content 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Body content 1</td>
+            <td>Body content 2</td>
+        </tr>
+    </tbody>
+</table>
+```
+用于包裹一个行的集合，来定义表格各列的头部（信息）。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、该元素的专有属性（align、char、charoff、valign）均从规范中移除，不要再使用。属性bgcolor只有IE支持，也不应使用。
+
+# TIME
+```
+<!--简单的使用-->
+<p>The concert starts at <time>20:00</time>.</p>
+<!--含有日期时间值-->
+<p>The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.</p>
+```
+用于表示：一个24小时时钟的时刻（或时间）、公历日历上的一个精确日期（带有可选的时间和时区信息）、一个有效的时间片段。
+* datetime————用于指定本元素的时间与日期。值必须为一个有效的可带有一个时间字符串的日期字符串。如果该值不能被正确解析，则本元素不会拥有一个相关的时间戳。
+* 注意事项：
+* 1、本元素是以一个机器可读格式来展示日期与时间的。例如，它可以帮助一个用户代理提供这样的功能：为一个用户的日程表添加一个事件。
+* 2、本元素不适用于不能被计算的专用日期。也不适用于用来表示比公历日历更早的日期（因为计算那些日期相当复杂）。
+* 3、日期时间值（机器可读的日期时间值），即本元素的datetime属性值，必须以合适的格式来表示。如果本元素没有设置datetime属性，则本元素必须用不能包含任何子孙元素，这时，元素的文本内容（the element's child text content）便是日期时间值。
+
+# TITLE
+```
+<title>网页的标题</title>
+```
+定义所在文档的标题。标题内容通常显示在浏览器的标题栏或网页的TAB栏。它仅能包含文本，所有子标签都会被忽略。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、TITLE 元素总是用在网页的 HEAD 块中。
+
+# TR
+```
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+</table>
+```
+定义表格的一行（单元格集合）。行中的单元格可以是 TD 元素和 TH 元素的混合。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、该元素的专有属性（align、char、charoff、valign）均从规范中移除，不要再使用。属性bgcolor只有IE支持，也不应使用。
+
+# TRACK
+```
+<video controls poster="/images/sample.gif">
+    <source src="sample.mp4" type="video/mp4">
+    <source src="sample.ogv" type="video/ogv">
+    <track kind="captions" src="sampleCaptions.vtt" srclang="en">
+    <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en">
+    <track kind="chapters" src="sampleChapters.vtt" srclang="en">
+    <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
+    <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
+    <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
+    <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
+    <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1">
+    <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2">
+    <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3">
+    <!-- Fallback -->
+    ...
+</video>
+```
+作为媒体元素（AUDIO 或 VIDEO）的子元素，用于指定时控文本轨道（或者称基于时间的数据），例如用来自动处理字幕（subtitles）。轨道的格式为WebVTT（文件后缀为".vtt"），即网络视频文本轨道（Web Video Text Tracks）。
+* default————该属性用于指定本轨道应该是可用的除非用户偏好指定了另外一个更合适的轨道。在每个媒体元素中，该属性仅应用在一个 TRACK 元素上。
+* kind————指出文本轨道要如何使用。如果省略该属性则默认值为"subtitles"。如果值是无效的，则会使用"metadata"（在早于52版本的Chrome会使用"subtitles"）。可能的关键词有，
+    * subtitles：
+        * (1)、字幕提供了观看者不能理解的内容的翻译。例如西方电影的中文字幕。
+        * (2)、字幕可能包含额外的内容，通常是额外的背景信息。例如《星球大战》中的某些场景的日期时间信息、位置信息等。
+    * captions：
+        * (1)、隐藏的带有解释意味的字幕（closed captions）提供了一份抄写本或为音频提供了一份翻译。
+        * (2)、它可能包含了重要的非言语交际的信息，例如音乐提示或声音效果。它也可能指出提示（cue）的源头（例如 音乐、文本、字符）。
+        * (3)、适合耳聋的用户或声音为静音状态时的使用者。
+    * descriptions：
+        * (1)、视频内容的文本描述。
+        * (2)、适合眼瞎的用户或视频为看不见的状态时的使用者。
+    * chapters：
+        * (1)、当用户导航到该媒体资源时所打算使用的章节标题。
+    * metadata：
+        * (1)、被脚本使用的轨道。对用户是不可见的。
+* label————一个用户可读的（浏览器在列可用的文本轨道时所用到的）文本轨道标题。
+* src————轨道（".vtt"文件）的地址。要求值必须为一个有效的URL。该属性为必填。
+* srclang————轨道文本数据的语言。值必须为一个有效的BCP 47语言标签。如果kind属性被设置为"subtitles"，则srclang属性必填。
+* 注意事项：
+* 1、TRACK 标签添加到媒体的数据类型是定义在kind属性中的，可选值有"subtitles"、"captions"、"descriptions"、"chapters"、"metadata"。
+* 2、本元素指出了当用户需要其他的数据时包含给浏览器曝露的时控文本的源文本。
+* 3、一个媒体元素不能包含多余一个的带有相同kind、srclang、label属性值的 TRACK 元素。
+
+# U
+```
+<!--指出拼读错误-->
+<p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
+```
+代表了一个内联文本的跨度，以指出其含有非文本注释的方式进行渲染。默认以一个简单的实体下划线来渲染，但可以使用CSS样式进行更改。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、在HTML5中，U 是"Unarticulated"而非"Underline"的缩写（旧版的指代underline的 U 元素已经被废除），不应误用。如果是为了让文本添加一根下划线，应当用CSS规则"text-decoration: underline;"来实现。
+* 2、U 元素的语义为：标记应用了某些非文本格式注释的文本。
+* 3、应用场合包括 为拼读错误添加注解、应用一个合适的名字记号来指示合适的中文名、其他注解形式。
+* 4、下面再回顾一下各种语义下应如何选择标签：
+    * EM：代表压力强调。
+    * B：为文本获取注意力。
+    * MARK：标记关键词或短语。
+    * STRONG：支持有强烈重要性的文本。
+    * CITE：标记书籍或其他发行物的标题。
+    * I：指代技术术语、字（音）译、想法、西方的船舶名称。
+    * RUBY：提供文本注释。
+    * U：提供非文本注释。
+
+# UL
+```
+<ul>
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+</ul>
+```
+表示一个无序列表，常常被渲染为一个子强调符号开头的列表。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、UL 元素用于组合各项没有数字顺序以及它们的顺序在列表中是无意义的的项目。通常，无序列表项带有一个强调符（有几种形式，包括一个点、一个圈或一个实心方块）。可以通常CSS的list-style-type属性来修改这些强调符的样式。
+* 2、在 OL 和 UL 元素中，嵌套列表的深度和更迭是没有限制的。
+* 3、OL 和 UL 都代表了项目的列表。不同之处在于，对于 OL 元素而言，顺序是有意义的。至于决定使用哪一个，可以这么考虑：尝试改变各项的顺序，如果整个列表的意思改变了，则应该使用 OL 标签，反之，使用 UL 是比较合适的。
+
+# VAR
+```
+<p>A simple equation: <var>x</var> = <var>y</var> + 2 </p>
+```
+代表一个数学表达式或一段程序上下文中的一个变量。通常以当前字体的斜体字版本显示，尽管该行为是依赖于浏览器的。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、VAR 元素通常用在 CODE、KBD、SAMP 等元素上下文中
+
+# VIDEO
+```
+<!-- 简单的视频案例 -->
+<video src="videofile.webm" autoplay poster="posterimage.jpg">
+    很抱歉，您的浏览器不支持内嵌视频，但不必担心，您可以<a href="videofile.webm">下载该视频</a>并用您喜欢的视频播放器打开它
+</video>
+<!-- 带有字幕的视频 -->
+<video src="foo.webm">
+    <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+    <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+</video>
+<!-- 支持多个播放格式的视频 -->
+<video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif" >
+  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
+  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg">
+  您的浏览器不支持 HTML5 视频标签。
+</video>
+```
+嵌入一个支持在文档中播放视频的媒体播放器。
+* autoplay————该布尔属性用于指定视频在加载数据过程中应否自动播放。该属性的最大用处在于，需要用户操作的情况下才动态创建媒体元素时，可以使用户避免了进一步的操作才能观看媒体内容。
+* buffered————通过该属性获取已缓冲的资源的时间段信息。该属性包含一个TimeRanges对象（对象包含length属性、start()方法、end()方法）。
+* controls————如果该属性出现在标签中，浏览器便会为读者提供控制条（通常包括音量、进度拖动条、暂停/重播）。
+* crossorigin————这是一个HTML5新增属性。表明是否必须使用CORS完成相关图像的抓取。启用CORS的图像在 CANVAS 元素中可以重复使用而不会被污染。允许的值有：
+    * 1、anonymous：执行一个跨域的请求（比如，请求头部带有 Origin: HTTP header）。但不发送证书（比如，没有 cookie，没有 X.509 证书，没有HTTP基本的授权认证）。如果服务器没有给源站证书（没有设置Access-Control-Allow-Origin: HTTP头），视频帧会被污染而且它的使用会被限制。
+    * 2、use-credentials：一个有证书的跨域请求（比如，请求头部带有 Origin: HTTP header）被发送 （比如，有 cookie, 有 certificate, 有HTTP基本的授权认证）。如果服务器没有给源站发送证书（通过Access-Control-Allow-Credentials: HTTP header），视频帧将会被污染，且它的使用会受限制。
+    * 3、不设置该属性：默认不使用CORS发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在 CANVAS 中的使用。
+    * 4、如果值无效，则值会被当成是"anonymous"。
+* height————指定 VIDEO 元素块的高度（只支持像素单位，只支持绝对值，不支持百分比）。
+* loop————该布尔属性用于指定当播放进度到达视频的结尾时，自动回到开头继续播放。
+* muted————该布尔属性用于指定视频中的音频的默认设置。如果出现了该属性，则在初始化时音频是静音的。默认为不静音。
+* played————一个TimeRanges对象，表示所有已播放的视频片段。
+* preload————可能的值有：
+    * "none"：指定声音不应当自动加载。
+    * "metadata"：指定只自动加载声音的元数据（例如声音长度信息）。
+    * "auto"：自动加载整个声音文件。
+    * ""：跟"auto"一样。
+    * 注1：如果设置了autoplay属性，preload属性则无效。
+    * 注2：规范并没有强迫浏览器遵循该属性的值。这仅仅是一个参考。
+* poster————一个URL，用于指定用户播放该视频前的封面。如果不指定该属性，则在视频的第一帧可用前，什么也不会显示在界面上。当第一帧下载完毕后，将作为封面帧。
+* src————被嵌入的视频的URL。这是一个可选属性。因为开发者可在 VIDEO 标签内使用 SOURCE 元素来指定嵌入的视频。
+* height————指定 VIDEO 元素块的宽度（只支持像素单位，只支持绝对值，不支持百分比）。
+* playsinline————该布尔属性用于指定视频以“内联的方式”播放，即元素播放的播放区域在一行之内。注意该属性的缺少并不意味着视频总会以全屏的方式播放。
+* 注意事项：
+* 1、也可用 VIDEO 元素播放音频内容，但 AUDIO 元素能提供更好的用户体验。
+* 2、对于用户而言，自动播放音频或带有音轨的视频是一个很不好的体验，应尽量避免。如果必须这么做，则应为用户提供一个打开/关闭选项。
+* 3、如果要禁止视频自动播放，设置autoplay="false"是没用的。只要 VIDEO 视频标签中出现autoplay属性，视频便会自动播放。应当直接移除autoplay属性来移除自动播放功能。
+* 4、各浏览器支持的视频格式在这 https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats 。因此，应提供一个视频的多种格式来实现兼容性。
+* 5、指定一个视频源时，可使用src属性或内嵌 SOURCE 元素，浏览器会根据需要选出最合适的一个。
+* 6、可以使用CSS的object-position属性来调整视频在元素框内的位置，可以使用CSS的object-fit属性来控制框内的视频的大小。
+
+# WBR
+```
+<!-- 显示的结果为网页右边 456,123 -->
+<div dir=rtl>123,<wbr>456</div>
+<!-- 显示的结果为网页右边 123,456 -->
+<div dir=rtl>123,456</div>
+<!-- 避免符合结尾处换行 -->
+<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+```
+表示一个单词换行机会。指文本中一个浏览器可以拿来换行的位置，虽然浏览器不一定在该位置实现换行。
+* 这个元素只有全局属性。
+* 注意事项：
+* 1、在UTF-8编码的网页中，WBR 元素的行为就像"U+200B"、"ZERO-WIDTH SPACE"（0长度空格）编码点一样。
+* 2、特别的是，该标签的行为很像一个bidi BN的Unicode编码点，意味着它在双向排序中不构成影响。（实测是有影响的，例子请看前面的HTML代码）
+* 3、《雅虎样式向导》（The Yahoo Style Guide）推荐在URL的标点符号前换行，以免在URL较长的情况下，用户在看到该URL的第一行时误以为到了URL的终点。
+* 4、出于相同原因，WBR 元素不会在换行的地方引入连字符。为了使连字符仅仅在行尾出现，使用连字符软实体(&shy;)来代替。
+* 5、该元素早在 IE5.5 时代就被实现了，只是HTML5正式将其引起官方标准。
