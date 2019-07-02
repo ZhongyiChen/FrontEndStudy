@@ -46,8 +46,8 @@
 ## ADDRESS
 ```html
 <address>
-    <p>Chris Mills, Manchester, The Grim North, UK</p>
-    If you see any bugs, please <a href="mailto:webmaster@somedomain.com">contact webmaster</a>
+  <p>Chris Mills, Manchester, The Grim North, UK</p>
+  If you see any bugs, please <a href="mailto:webmaster@somedomain.com">contact webmaster</a>
 </address>
 ```
 用于描述文章编写者或网站拥有者(组织)的联系信息。内容可包括物理地址，URL，email地址，电话号码，社交媒体链接，地理坐标等待。
@@ -58,9 +58,9 @@
 ```html
 <img src="mm.jpg" alt="美女" usemap="#MM" width="256" height="191">
 <map id="MM" name="MM">
-    <area shape="rect" coords="20,20,80,80" href="#rect" alt="矩形">
-    <area shape="circle" coords="200,50,50" href="#circle" alt="圆形">
-    <area shape="poly" coords="150,100,200,120,180,130,190,180,150,150,100,160,140,120,100,110" href="#poly" alt="多边形">
+  <area shape="rect" coords="20,20,80,80" href="#rect" alt="矩形">
+  <area shape="circle" coords="200,50,50" href="#circle" alt="圆形">
+  <area shape="poly" coords="150,100,200,120,180,130,190,180,150,150,100,160,140,120,100,110" href="#poly" alt="多边形">
 </map>
 ```
 结合 MAP 使用，用于为图片生成热点区域。
@@ -79,16 +79,16 @@
 ## ARTICLE
 ```html
 <article class="film_review">
-    <header>
-        <h2>头部信息，通常是标题</h2>
-    </header>
-    <section class="main_review">
-        <p>Dinos were great!</p>
-        这里可以防止其他的 ARTICLE 元素<br/>
-    </section>
-    <!--这里可以放置更多的 SECTION 元素-->
-    <footer>
-        <p>Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.</p>
+  <header>
+    <h2>头部信息，通常是标题</h2>
+  </header>
+  <section class="main_review">
+    <p>Dinos were great!</p>
+    这里可以防止其他的 ARTICLE 元素<br/>
+  </section>
+  <!--这里可以放置更多的 SECTION 元素-->
+  <footer>
+    <p>Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.</p>
   </footer>
 </article>
 ```
@@ -102,11 +102,11 @@
 ## ASIDE
 ```html
 <article>
-    <p>The Disney movie <cite>The Little Mermaid</cite> was first released to theatres in 1989.</p>
-    <aside>
-        <p>The movie earned $87 million during its initial release.</p>
-    </aside>
-    <p>More info about the movie...</p>
+  <p>The Disney movie <cite>The Little Mermaid</cite> was first released to theatres in 1989.</p>
+  <aside>
+    <p>The movie earned $87 million during its initial release.</p>
+  </aside>
+  <p>More info about the movie...</p>
 </article>
 ```
 用于表示只与文档中主要内容间接相关的部分。该元素通常显示为侧边栏或导航栏。
@@ -116,11 +116,11 @@
 ## AUDIO
 ```html
 <audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
-    Your browser does not support the <code>audio</code> element.
+  Your browser does not support the <code>audio</code> element.
 </audio>
 <audio controls="controls">
-    Your browser does not support the <code>audio</code> element.
-    <source src="foo.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+  <source src="foo.wav" type="audio/wav">
 </audio>
 ```
 用于向文档嵌入一个或多个声音内容。
@@ -132,11 +132,11 @@
 * muted————"true"指定初始化时为静音，"false"指定初始化时为非静音。默认为"false"。
 * played————一个TimeRanges对象，表示所有已播放的音频片段。
 * preload————可能的值有：
-    * "none"：指定声音不应当自动加载。
-    * "metadata"：指定只自动加载声音的元数据（例如声音长度信息）。
-    * "auto"：自动加载整个声音文件。
-    * ""：跟"auto"一样。
-    * 注1：如果设置了autoplay属性，preload属性则无效。
+  * "none"：指定声音不应当自动加载。
+  * "metadata"：指定只自动加载声音的元数据（例如声音长度信息）。
+  * "auto"：自动加载整个声音文件。
+  * ""：跟"auto"一样。
+  * 注1：如果设置了autoplay属性，preload属性则无效。
 * src————指定音频的URL（可选项）。你也可以通过在 AUDIO 标签块中嵌入一个 SOURCE 标签来指定声音源，从而替代src属性。
 * volume————指定播放音量。范围是0.0(静音) - 1.0(最大音量)。
 * 注意事项：
@@ -175,7 +175,7 @@
 ## BLOCKQUOTE
 ```html
 <blockquote cite="http://developer.mozilla.org">
-    <p>This is a quotation taken from the Mozilla Developer Center.</p>
+  <p>This is a quotation taken from the Mozilla Developer Center.</p>
 </blockquote>
 ```
 用于表示其中的文字是引用内容。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上。
@@ -186,12 +186,12 @@
 ## BODY
 ```html
 <html>
-    <head>
-        <title>Document title</title>
-    </head>
-    <body onunload="onUnloadCallback">
-        <p>This is a paragraph</p>
-    </body>
+  <head>
+    <title>Document title</title>
+  </head>
+  <body onunload="onUnloadCallback">
+    <p>This is a paragraph</p>
+  </body>
 </html>
 ```
 用于表示一个HTML文档的内容。
@@ -233,10 +233,10 @@
 * form————指定本按钮所属的 FORM 标签（值就是 FORM 的id）。若不设置该属性，则按钮归属于父级的 FORM 元素。因此设置了该属性可以让 BUTTON 元素出现在页面的任何位置。(HTML5)
 * formaction————表示程序处理 BUTTON 提交信息的URI。此属性将重写 BUTTON 所在表单的action属性。(HTML5)
 * formenctype————若按钮是提交类型，则指定所属表单提交时所使用的文本格式。常用值有：
-    * "application/x-www-form-urlencoded"(默认值)。
-    * "multipart/form-data"(提交的内容含文件类型时使用)。
-    * "text/plain"。
-    * 注1：此属性将重写 BUTTON 表单拥有者的enctype属性。(HTML5)
+  * "application/x-www-form-urlencoded"(默认值)。
+  * "multipart/form-data"(提交的内容含文件类型时使用)。
+  * "text/plain"。
+  * 注1：此属性将重写 BUTTON 表单拥有者的enctype属性。(HTML5)
 * formmethod————若按钮是提交类型，则指定所属表单提交时所使用的HTTP方法。常用值有："post"、"get"。此属性将重写 BUTTON 表单拥有者的method属性。(HTML5)
 * formnovalidate—————若按钮是提交类型，则指定所属表单提交时不进行验证。此属性将重写 BUTTON 表单拥有者的novalidate属性。(HTML5)
 * formtarget————若按钮是提交类型，则指定所属表单提交时在何处显示返回结果。常用值有："_self"、"_blank"、"_parent"、"_top"。此属性将重写 BUTTON 表单拥有者的target属性。(HTML5)
@@ -252,7 +252,7 @@
 ## CANVAS
 ```html
 <canvas id="canvas" width="300" height="300">
-    <p>你的浏览器不支持画布哦</p>
+  <p>你的浏览器不支持画布哦</p>
 </canvas>
 ```
 用于显示脚本（包括canvas脚本和webgl脚本）绘制的图形与动画。
@@ -267,15 +267,15 @@
 ## CAPTION
 ```html
 <table>
-    <caption>这是表格的标题</caption>
-    <tr>
-        <th>表头 1</th>
-        <th>表头 2</th>
-    </tr>
-    <tr>
-        <td>表项 1</td>
-        <td>表项 2</td>
-    </tr>
+  <caption>这是表格的标题</caption>
+  <tr>
+    <th>表头 1</th>
+    <th>表头 2</th>
+  </tr>
+  <tr>
+    <td>表项 1</td>
+    <td>表项 2</td>
+  </tr>
 </table>
 ```
 用于 TABLE 元素上的标题（说明文字）。
@@ -296,7 +296,11 @@
 
 ## CODE
 ```html
-<p>The function <code>selectAll()</code> highlights all the text in the input field so the user can, for example, copy or delete the text.</p>
+<p>
+  The function 
+  <code>selectAll()</code> 
+  highlights all the text in the input field so the user can, for example, copy or delete the text.
+</p>
 ```
 呈现一段计算机代码。默认情况下，它以浏览器的默认等宽字体显示。
 * 这个元素只有全局属性。
@@ -305,20 +309,20 @@
 ## COL
 ```html
 <table>
-    <colgroup>
-        <col style="background-color: #0f0">
-        <col span="2">
-    </colgroup>
-    <tr>
-        <th>Lime</th><!--该项会显示绿色背景-->
-        <th>Lemon</th>
-        <th>Orange</th>
-    </tr>
-    <tr>
-        <td>Green</td><!--该项会显示绿色背景-->
-        <td>Yellow</td>
-        <td>Orange</td>
-    </tr>
+  <colgroup>
+    <col style="background-color: #0f0">
+    <col span="2">
+  </colgroup>
+  <tr>
+    <th>Lime</th><!--该项会显示绿色背景-->
+    <th>Lemon</th>
+    <th>Orange</th>
+  </tr>
+  <tr>
+    <td>Green</td><!--该项会显示绿色背景-->
+    <td>Yellow</td>
+    <td>Orange</td>
+  </tr>
 </table>
 ```
 定义一个表格中的一列，并用于定义所有公共单元格上的公共语义。通常位于 COLGROUP 标签中。
@@ -332,20 +336,20 @@
 ## COLGROUP
 ```html
 <table>
-    <colgroup>
-        <col style="background-color: #0f0">
-        <col span="2">
-    </colgroup>
-    <tr>
-        <th>Lime</th><!--该项会显示绿色背景-->
-        <th>Lemon</th>
-        <th>Orange</th>
-    </tr>
-    <tr>
-        <td>Green</td><!--该项会显示绿色背景-->
-        <td>Yellow</td>
-        <td>Orange</td>
-    </tr>
+  <colgroup>
+    <col style="background-color: #0f0">
+    <col span="2">
+  </colgroup>
+  <tr>
+    <th>Lime</th><!--该项会显示绿色背景-->
+    <th>Lemon</th>
+    <th>Orange</th>
+  </tr>
+  <tr>
+    <td>Green</td><!--该项会显示绿色背景-->
+    <td>Yellow</td>
+    <td>Orange</td>
+  </tr>
 </table>
 ```
 用于在一个表格里面定义一组列。
@@ -359,9 +363,9 @@
 ```html
 <p>新产品</p>
 <ul>
-    <li><data value="3967381398">迷你番茄酱</data></li><!--value是该产品的39码-->
-    <li><data value="3967381399">巨无霸番茄酱</data></li><!--value是该产品的39码-->
-    <li><data value="3967381400">超级巨无霸番茄酱</data></li><!--value是该产品的39码-->
+  <li><data value="3967381398">迷你番茄酱</data></li><!--value是该产品的39码-->
+  <li><data value="3967381399">巨无霸番茄酱</data></li><!--value是该产品的39码-->
+  <li><data value="3967381400">超级巨无霸番茄酱</data></li><!--value是该产品的39码-->
 </ul>
 ```
 用于将给定内容关联到一个机器可读的翻译数据。（属于HTML5新增标签）
@@ -371,16 +375,16 @@
 ## DATALIST
 ```html
 <label>
-    Choose a browser from this list: 
-    <input list="browsers" name="myBrowser" />
+  Choose a browser from this list: 
+  <input list="browsers" name="myBrowser" />
 </label>
 <datalist id="browsers">
-    <option value="Chrome">
-    <option value="Firefox">
-    <option value="Internet Explorer">
-    <option value="Opera">
-    <option value="Safari">
-    <option value="Microsoft Edge">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
 </datalist>
 ```
 用于包含一个 OPTION 元素组成的集合，以提供其他表单可选值。
@@ -390,9 +394,9 @@
 ## DD
 ```html
 <dl>
-    <dt>Firefox</dt>
-    <dd>A free, open source, cross-platform, graphical web browser</dd>
-    <!-- other terms and definitions -->
+  <dt>Firefox</dt>
+  <dd>A free, open source, cross-platform, graphical web browser</dd>
+  <!-- other terms and definitions -->
 </dl>
 ```
 用于指明一个描述列表 DL 元素中一个术语的描述。
@@ -412,15 +416,15 @@
 ## DETAILS
 ```html
 <details>
-    <p>这里没有指定摘要或标签信息，因此标签会使用浏览器提供的默认信息：英文是"Details"，中文则是"详细信息"。</p>
+  <p>这里没有指定摘要或标签信息，因此标签会使用浏览器提供的默认信息：英文是"Details"，中文则是"详细信息"。</p>
 </details>
 <details>
-    <summary>这是摘要</summary>
-    <p>这里提供了摘要信息，因此详情闭合时，本小部件显示的是 SUMMARY 所提供的文本："这是摘要"。</p>
+  <summary>这是摘要</summary>
+  <p>这里提供了摘要信息，因此详情闭合时，本小部件显示的是 SUMMARY 所提供的文本："这是摘要"。</p>
 </details>
 <details open>
-    <summary>这是摘要</summary>
-    <p>本小部件指定了open属性，因此会自动展开，并显示这段文本。</p>
+  <summary>这是摘要</summary>
+  <p>本小部件指定了open属性，因此会自动展开，并显示这段文本。</p>
 </details>
 ```
 用于创建一个公开更多内容的小部件（当该小部件的状态变成"open"时，更多的信息才可见）。
@@ -431,10 +435,31 @@
 
 ## DFN
 ```html
-<p><strong>HTML定义元素</strong>(<strong><dfn id"definition-dfn">&lt;dfn&gt;</dfn></strong>)用于指定一个定义语句或段落的被定义术语。</p>
-<p>你可以通过点击<code><a href="#definition-dfn">&lt;dfn&gt;</a></code>元素跳到相应词条的解析。</p>
-<p><dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn>是指美国宇航局发射的在轨超过了20年的太空探测科学装备。</p><!--这是定义也语句-->
-<p><abbr title="Hubble Space Telescope">HST</abbr>比之前发射的其他深空探测装备先进很多。</p><!--这不是定义也语句-->
+<p>
+  <strong>HTML定义元素</strong>
+  (
+  <strong>
+    <dfn id"definition-dfn">&lt;dfn&gt;</dfn>
+  </strong>
+  )用于指定一个定义语句或段落的被定义术语。
+</p>
+<p>
+  你可以通过点击
+  <code>
+    <a href="#definition-dfn">&lt;dfn&gt;</a>
+  </code>
+  元素跳到相应词条的解析。
+</p>
+<p>
+  <dfn>
+    <abbr title="Hubble Space Telescope">HST</abbr>
+  </dfn>
+  是指美国宇航局发射的在轨超过了20年的太空探测科学装备。
+</p><!--这是定义也语句-->
+<p>
+  <abbr title="Hubble Space Telescope">HST</abbr>
+  比之前发射的其他深空探测装备先进很多。
+</p><!--这不是定义也语句-->
 ```
 用于指定一个定义语句或段落的被定义术语。 DFN 元素的最近祖先标签包括了 P 标签、DT/DD 标签对、SECTION 标签，这些标签用于包裹对 DFN 含有的被定义术语的解析。
 * 从功能上说，该标签没有太大的作用。（主要目的就是为了使文档更符合语义化）
@@ -447,40 +472,40 @@
 ```html
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog open id="favDialog">
-    <form method="dialog">
-        <section>
-            <p>
-                <label for="favAnimal">Favorite animal:</label>
-                <select id="favAnimal">
-                    <option></option>
-                    <option>Brine shrimp</option>
-                    <option>Red panda</option>
-                    <option>Spider monkey</option>
-                </select>
-            </p>
-        </section>
-        <menu>
-            <button id="cancel" type="reset">Cancel</button>
-            <button type="submit">Confirm</button>
-        </menu>
-    </form>
+  <form method="dialog">
+    <section>
+      <p>
+        <label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
 </dialog>
 <menu>
-    <button id="updateDetails">Update details</button>
+  <button id="updateDetails">Update details</button>
 </menu>
 <script>
 (function() {
-    var updateButton = document.getElementById('updateDetails');
-    var cancelButton = document.getElementById('cancel');
-    var favDialog = document.getElementById('favDialog');
-    // Update button opens a modal dialog
-    updateButton.addEventListener('click', function() {
-        favDialog.showModal();
-    });
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener('click', function() {
-        favDialog.close();
-    });
+  var updateButton = document.getElementById('updateDetails');
+  var cancelButton = document.getElementById('cancel');
+  var favDialog = document.getElementById('favDialog');
+  // Update button opens a modal dialog
+  updateButton.addEventListener('click', function() {
+    favDialog.showModal();
+  });
+  // Form cancel button closes the dialog box
+  cancelButton.addEventListener('click', function() {
+    favDialog.close();
+  });
 })();
 </script>
 ```
@@ -495,8 +520,8 @@
 ## DIV
 ```html
 <div id="textBox">
-    <p>Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!</p>
-    <p>Some other text here.</p>
+  <p>Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!</p>
+  <p>Some other text here.</p>
 </div>
 ```
 用于流内容的一般性容器。
@@ -508,33 +533,33 @@
 ## DL
 ```html
 <dl>
-    <dt>Name</dt>    
-    <dd>Godzilla</dd>
-    <dt>Born</dt>
-    <dd>1952</dd>
-    <dt>Birthplace</dt>
-    <dd>Japan</dd>
-    <dt>Color</dt>
-    <dd>Green</dd>
+  <dt>Name</dt>  
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
 </dl>
 <dl>
-    <!--这样使用便于样式化每一组数据-->
-    <div>
-        <dt>Name</dt>
-        <dd>Godzilla</dd>
-    </div>
-    <div>
-        <dt>Born</dt>
-        <dd>1952</dd>
-    </div>
-    <div>
-        <dt>Birthplace</dt>
-        <dd>Japan</dd>
-    </div>
-    <div>
-        <dt>Color</dt>
-        <dd>Green</dd>
-    </div>
+  <!--这样使用便于样式化每一组数据-->
+  <div>
+    <dt>Name</dt>
+    <dd>Godzilla</dd>
+  </div>
+  <div>
+    <dt>Born</dt>
+    <dd>1952</dd>
+  </div>
+  <div>
+    <dt>Birthplace</dt>
+    <dd>Japan</dd>
+  </div>
+  <div>
+    <dt>Color</dt>
+    <dd>Green</dd>
+  </div>
 </dl>
 ```
 用于展示一个个描述内容所组成的列表。
@@ -545,9 +570,9 @@
 ## DT
 ```html
 <dl>
-    <dt>Firefox</dt>
-    <dd>A free, open source, cross-platform, graphical web browser</dd>
-    <!-- other terms and definitions -->
+  <dt>Firefox</dt>
+  <dd>A free, open source, cross-platform, graphical web browser</dd>
+  <!-- other terms and definitions -->
 </dl>
 ```
 用于指定一个描述或定义列表的术语。
@@ -559,7 +584,7 @@
 ## EM
 ```html
 <p>
-    In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.
+  In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.
 </p>
 ```
 用于标记需要强调(突出)的文本。（EM 元素可以相互嵌套，内部的 EM 标签包含的文本的强调等级比外部的更高）
@@ -589,11 +614,11 @@
 ## FIELDSET
 ```html
 <form action="test.php" method="post">
-    <fieldset>
-        <legend>标题</legend>
-        <input type="radio" id="radio">
-        <label for="radio">点我</label>
-    </fieldset>
+  <fieldset>
+    <legend>标题</legend>
+    <input type="radio" id="radio">
+    <label for="radio">点我</label>
+  </fieldset>
 </form>
 ```
 用于在一个网页表单里面将几个控件(controls)以及标签(labels)划分为一组。
@@ -608,8 +633,8 @@
 ## FIGCAPTION
 ```html
 <figure>
-    <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
-    <p>"If debugging is the process of removing software bugs,<br />then programming must be the process of putting them in"</p>
+  <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
+  <p>"If debugging is the process of removing software bugs,<br />then programming must be the process of putting them in"</p>
 </figure>
 ```
 用于标记一句与一副图像或一则说明(插画)（图像、插画、说明通常跟随在 FIGCAPTION 标签后面）相关的说明/标题，FIGURE 标签就是 FIGCAPTION 标签的直接父元素。
@@ -620,13 +645,13 @@
 ```html
 <!-- Just a figure -->
 <figure>
-    <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
+  <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
 </figure>
 <p>这是文件流的一部分。</p>
 <!-- Figure with figcaption -->
 <figure>
-    <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
-    <figcaption>MDN Logo</figcaption>
+  <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
+  <figcaption>MDN Logo</figcaption>
 </figure>
 <p>这也是文件流的一部分。</p>
 ```
@@ -639,7 +664,7 @@
 ## FOOTER
 ```html
 <footer>
-    Some copyright info or perhaps some author info for an &lt;article&gt;?
+  Some copyright info or perhaps some author info for an &lt;article&gt;?
 </footer>
 ```
 用于表示离本元素最近的分片内容或分片内容的根的页脚。本标签通常包含所在分片的作者、版权数据或文档的相关链接。
@@ -652,24 +677,24 @@
 ```html
 <!-- Simple form which will send a POST request -->
 <form action="" method="post">
-    <label for="POST-name">名字：</label>
-    <input id="POST-name" type="text" name="name">
-    <input type="submit" value="保存">
+  <label for="POST-name">名字：</label>
+  <input id="POST-name" type="text" name="name">
+  <input type="submit" value="保存">
 </form>
 ```
 用于表示一个包含有可交互控件并能提交数据到一个网络服务器的文档部分。
 * 可以对 FORM 元素应用:valid和:invalid这几个css伪类。
 * accept-charset————指定服务器接受的一个字符编码列表(用空格或逗号隔开)。默认值为"UNKNOWN"，即参考所在文档的字符编码。HTML5以前，字符编码项可以用空格或逗号隔开，HTML5以后，只允许用空格隔开。
 * autocomplete————这是一个HTML5新增属性。指定输入框元素是否默认被浏览器自动完成值的填写（当然，这个设定会被输入框或文本域本身的autocomplete属性值所覆盖）。可能的值有：
-    * "off"：指定用户在每次使用输入框时，都必须明确地输入值，又或者文档本身提供自己的自动完成方法（浏览器是不会自动完成输入的）。
-    * "on"：浏览器会根据用户以前在改输入框中输入的内容，自动将其输入填充到输入框中。。
+  * "off"：指定用户在每次使用输入框时，都必须明确地输入值，又或者文档本身提供自己的自动完成方法（浏览器是不会自动完成输入的）。
+  * "on"：浏览器会根据用户以前在改输入框中输入的内容，自动将其输入填充到输入框中。。
 * enctype————当method属性被设置成"post"时，enctype就是用于指定要提交到服务器的表单的内容的MIME类型。常用值有：
-    * "application/x-www-form-urlencoded"(默认值)。
-    * "multipart/form-data"(提交的内容含文件类型时使用)。
-    * "text/plain"。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
+  * "application/x-www-form-urlencoded"(默认值)。
+  * "multipart/form-data"(提交的内容含文件类型时使用)。
+  * "text/plain"。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
 * method————浏览器提交表单的HTTP方法。常用值有：
-    * "post"(对应HTTP的"POST"方法。表单数据将被包含在表单体中，然后发送给服务器)、
-    * "get"(对应HTTP的"GET"方法。表单数据将附在要请求URI的查询位置中，即"?"后面，然后发送给服务器。这种方式要求表单没有副作用，并且数据需要进行URI编码)。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
+  * "post"(对应HTTP的"POST"方法。表单数据将被包含在表单体中，然后发送给服务器)、
+  * "get"(对应HTTP的"GET"方法。表单数据将附在要请求URI的查询位置中，即"?"后面，然后发送给服务器。这种方式要求表单没有副作用，并且数据需要进行URI编码)。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formenctype属性覆盖。
 * name————表单的名称(name)。
 * novalidate————指定表单在提交时是否不要做验证。不指定该属性的情况下，表单是会被验证的。默认的设置可以被 BUTTON 和 INPUT 元素设置的formnovalidate属性覆盖。(html5)
 * target————值为一个名称或关键词，用来指定在何处显示提交表单后收到的返回信息。常用值有："_self"、"_blank"、"_parent"、"_top", 标签 IFRAME 的name属性值。该属性的值可能会被 BUTTON 和 INPUT 元素设置的formtarget属性覆盖。
@@ -704,9 +729,9 @@
 ## HEAD
 ```html
 <html>
-    <head>
-        <title>Document title</title>
-    </head>
+  <head>
+    <title>Document title</title>
+  </head>
 </html>
 ```
 用于为文档提供通用信息（例如元数据），包括了文档的标题、样式与脚步的链接等。
@@ -718,17 +743,21 @@
 ```html
 <!--属于页面的 HEADER -->
 <header>
-    <h1>Main Page Title</h1>
-    <img src="mdn-logo-sm.png" alt="MDN logo">
+  <h1>Main Page Title</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo">
 </header>
 <!--属于章节的 HEADER -->
 <article>
-    <header>
-        <h2>The Planet Earth</h2>
-        <p>Posted on Wednesday, 4 October 2017 by Jane Smith</p>
-    </header>
-    <p>We live on a planet that's blue and green, with so many things still unseen.</p>
-    <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+  <header>
+    <h2>The Planet Earth</h2>
+    <p>Posted on Wednesday, 4 October 2017 by Jane Smith</p>
+  </header>
+  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
+  <p>
+    <a href="https://janesmith.com/the-planet-earth/">
+      Continue reading....
+    </a>
+  </p>
 </article>
 ```
 用于展示介绍性的内容，通常是一组介绍性或导航性的帮助。
@@ -751,8 +780,8 @@
 ```html
 <!DOCTYPE html>
 <html>
-    <head>...</head>
-    <body>...</body>
+  <head>...</head>
+  <body>...</body>
 </html>
 ```
 用于表示一个HTML文档的根(最高层级元素)。所有其他元素都必须是 HTML 元素的后代。
@@ -767,17 +796,17 @@
 * 注意事项：
 * 1、在早期的HTML规范中，I 标签仅仅是一个用于展示斜体字的元素（这很像 B 标签只用来展示粗体字一样）。现在不是了，它被赋予了更多的语义化作用。
 * 2、在下面这些标签的语义都不合适的时候，再考虑使用 I 标签。
-    * 使用 EM 标签来表示强调或者压力；
-    * 使用 STRONG 标签来表示重要性；
-    * 使用 MARK 标签来表示相关性；
-    * 使用 CITE 标签来表示作品(例如一本书、一则戏剧或一首歌)的名称；
-    * 使用 DFN 标签来表示一个术语的定义实例。
+  * 使用 EM 标签来表示强调或者压力；
+  * 使用 STRONG 标签来表示重要性；
+  * 使用 MARK 标签来表示相关性；
+  * 使用 CITE 标签来表示作品(例如一本书、一则戏剧或一首歌)的名称；
+  * 使用 DFN 标签来表示一个术语的定义实例。
 * 3、用class属性来指出该元素为何被使用是一个好的做法。毕竟 I 标签现在不一定需要显示成斜体，程序员可以修改它的样式。
 
 ## IFRAME
 ```html
 <iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300">
-    <p>Your browser does not support iframes.</p>
+  <p>Your browser does not support iframes.</p>
 </iframe>
 ```
 用于展示一个嵌入(在本文档中)的一个浏览上下文。（事实上，就是本页面中嵌套另外一个HTML页面）
@@ -787,20 +816,20 @@
 * height————指定 IFRAME 元素的高度（只支持像素单位）。
 * name————被嵌入的浏览上下文的名字(name)。其值可用于 A 标签、FORM 标签、BASE 标签的target属性值，也可用于一个 INPUT 标签或 BUTTON 标签的formtarget属性的值。其值甚至可用于window.onpen()方法的windowName参数。
 * sandbox————这是一个HTML5新增属性。当设置了该属性时，可以放开一些对iframe的限制。默认值为空字符串，即 IFRAME 会应用所有限制。值可以包含多个（用空格隔开）：
-    * 1、allow-forms：允许嵌入的浏览上下文提交表单。
-    * 2、allow-modals：允许嵌入的浏览上下文打开模态框（包括 alert，confirm，prompt ）。
-    * 3、allow-orientation-lock：允许嵌入的浏览上下文拥有禁用锁住屏幕方向的能力（比如智能手机的水平朝向和垂直朝向）。
-    * 4、allow-pointer-lock：允许嵌入的浏览上下文使用鼠标锁的相关接口（Pointer Lock API）。
-    * 5、allow-popups：允许弹出窗口（例如 window.opne，target="_blank"，showModalDialog 等）。如果没设置该值，则嵌入的浏览上下文在使用这些方法时，会静默失败。
-    * 6、allow-popups-to-escape-sandbox：允许一个沙盒内的文档打开新的窗口，并且不强制要求新窗口设置沙箱标记。（例如，这将允许一个第三方的沙箱环境运行广告开启一个登陆页面，新页面不强制受到沙箱相关限制）
-    * 7、allow-presentation：允许嵌入者控制 IFRAME 是否启用一个展示会话。
-    * 8、allow-same-origin：允许(IFRAME元素的)内容被看待为同源的（即跟父级文档的正常来源一样）。
-    * 9、allow-scripts：允许浏览上下文运行脚本（但不能创建弹出窗口）。
-    * 10、allow-top-navigation：允许嵌入的浏览上下文导航（加载）内容到顶级浏览上下文。
-    * 11、allow-top-navigation-by-user-activation：允许当某个用户动作产生后，嵌入的浏览上下文导航（加载）内容到顶级浏览上下文。
-    * 注1、当嵌入的文档与主页面是同源时，强烈不建议同时使用allow-scripts与allow-same-origin。（因为那样会允许嵌入的文档通过程序的方式移除sandbox属性，容易导致意外）
-    * 注2、如果攻击者可以将潜在的恶意内容往用户的已沙箱化的 IFRAME 中显示，那么沙箱操作的安全性将不再可靠。推荐把这种内容放置到独立的专用域中，减小可能的损失。
-    * 注3、sandbox属性在IE9及更早的版本中不被支持。
+  * 1、allow-forms：允许嵌入的浏览上下文提交表单。
+  * 2、allow-modals：允许嵌入的浏览上下文打开模态框（包括 alert，confirm，prompt ）。
+  * 3、allow-orientation-lock：允许嵌入的浏览上下文拥有禁用锁住屏幕方向的能力（比如智能手机的水平朝向和垂直朝向）。
+  * 4、allow-pointer-lock：允许嵌入的浏览上下文使用鼠标锁的相关接口（Pointer Lock API）。
+  * 5、allow-popups：允许弹出窗口（例如 window.opne，target="_blank"，showModalDialog 等）。如果没设置该值，则嵌入的浏览上下文在使用这些方法时，会静默失败。
+  * 6、allow-popups-to-escape-sandbox：允许一个沙盒内的文档打开新的窗口，并且不强制要求新窗口设置沙箱标记。（例如，这将允许一个第三方的沙箱环境运行广告开启一个登陆页面，新页面不强制受到沙箱相关限制）
+  * 7、allow-presentation：允许嵌入者控制 IFRAME 是否启用一个展示会话。
+  * 8、allow-same-origin：允许(IFRAME元素的)内容被看待为同源的（即跟父级文档的正常来源一样）。
+  * 9、allow-scripts：允许浏览上下文运行脚本（但不能创建弹出窗口）。
+  * 10、allow-top-navigation：允许嵌入的浏览上下文导航（加载）内容到顶级浏览上下文。
+  * 11、allow-top-navigation-by-user-activation：允许当某个用户动作产生后，嵌入的浏览上下文导航（加载）内容到顶级浏览上下文。
+  * 注1、当嵌入的文档与主页面是同源时，强烈不建议同时使用allow-scripts与allow-same-origin。（因为那样会允许嵌入的文档通过程序的方式移除sandbox属性，容易导致意外）
+  * 注2、如果攻击者可以将潜在的恶意内容往用户的已沙箱化的 IFRAME 中显示，那么沙箱操作的安全性将不再可靠。推荐把这种内容放置到独立的专用域中，减小可能的损失。
+  * 注3、sandbox属性在IE9及更早的版本中不被支持。
 * src————被嵌入的页面的URL。对于空页面，应当使用"about:blank"以符合同源策略规范。
 * srcdoc————该属性值可以是HTML代码，这些代码会被渲染到 IFRAME 中，如果同时指定了src属性，srcdoc会覆盖src所指向的页面（但如果浏览器不支持srcdoc属性，则src属性将生效）。该属性最好与sandbox属性同在。
 * width————指定 IFRAME 元素的宽度（只支持像素单位）。
@@ -819,27 +848,27 @@
 用于在文档中嵌入一张图片。
 * alt————用于定义描述图片的替代文本。如果图片地址错误、图片格式不被支持、图片没有完全下载好，这些文本就会显示出来。如果图片本身不是关键内容（可省略的那种），则应当设置值为空字符串""，那样，在非可视化浏览器中在渲染的时候可能会忽略它。
 * crossorigin—————这是一个HTML5新增属性。表明是否必须使用CORS完成相关图像的抓取。启用CORS的图像在 CANVAS 元素中可以重复使用而不会被污染。允许的值有：
-    * 1、anonymous：执行一个跨域的请求（比如，请求头部带有 Origin: HTTP header）。但不发送证书（比如，没有 cookie，没有 X.509 证书，没有HTTP基本的授权认证）。如果服务器没有给源站证书（没有设置Access-Control-Allow-Origin: HTTP头），图像会被污染而且它的使用会被限制。
-    * 2、use-credentials：一个有证书的跨域请求（比如，请求头部带有 Origin: HTTP header）被发送 （比如，有 cookie, 有 certificate, 有HTTP基本的授权认证）。如果服务器没有给源站发送证书（通过Access-Control-Allow-Credentials: HTTP header），图像将会被污染，且它的使用会受限制。
-    * 3、不设置该属性：默认不使用CORS发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在 CANVAS 中的使用。
+  * 1、anonymous：执行一个跨域的请求（比如，请求头部带有 Origin: HTTP header）。但不发送证书（比如，没有 cookie，没有 X.509 证书，没有HTTP基本的授权认证）。如果服务器没有给源站证书（没有设置Access-Control-Allow-Origin: HTTP头），图像会被污染而且它的使用会被限制。
+  * 2、use-credentials：一个有证书的跨域请求（比如，请求头部带有 Origin: HTTP header）被发送 （比如，有 cookie, 有 certificate, 有HTTP基本的授权认证）。如果服务器没有给源站发送证书（通过Access-Control-Allow-Credentials: HTTP header），图像将会被污染，且它的使用会受限制。
+  * 3、不设置该属性：默认不使用CORS发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在 CANVAS 中的使用。
 * decoding————为浏览器提供一个解码的提示。可能只包括：
-    * 1、sync：同步解码，在此期间，不渲染其他内容。
-    * 2、async：异步解码，以减少其他内容的显示延迟。
-    * 3、auto：默认值。由浏览器决定解码方式。
+  * 1、sync：同步解码，在此期间，不渲染其他内容。
+  * 2、async：异步解码，以减少其他内容的显示延迟。
+  * 3、auto：默认值。由浏览器决定解码方式。
 * height————指定 IMG 元素的高度（只支持像素单位）。
 * ismap————指定该图片是否是服务器端map的一部分。如果是，那么每次点击的精确坐标将会被发送到服务器。（这个属性只会在当 IMG 元素属于一个带有有效的href属性的 A 标签的子元素时，才有效）
 * longdesc————一个指向该图像的更详细描述的链接，是对 alt 文本的补充。（可能值包括一个URL或者一个元素ID）
 * sizes————这是一个HTML5新增属性。只与srcset属性共同起作用。其值是一个表示图片资源大小的以逗号分隔的一个或多个字符串。每一个资源大小包括：
-    * 1、媒体条件。最后一项一定是被忽略的。
-    * 2、一个资源的尺寸值。
-    * 注1、资源尺寸大小指定了图片将要展示的大小。当sizes属性的资源字符串用宽度描述符('w')来修饰时，用户代理（浏览器）会根据srcset属性提供的值从sizes值中选择一个合适的资源大小(来使用)。被选中的资源大小将会影响图片本身的尺寸（如果图片元素没有应用css样式的话，还会影响图片的显示尺寸）。当然，如果 IMG 标签没有设置srcset属性值，或者没包含有带宽度描述符('w')的值时，属性sizes是无效的。
+  * 1、媒体条件。最后一项一定是被忽略的。
+  * 2、一个资源的尺寸值。
+  * 注1、资源尺寸大小指定了图片将要展示的大小。当sizes属性的资源字符串用宽度描述符('w')来修饰时，用户代理（浏览器）会根据srcset属性提供的值从sizes值中选择一个合适的资源大小(来使用)。被选中的资源大小将会影响图片本身的尺寸（如果图片元素没有应用css样式的话，还会影响图片的显示尺寸）。当然，如果 IMG 标签没有设置srcset属性值，或者没包含有带宽度描述符('w')的值时，属性sizes是无效的。
 * src————图片的URL。此属性的必需的。在支持srcset的浏览器中，src被当做拥有一个像素密度描述符1x的候选图像进行处理，除非这个像素密度描述符已经在srcset中定义了，或者除非srcset包含了宽度描述符('w')。
 * srcset————值为一个用逗号隔开的字符列表，用于指定用户代理（浏览器）可能使用的图像资源的集合。每个字符串包含有：
-    * 1、一张图像的URL。
-    * 2、可选项。此项跟在空白处（空格或制表符）后面。此项可以是：一个宽度描述符或者一个正整数直接加'w'，可以用sizes属性中的给予的资源大小除以该宽度描述符得出像素密度；一个像素密度描述符（正浮点数后面直接加'x'）。
-    * 注1、如果没有指定描述符，则资源会分配一个默认的描述符：1x。
-    * 注2、在同一个srcset属性下面混用宽度描述符和像素密度描述符是不对的。另外，重复的描述符也是不对的。
-    * 注3、用户代理（浏览器）会根据它的考虑来选择可用资源中的任意一个。这为用户提供了可选的余地，或者为浏览器提供了根据带宽条件优化图片显示的可能。
+  * 1、一张图像的URL。
+  * 2、可选项。此项跟在空白处（空格或制表符）后面。此项可以是：一个宽度描述符或者一个正整数直接加'w'，可以用sizes属性中的给予的资源大小除以该宽度描述符得出像素密度；一个像素密度描述符（正浮点数后面直接加'x'）。
+  * 注1、如果没有指定描述符，则资源会分配一个默认的描述符：1x。
+  * 注2、在同一个srcset属性下面混用宽度描述符和像素密度描述符是不对的。另外，重复的描述符也是不对的。
+  * 注3、用户代理（浏览器）会根据它的考虑来选择可用资源中的任意一个。这为用户提供了可选的余地，或者为浏览器提供了根据带宽条件优化图片显示的可能。
 * width————指定 IMG 元素的宽度（只支持像素单位）。
 * usemap————指定一个与图像地图(image map)关联的元素不完全URL（以'#'开头）。如果 IMG 标签是一个 A 标签或 BUTTON 标签的后代，那么你不能使用该属性。（URL通常指向那个地图元素的name属性或id属性）
 * 注意事项：
@@ -880,61 +909,61 @@
 * 属性的解析则如下：
 * type————控件渲染成的类型（参考上面所述的控件类型）。
 * accept————当type属性值为"file"，该属性才能起作用，否则直接被忽略。该属性用于指定服务器会接收的文件(内容)类型。多个值时，用逗号进行分隔。不允许重复值。可接受的值包括：
-    * 1、以 STOP 字符 (U+002E) 开始的文件扩展名。（例如：".jpg,.png,.doc"）
-    * 2、一个有效的 MIME 类型，但没有扩展名。
-    * 3、audio/* 表示音频文件。(HTML5)
-    * 4、video/* 表示视频文件。(HTML5)
-    * 5、image/* 表示图片文件。(HTML5)
+  * 1、以 STOP 字符 (U+002E) 开始的文件扩展名。（例如：".jpg,.png,.doc"）
+  * 2、一个有效的 MIME 类型，但没有扩展名。
+  * 3、audio/* 表示音频文件。(HTML5)
+  * 4、video/* 表示视频文件。(HTML5)
+  * 5、image/* 表示图片文件。(HTML5)
 * accesskey————已经升级为全局属性。
 * autocomplete————这是一个HTML5新增属性。用于指定控件的值能否被浏览器自动补全。可接受的值包括：
-    * 1、off：关闭自动补全（用户自己必须准确输入一个值，除非文档本身提供了自动补全方法）。
-    * 2、on：打开自动补全（浏览器会根据用户以前使用输入控件时输入的值进行自动补全，但不限制值的种类）。
-    * 3、name：完整的姓名。
-    * 4、honorific-prefix：尊称的前缀（如"Mr."，"Ms."，"Dr."，"Mlle"）。
-    * 5、given-name：名（名字第一部分）。
-    * 6、additional-ame：中间名。
-    * 7、family-name：姓（名字最后部分）。
-    * 8、honorific-suffix：尊称的后缀（如"Jr."，"B.Sc."，"MBASW"，"II"）。
-    * 9、nickname：昵称。
-    * 10、email：邮件地址。
-    * 11、username：用户名。
-    * 12、new-password：一个新的密码（例如在创建一个账号或改变密码时记录下来的密码）。
-    * 13、current-password：当前密码。
-    * 14、organization-title：职位名称（如"Software Engineer"、"Senior Vice President"、"Deputy Managing Director"）。
-    * 15、organization：组织名称。
-    * 16、street-address：街道地址。
-    * 17、address-line1、address-line2、address-line3、address-level4、address-level3、address-level2、address-level1：街道纵横名称。
-    * 18、country：国家。
-    * 19、country-name：国家名称。
-    * 20、postal-code：邮政编码。
-    * 21、cc-name、cc-given-name、cc-additional-name、cc-family-name、cc-number、cc-exp、cc-exp-month、cc-exp-year、cc-csc、cc-type：与支付相关的名称（例如 Visa 信用卡的相关信息）。
-    * 22、transaction-currency：交易货币。
-    * 23、transaction-amount：交易金额。
-    * 24、language：偏好的语言（人的语言）。
-    * 25、bday：生日。
-    * 26、bday-day、bday-month、bday-year：生日的日、月、年。
-    * 27、sex：性别标识（例如"Fa'afafine"）。自由式文本，不包括新行。
-    * 28、tel：电话号码的完整形式，包括国家编码。（其他关于电话号码的信息有————tel-country-code、tel-national、tel-area-code、tel-local、tel-local-prefix、tel-local-suffix、tel-extension）
-    * 29、url：公司、个人、与当前域相关的其他域的地址或联系方式的相关的主页或其他网页（其实就一统一资源标志符）。
-    * 30、photo：公司、个人、与当前域相关的其他域的地址或联系方式的相关的图片、图标。
-    * 注1：当 INPUT 元素没有指定autocomplete属性时，浏览器会使用 INPUT 元素所属的 FORM 元素的autocomplete属性。
-    * 注2：在FireFox浏览器中，一个 INPUT 元素被设置为disabled后，刷新页面也会保持disabled状态。可设置autocomplete属性为"off"来解决。
-    * 注3：对于现代浏览器，无论autocomplete属性设置了什么值，都不能阻止浏览器询问用户是否保存登录数据(用户名和密码)，如果用户选择了同意，当其再次访问该页面时，浏览器自动将这些登录数据填充到相应的 INPUT 元素中。
+  * 1、off：关闭自动补全（用户自己必须准确输入一个值，除非文档本身提供了自动补全方法）。
+  * 2、on：打开自动补全（浏览器会根据用户以前使用输入控件时输入的值进行自动补全，但不限制值的种类）。
+  * 3、name：完整的姓名。
+  * 4、honorific-prefix：尊称的前缀（如"Mr."，"Ms."，"Dr."，"Mlle"）。
+  * 5、given-name：名（名字第一部分）。
+  * 6、additional-ame：中间名。
+  * 7、family-name：姓（名字最后部分）。
+  * 8、honorific-suffix：尊称的后缀（如"Jr."，"B.Sc."，"MBASW"，"II"）。
+  * 9、nickname：昵称。
+  * 10、email：邮件地址。
+  * 11、username：用户名。
+  * 12、new-password：一个新的密码（例如在创建一个账号或改变密码时记录下来的密码）。
+  * 13、current-password：当前密码。
+  * 14、organization-title：职位名称（如"Software Engineer"、"Senior Vice President"、"Deputy Managing Director"）。
+  * 15、organization：组织名称。
+  * 16、street-address：街道地址。
+  * 17、address-line1、address-line2、address-line3、address-level4、address-level3、address-level2、address-level1：街道纵横名称。
+  * 18、country：国家。
+  * 19、country-name：国家名称。
+  * 20、postal-code：邮政编码。
+  * 21、cc-name、cc-given-name、cc-additional-name、cc-family-name、cc-number、cc-exp、cc-exp-month、cc-exp-year、cc-csc、cc-type：与支付相关的名称（例如 Visa 信用卡的相关信息）。
+  * 22、transaction-currency：交易货币。
+  * 23、transaction-amount：交易金额。
+  * 24、language：偏好的语言（人的语言）。
+  * 25、bday：生日。
+  * 26、bday-day、bday-month、bday-year：生日的日、月、年。
+  * 27、sex：性别标识（例如"Fa'afafine"）。自由式文本，不包括新行。
+  * 28、tel：电话号码的完整形式，包括国家编码。（其他关于电话号码的信息有————tel-country-code、tel-national、tel-area-code、tel-local、tel-local-prefix、tel-local-suffix、tel-extension）
+  * 29、url：公司、个人、与当前域相关的其他域的地址或联系方式的相关的主页或其他网页（其实就一统一资源标志符）。
+  * 30、photo：公司、个人、与当前域相关的其他域的地址或联系方式的相关的图片、图标。
+  * 注1：当 INPUT 元素没有指定autocomplete属性时，浏览器会使用 INPUT 元素所属的 FORM 元素的autocomplete属性。
+  * 注2：在FireFox浏览器中，一个 INPUT 元素被设置为disabled后，刷新页面也会保持disabled状态。可设置autocomplete属性为"off"来解决。
+  * 注3：对于现代浏览器，无论autocomplete属性设置了什么值，都不能阻止浏览器询问用户是否保存登录数据(用户名和密码)，如果用户选择了同意，当其再次访问该页面时，浏览器自动将这些登录数据填充到相应的 INPUT 元素中。
 * autofocus————用于指定页面刚加载完成时，某个表单控件是否应当拥有输入焦点（除非用户改变了输入焦点，例如在别的控件中打字）。一个表单只能有一个控件拥有autofocus属性。如果一个控件被隐藏了，那么它的autofocus属性失效。控件的获取焦点会在控件加载完成前发生。
 * capture————当 INPUT 元素的type属性被设置为"file"时，该属性将会指定直接从设备环境中捕获accept指定的类型的媒体。例如下面的例子：
-    1、调用所在设备的照相机（user facing mode）：
-```
-    <input type="file" accept="image/*" capture="user">
-```
-
-    2、调用所在设备的摄像机（environment facing mode）：
-```
-    <input type="file" accept="video/*" capture="environment">
+  1、调用所在设备的照相机（user facing mode）：
+```html
+  <input type="file" accept="image/*" capture="user">
 ```
 
-    3、调用所在设备的麦克风（default facing mode）：
+  2、调用所在设备的摄像机（environment facing mode）：
+```html
+  <input type="file" accept="video/*" capture="environment">
 ```
-    <input type="file" accept="audio/*" capture>
+
+  3、调用所在设备的麦克风（default facing mode）：
+```html
+  <input type="file" accept="audio/*" capture>
 ```
 
 * checked————当 INPUT 元素的type属性被设置为"radio"或"checkbox"时，该属性将指定本控件是否被默认选中。当选择动作发生后，该属性会被忽略。在FireFox浏览器中，INPUT 元素被设置为checked后，刷新页面会保持checked状态。可设置autocomplete属性为"off"来解决。
@@ -955,8 +984,8 @@
 * name————控件的名称。会（作为键值对的键）随着表单数据一起提交到服务器。
 * pattern————若type属性的值为"text"、"email"、"search"、"password"、"tel"、"url"，该属性将指定一个检查(用户输入的)值的正则表达式。为了提升对用户友好度，在使用该属性时，应使用title属性来提示关于本正则表达式的描述。该正则表达式不能被正斜杠包着。(HTML5)
 * placeholder————一个在控件中告诉用户应当输入什么内容的提示。该属性值绝对不能包含回车换行。(HTML5)
-    * 注1：placeholder属性是不能替代 LABEL 元素的作用的，它们的使用目标不一样。LABEL 元素用于描述表单元素的角色，而placeholder属性则用于提示内容应当输入的格式。
-    * 注2：placeholder属性在很多情况下会不显示，所以必须保证表单在没有placeholder的情况下也能被使用者所理解。
+  * 注1：placeholder属性是不能替代 LABEL 元素的作用的，它们的使用目标不一样。LABEL 元素用于描述表单元素的角色，而placeholder属性则用于提示内容应当输入的格式。
+  * 注2：placeholder属性在很多情况下会不显示，所以必须保证表单在没有placeholder的情况下也能被使用者所理解。
 * readonly————用于指定控件的值能否被使用者修改。该属性的值无关重要。如果你需要对 INPUT 元素的值进行读写访问，千万别添加"readonly"属性。若type属性的值为"hidden"、"range"、"color"、"checkbox"、"radio"、"file"或一个按钮类型（如 "reset"、"submit"）时，该属性将被忽略。(HTML5)
 * required————使用该属性表示提交一个表单前，用户必须为 INPUT 元素填充一个值。当type属性的值为"hidden"、"image"或一个按钮类型（如 "reset"、"submit"）时，该属性不能被使用。相应地，:optional和:required这俩css伪类将被应用到该字段。
 * selectionDirection————用户选择输入框的文本时的方向。若用户通过鼠标从左往右选择输入框内的内容，属性值会变成"forward"；若用户从右往左选择输入框内的内容，属性值则变成"backward"。不同的平台下，该属性的值可能是不确定的，这时，值为"none"。例如在macOS中，默认的方向就是"none"，当用户开始通过键盘修改文本的选中时，该属性的值就会相应的变化。(HTML5)
@@ -966,47 +995,48 @@
 * spellcheck————该属性值设置为"true"时，表示 INPUT 元素需要进行拼写和语法检查。值为"default"时，指定元素根据默认的情况选择相应的检查行为（可能基于父级元素的spellcheck属性值）。值为"false"时，指定元素不应当进行检查。(HTML5)
 * src————当type属性的值为"image"时，该属性值将指定一张在图形化提交按钮上显示的图片的URI。其他情况下，该属性将被忽略。
 * step————一个可以结合min和max属性来限制用户对数值和日期值进行设置的属性。值可以被设置为字符串"any"或者一个正浮点数。如果step属性没有被设置为"any"，则控件只接受最小值或最小值加上step属性值的倍数的所得值（除非有默认值）。step属性的可能值包括：(HTML5)
-    * 1、属性type值为"datetime"，则step的单位为(秒)，默认step为"60"。（不要再使用"datetime"，新版HTML规范已去除该type类型，应当用"datetime-local"代替）
-    * 2、属性type值为"date"，则step的单位为(日)，默认step为"1"。
-    * 3、属性type值为"month"，则step的单位为(月)，默认step为"1"。
-    * 4、属性type值为"week"，则step的单位为(周)，默认step为"1"。
-    * 5、属性type值为"time"，则step的单位为(秒)，默认step为"60"。
-    * 6、属性type值为"datetime-local"，则step的单位为(秒)，默认step为"60"。
-    * 7、属性type值为"number"，则step的单位为(1)，默认step为"1"。
-    * 8、属性type值为"range"，则step的单位为(1)，默认step为"1"。
+  * 1、属性type值为"datetime"，则step的单位为(秒)，默认step为"60"。（不要再使用"datetime"，新版HTML规范已去除该type类型，应当用"datetime-local"代替）
+  * 2、属性type值为"date"，则step的单位为(日)，默认step为"1"。
+  * 3、属性type值为"month"，则step的单位为(月)，默认step为"1"。
+  * 4、属性type值为"week"，则step的单位为(周)，默认step为"1"。
+  * 5、属性type值为"time"，则step的单位为(秒)，默认step为"60"。
+  * 6、属性type值为"datetime-local"，则step的单位为(秒)，默认step为"60"。
+  * 7、属性type值为"number"，则step的单位为(1)，默认step为"1"。
+  * 8、属性type值为"range"，则step的单位为(1)，默认step为"1"。
 * tabindex————已升级为全局属性。
 * value————控件的初始值。该属性是可选属性。
-    * 注1、在type为"radio"或"checkbox"时，该属性的值用于指定某项被选中，在提交表单时，name属性的值会与value属性的值一起组成键值对。
+  * 注1、在type为"radio"或"checkbox"时，该属性的值用于指定某项被选中，在提交表单时，name属性的值会与value属性的值一起组成键值对。
 ```
-        <!--情况1：radio带value属性-->
-        <input type="radio" id="contactChoice1" name="contact" value="email"><!--如果该被选中，则提交表单时会产生键值对：[contact: email]-->
-        <!--情况2：radio不带value属性-->
-        <input type="radio" id="contactChoice2" name="contact"><!--如果该被选中，则提交表单时会产生键值对：[contact: on]-->
+    <!--情况1：radio带value属性-->
+    <input type="radio" id="contactChoice1" name="contact" value="email"><!--如果该被选中，则提交表单时会产生键值对：[contact: email]-->
+    <!--情况2：radio不带value属性-->
+    <input type="radio" id="contactChoice2" name="contact"><!--如果该被选中，则提交表单时会产生键值对：[contact: on]-->
 ```
-    * 因此，相同name的radio有多项时，务必分别为每项设置value属性。
-    * 注2、在重新加载页面前，如果value属性值发生了改变，那么刷新页面后，Gecko和IE类型浏览器会忽略HTML代码上的那个value属性指定的值。
+  * 因此，相同name的radio有多项时，务必分别为每项设置value属性。
+  * 注2、在重新加载页面前，如果value属性值发生了改变，那么刷新页面后，Gecko和IE类型浏览器会忽略HTML代码上的那个value属性指定的值。
 * webkitdirectory————非标准属性（但浏览器支持良好，所有浏览器都支持）。当type属性的值为"file"时，用于指定是否只让用户选择目录。这能赋予脚步在该目录的操作权限：
-```
-    <input id="dialog" type="file" webkitdirectory />
-    <script>
-        window.onload = function(){
-            var dialog = document.getElementById("dialog");
-            dialog.onchange = function(e) {
-                var files = this.files;
-                var table = {};
-                for (var i = 0; i < files.length; i++) {
-                    var f = files[i];
-                    var dt = new Date(f.lastModified);
-                    table[i] = {
-                        path: f.webkitRelativePath,
-                        size: f.size,
-                        modified: dt.toLocaleString();
-                    };
-                }
-                console.table(table);   // 在控制台中打印该目录的所有文件的信息
-            };
-        }
-    </script>
+```html
+<input id="dialog" type="file" webkitdirectory />
+<script>
+  window.onload = function(){
+    var dialog = document.getElementById("dialog");
+    dialog.onchange = function(e) {
+      var files = this.files;
+      var table = {};
+      for (var i = 0; i < files.length; i++) {
+        var f = files[i];
+        var dt = new Date(f.lastModified);
+        table[i] = {
+          path: f.webkitRelativePath,
+          size: f.size,
+          modified: dt.toLocaleString();
+        };
+      }
+      // 在控制台中打印该目录的所有文件的信息
+      console.table(table);
+    };
+  }
+</script>
 ```
 * width————若 INPUT 元素的type属性的值为"image"，该属性将为按钮定义所要展示图片的宽度。(HTML5)
 * 注意事项：
@@ -1026,33 +1056,68 @@
 ## KBD
 ```html
 <!--单独使用-->
-<p>使用命令 <kbd>help mycommand</kbd> 查看"mycommand"命令的文档。</p>
+<p>
+  使用命令 
+  <kbd>help mycommand</kbd>
+  查看"mycommand"命令的文档。
+</p>
 <!--对应串联场景(1)-->
-<p>你也可以用快捷键 <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> 创建一个新的文档。</p>
+<p>
+  你也可以用快捷键
+  <kbd>
+    <kbd>Ctrl</kbd>
+    +
+    <kbd>N</kbd>
+  </kbd>
+  创建一个新的文档。
+</p>
 <!--对应串联场景(2)-->
 <p>If a syntax error occurs, the tool will output the initial command you typed for your review:</p>
 <blockquote>
-    <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
+  <samp>
+    <kbd>custom-git ad my-new-file.cpp</kbd>
+  </samp>
 </blockquote>
 <!--对应串联场景(3)-->
-<p>To create a new file, choose the menu option <kbd><kbd><samp>File</samp></kbd>⇒<kbd><samp>New Document</samp></kbd></kbd>.</p>
-<p>Don't forget to click the <kbd><samp>OK</samp></kbd> button to confirm once you've entered the name of the new file.</p>
+<p>
+  To create a new file, choose the menu option
+  <kbd>
+    <kbd>
+      <samp>File</samp>
+    </kbd>
+    ⇒
+    <kbd>
+      <samp>New Document</samp>
+    </kbd>
+  </kbd>
+  .
+</p>
+<p>
+  Don't forget to click the
+  <kbd>
+    <samp>OK</samp>
+  </kbd>
+  button to confirm once you've entered the name of the new file.
+</p>
 ```
 HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键盘、语音设备或者任何其他文本输入设备输入指定的文本。该元素包含的文本默认以内联文本、浏览器的monospace字体（尽管这一点没有被HTML标准授权）为样式进行显示。
 * KBD 元素可能被嵌套在 SAMP 元素（Sample Output）形成不同的组合，从而基于视觉线索表示各种输入形式或不同的输入内容。
 * 这个元素只有全局属性。
 * 注意事项：
 * 1、其他元素可以与 KBD 元素串联着使用以表示更多的专门场景。当然，单独使用 KBD 元素也是有效的。
-    * (1): 一个 KBD 元素嵌套在另外一个 KBD 元素中表示一个实际的键(键盘上的某个键)或者该输入机制下的某个单位输入。
-    * (2)：在 SAMP 元素中嵌套一个 KBD 元素表示系统对用户输入回应的结果。
-    * (3)：在 KBD 元素中嵌套一个 SAMP 元素表示用户接下来的输入应当基于系统的输出。例如菜单或者菜单项的名称、显示在屏幕上的按钮的名称。
+  * (1): 一个 KBD 元素嵌套在另外一个 KBD 元素中表示一个实际的键(键盘上的某个键)或者该输入机制下的某个单位输入。
+  * (2)：在 SAMP 元素中嵌套一个 KBD 元素表示系统对用户输入回应的结果。
+  * (3)：在 KBD 元素中嵌套一个 SAMP 元素表示用户接下来的输入应当基于系统的输出。例如菜单或者菜单项的名称、显示在屏幕上的按钮的名称。
 
 ## KEYGEN
 被废弃了。勿用。
 
 ## LABEL
 ```html
-<label>Click me <input type="text"></label>
+<label>
+  Click me 
+  <input type="text">
+</label>
 ```
 表示用户界面中一个项目的标题。
 * for————指定在同一文档中的可标记的form相关元素的id。在文档中，第一个符合这样条件的控件（其id匹配 LABEL 元素的for属性的值）是被该 LABEL 元素所标记的控件。LABEL 元素也可以在拥有for属性的同时，包含这一个控件元素（只要for属性指向该控件元素即可）。
@@ -1065,11 +1130,11 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!-- Form with fieldset, legend, and label -->
 <form action="" method="post">
-    <fieldset>
-        <legend>Title</legend>
-        <input type="radio" name="radio" id="radio">
-        <label for="radio">Click me</label>
-    </fieldset>
+  <fieldset>
+    <legend>Title</legend>
+    <input type="radio" name="radio" id="radio">
+    <label for="radio">Click me</label>
+  </fieldset>
 </form>
 ```
 表示它的父级元素 FIELDSET 的内容的一个标题(caption)。
@@ -1078,9 +1143,9 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ## LI
 ```html
 <ol>
-    <li value="3">third item</li>
-    <li>fourth item</li>
-    <li>fifth item</li>
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
 </ol>
 ```
 常常用于代表一个列表中的一项。
@@ -1102,24 +1167,24 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 用于指定一个外部资源与当前文档之间的关系。该元素的使用方式包括了为导航定义一个相关框架。最常使用的方式则是链接到样式表。
 * as————该属性只有当 LINK 元素的rel属性设置为"preload"时才起作用。它指定了 LINK 元素所加载的内容的类型，这对于内容优化、请求匹配、应用正确的内容安全策略、设置正确的Accept请求头是很有必要的。
 * crossorigin————该可枚举属性指定了当取回相关资源时，是否必须使用CORS。允许CORS的图片可以被 CANVAS 元素复用而不被污染。可能的值包括了：
-    * 1、"anonymous"：执行跨域请求（例如带有 Origin: 这个HTTP头部名），但不发送证书（例如，没有cookie，没有X.509证书，没有HTTP基础授权）。如果服务器不给源网站发送证书（通过不设置 Access-Control-Allow-Origin: 这个头部名），图片将被污染并且使用受限。
-    * 2、"use-credentials"：执行跨域请求（例如带有 Origin: 这个HTTP头部名），并带有证书（例如，有cookie，有X.509证书，有HTTP基础授权）。如果服务器不给源网站发送证书（通过不设置 Access-Control-Allow-Origin: 这个头部名），图片将被污染并且使用受限。
-    注1：如果没有指定该属性，那么请求资源时将不使用CORS（例如不带 Origin: 这个HTTP头部名），以阻止 CANVAS 元素对它的非污染使用。如果设置了一个无效值，那么它将被当做关键词"anonymous"使用。
+  * 1、"anonymous"：执行跨域请求（例如带有 Origin: 这个HTTP头部名），但不发送证书（例如，没有cookie，没有X.509证书，没有HTTP基础授权）。如果服务器不给源网站发送证书（通过不设置 Access-Control-Allow-Origin: 这个头部名），图片将被污染并且使用受限。
+  * 2、"use-credentials"：执行跨域请求（例如带有 Origin: 这个HTTP头部名），并带有证书（例如，有cookie，有X.509证书，有HTTP基础授权）。如果服务器不给源网站发送证书（通过不设置 Access-Control-Allow-Origin: 这个头部名），图片将被污染并且使用受限。
+  注1：如果没有指定该属性，那么请求资源时将不使用CORS（例如不带 Origin: 这个HTTP头部名），以阻止 CANVAS 元素对它的非污染使用。如果设置了一个无效值，那么它将被当做关键词"anonymous"使用。
 * disabled————这是一个非标准属性（只有IE系列支持）。用于禁用一个链接关系。当与脚本共同使用时，该属性将可以被用来打开和关闭不同的样式表关系。
-    * 注1：在HTML标准中并没有disabled属性，该disabled属性是在HTMLLinkElement这个DOM对象上。
-    * 注2：将disabled作为一个HTML属性来使用是非标准的，只有一些浏览器在用。别用它了。如要实现类似的效果，可以通过 (1)压根不引入 LINK 元素；(2)通过在脚本中对StyleSheet这类DOM对象设置disabled属性。
+  * 注1：在HTML标准中并没有disabled属性，该disabled属性是在HTMLLinkElement这个DOM对象上。
+  * 注2：将disabled作为一个HTML属性来使用是非标准的，只有一些浏览器在用。别用它了。如要实现类似的效果，可以通过 (1)压根不引入 LINK 元素；(2)通过在脚本中对StyleSheet这类DOM对象设置disabled属性。
 * href————该属性用于指定一个被链接的资源的URL（可以是绝对的或相对的）。
 * hreflang————指定被链接资源的语言（是人类的语言，不是编程语言）。值仅提供参考。只应当href属性出现时使用。
 * media————指定被链接资源所应用到的媒介（如各种参数不一的屏幕、打印机等）。该属性值必须是一个媒体查询（如 @media screen,print ）。该属性主要用于链接到外部样式表时，准许用户代理（浏览器）采用最适合在当前设备运行的那个。
-    * 注1：在HTML4中，该属性值只能是一个以空格分隔的简单的媒体描述列表（如 print、screen、aural、braille）。HTML5把它扩展到了可以应用任何种类的媒体查询，这是一个HTML4所允许值的超集。
-    * 注2：不支持CSS3媒体查询的浏览器不会识别合适的链接。别忘了设置备用链接（在HTML4中所定义的媒体查询有限集合）。
+  * 注1：在HTML4中，该属性值只能是一个以空格分隔的简单的媒体描述列表（如 print、screen、aural、braille）。HTML5把它扩展到了可以应用任何种类的媒体查询，这是一个HTML4所允许值的超集。
+  * 注2：不支持CSS3媒体查询的浏览器不会识别合适的链接。别忘了设置备用链接（在HTML4中所定义的媒体查询有限集合）。
 * prefetch————这是一个非标准属性（只有Chrome和Opera支持）。用于指定该资源可能被下一个导航所所请求时，用户代理（浏览器）应当取回它。该属性会使得用户代理（浏览器）在未来的资源请求时响应得更快。
 * rel————用于为被链接的文档与当前文本的关系进行赋名。该属性的值必须是一个以空格分隔的链接类型值（link types values）列表，具体值参考 https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types 。该属性最常用于指定一个链接链接到一个外部的样式表，此时，rel属性被设置为"stylesheet"，href属性则被设置为一个外部样式表（用来样式化该页面）的URL。WebTV也支持在一个文档系列中，将属性rel设置为"next"来预加载下一页。
 * sizes————为视觉媒体指定被包含在资源中的图标定义尺寸。该属性只能在当rel属性包含了"icon"时出现。可能值包括：
-    * 1、"any"：意味着图标被当作向量格式，可以被缩放为任意大小。（如 image/svg+xml）
-    * 2、一个以空格分隔的尺寸列表：格式为"[width in pixels]x[height in pixels]"或"[width in pixels]X[height in pixels]"。尺寸的每一个都必须被包含在资源中。
-    * 注1：大部分图标格式只能存储一个单独的图标。因此大部分时间sizes属性只包含唯一一个入口(输入)。微软的ICO格式和苹果的ICNS格式就是这样。ICO的使用更加普遍，你应当使用它。
-    * 注2：苹果的iOS系统不支持该属性，因此苹果的iPhone和iPad使用专门的、非标准的链接类型值（link types values）来定义图标通过网络剪片（Web Clip）或者开头占位符（start-up placeholder）的方式使用："apple-touch-icon"以及"apple-touch-startup-icon"。
+  * 1、"any"：意味着图标被当作向量格式，可以被缩放为任意大小。（如 image/svg+xml）
+  * 2、一个以空格分隔的尺寸列表：格式为"[width in pixels]x[height in pixels]"或"[width in pixels]X[height in pixels]"。尺寸的每一个都必须被包含在资源中。
+  * 注1：大部分图标格式只能存储一个单独的图标。因此大部分时间sizes属性只包含唯一一个入口(输入)。微软的ICO格式和苹果的ICNS格式就是这样。ICO的使用更加普遍，你应当使用它。
+  * 注2：苹果的iOS系统不支持该属性，因此苹果的iPhone和iPad使用专门的、非标准的链接类型值（link types values）来定义图标通过网络剪片（Web Clip）或者开头占位符（start-up placeholder）的方式使用："apple-touch-icon"以及"apple-touch-startup-icon"。
 * target————这是一个非标准属性（众多浏览器支持）。用于指定定义了链接关系（linking relationship）或将显示任何被链接资源的渲染的框架或窗口的名称（name）。
 * title————该属性在 LINK 元素中有专门的语义。当该属性被用在一个设置了rel属性为"stylesheet"的 LINK 元素中时，它指定了一个偏好或替代样式表（a preferred or an alternate stylesheet）。对该属性的不当使用可能导致样式表别忽略。
 * type————用于定义链接到的内容的类型。该属性的值应当是一个MIME类型（例如 text/html、text/css 等等）。该属性最常用于定义被链接的样式表的类型，即最常见的值为"text/css"（用来指定一个级联样式表格式）。它也被用在rel属性为"preload"链接类型中，以确保浏览器只下载它支持的文件类型。
@@ -1134,18 +1199,18 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!-- other content -->
 <main role="main"><!-- role的作用是为了让旧版的 IE 浏览器也能识别 MAIN 元素 -->
-    <h1>Apples</h1>
-    <p>The apple is the pomaceous fruit of the apple tree.</p>
-    <article>
-        <h2>Red Delicious</h2>
-        <p>These bright red apples are the most common found in many supermarkets.</p>
-        <p>... </p>
-    </article>
-    <article>
-        <h2>Granny Smith</h2>
-        <p>These juicy, green apples make a great filling for apple pies.</p>
-        <p>... </p>
-    </article>
+  <h1>Apples</h1>
+  <p>The apple is the pomaceous fruit of the apple tree.</p>
+  <article>
+    <h2>Red Delicious</h2>
+    <p>These bright red apples are the most common found in many supermarkets.</p>
+    <p>... </p>
+  </article>
+  <article>
+    <h2>Granny Smith</h2>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
+    <p>... </p>
+  </article>
 </main>
 <!-- other content -->
 ```
@@ -1157,14 +1222,14 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 2、在一系列文档或者文档部分（如侧边栏、导航链接、版权信息、网站图标、搜索表单）中重复的内容不应当包含在 MAIN 元素中，除非它（如搜索表单）是所在页面的主要功能。
 * 3、MAIN 元素对文档的大纲（outline）是没有贡献的。也就是说，不像 BODY 这样的元素，也不像 H2 这样的标题等等，MAIN 元素对页面结构的DOM概念是没有影响的。它就是个提供信息的。
 * 4、关于 MAIN 元素，WHATWG规范和W3C规范有着巨大的差异：
-    * (1)、WHATWG当前标准允许一个页面存在多个 MAIN 元素，但W3C规范只允许存在一个，除非其他的 MAIN 元素使用了hidden属性隐藏起来了。
-    * (2)、WHATWG规范允许 MAIN 元素在任何文档流允许存在的地方使用。但是，W3C规范版本就不允许 MAIN 元素作为 ARTICLE、ASIDE、FOOTER、HEADER、NAV 等元素的后代元素。
+  * (1)、WHATWG当前标准允许一个页面存在多个 MAIN 元素，但W3C规范只允许存在一个，除非其他的 MAIN 元素使用了hidden属性隐藏起来了。
+  * (2)、WHATWG规范允许 MAIN 元素在任何文档流允许存在的地方使用。但是，W3C规范版本就不允许 MAIN 元素作为 ARTICLE、ASIDE、FOOTER、HEADER、NAV 等元素的后代元素。
 
 ## MAP
 ```html
 <map name="primary">
-    <area shape="circle" coords="75,75,75" href="left.html">
-    <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75" href="left.html">
+  <area shape="circle" coords="275,75,75" href="right.html">
 </map>
 <img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
 ```
@@ -1175,9 +1240,9 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!--MARK元素用于引用块中，表示文本对用户有特别的意义-->
 <blockquote>
-    It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil
-    Galactic Empire. During the battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s ultimate weapon,
-    the DEATH STAR, an armored space station with enough power to destroy an entire planet.
+  It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil
+  Galactic Empire. During the battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s ultimate weapon,
+  the DEATH STAR, an armored space station with enough power to destroy an entire planet.
 </blockquote>
 <!--MARK元素用于其他地方，表示与用户活动相关的部分，例如搜索结果中匹配的关键词-->
 <p>It is a dark time for the Rebellion. Although the Death Star has been destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel forces from their hidden base and pursued them across the galaxy.</p>
@@ -1207,43 +1272,43 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * charset————用于声明一个页面的字符编码。值必须包含一个标准的字符编码的IANA MIME名称。鼓励使用"UTF-8"。
 * content————用于包含：http-equiz属性或name属性的值的值。这取决于哪个被使用了。
 * http-equiv————该属性用于包含一个HTTP头部的名称，因此被称为"http等价(警报)"。它可定义一个能改变服务器或用户代理（浏览器）行为的指令。指令的具体内容会放在content属性中，包括：
-    * "content-security-policy"：允许程序员为当前页面定义一个内容策略。主要是帮维护人员指定所允许的服务器源以及脚步终端，以对抗跨站脚步攻击。
-    * "refresh"：该指令能指定两点。一是当content属性只包含一个正整数时，页面会在这个秒数后重载。二是当content属性包含一个正整数加上";url="以及一个有效的URL地址时，页面会在这个秒数后重定向到该URL所指向的网页。
+  * "content-security-policy"：允许程序员为当前页面定义一个内容策略。主要是帮维护人员指定所允许的服务器源以及脚步终端，以对抗跨站脚步攻击。
+  * "refresh"：该指令能指定两点。一是当content属性只包含一个正整数时，页面会在这个秒数后重载。二是当content属性包含一个正整数加上";url="以及一个有效的URL地址时，页面会在这个秒数后重定向到该URL所指向的网页。
 * name————该属性定义一块（段）文档级的元数据的名称。如果 META 标签上设置了 "itemprop"、"http-equiv"、"charset" 中的某一个，就不要再设置name属性了。该元数据名称所关联的值会包含在content属性中。name属性的可能值包括：
-    * "application-name"：定义网页中在运行的应用的名称。它有可能被浏览器用来指定特定的应用。它跟 TITLE 元素常常只包含应用的名称不一样，它还包含一些像文档名称或一个状态等信息。（简单的网页不应当使用application-name）
-    * "author"：文档作者的名字。
-    * "description"：该网页内容的一个简短精确的摘要。FireFox以及Opera等浏览器会使用该项作为收藏书签页的默认描述。
-    * "generator"：产生该网页的软件的识别码。
-    * "keywords"：与网页内容相关的关键词。关键词之间用逗号分隔。
-    * "referrer"：控制当前文档的请求中附加的 Referer HTTP 头部，这是一个实验性项。当几个冲突的策略同时被使用时，no-referrer策略将被应用。对应的content值可以为：
-        * "no-referrer"、不发送 Referer HTTP 头部；
-        * "origin"、发送当前文档的源；
-        * "no-referrer-when-downgrade"、当请求的URL的安全等级与当前网页一致时（https -> https），将源作为一个referrer附加到请求头上。但是，如果请求的安全等级低于当前网页时（https -> http），则不发送。这是默认行为。
-        * "origin-when-crossorigin"、对同源请求发送全URL（剥去了查询参数）。对于其他情况，则只发送源（协议 + Host + 端口）。
-        * "unsafe-URL"、无论对同源还是跨源请求，都发送全URL（剥去了查询参数）。
-    * 从这里开始则是一些比较少用到的项。
-    * "creator"：指定文档创建者的名字，例如一个组织或一个机构。如果创建者多于一个，则应当使用多 META 标签来分别指明。
-    * "googlebot"："robots"的一个同义词，只对谷歌的索引爬虫有用。
-    * "publisher"：指定文档发布者的名字。
-    * "robots"：指定协作型爬虫（机器人）在本页面的行为。对应的content值可以是一个以逗号分隔的列表：
-        * "index"、允许机器人添加该页面的索引（默认行为）。被所有搜索引擎支持。
-        * "noindex"、要求机器人别添加该页面的索引。被所有搜索引擎支持。
-        * "follow"、允许机器人追踪页面上的跳转链接（默认行为）。被所有搜索引擎支持。
-        * "nofollow"、要求机器人别追踪页面上的跳转链接。被所有搜索引擎支持。
-        * "none"、与"noindex,nofollow"等同。只被 Google 支持。
-        * "noodp"、如果有的话，阻止使用[打开目录对象]描述。因为页面描述将作为搜索引擎的收录描述。只被 Google、Yahoo、Bing 支持。
-        * "noarchive"、要求搜索引擎别缓存页面内容。只被 Google、Yahoo、Bing 支持。
-        * "nosnippet"、阻止搜索引擎结果显示页面的任何描述。只被 Google、Bing 支持。
-        * "noimageindex"、如果作为一个索引图片的相关页面，要求该页面不显示。只被 Google 支持。
-        * "nocache"、"noarchive"的同义词。只被 Bing 支持。
-    * "slurp"："robots"的一个同义词。但只对 Yahoo 搜索爬虫引擎Slurp有效。
-    * "viewport"：提示视窗最初范围的尺寸。只用在移动设备中。对应的content属性的值包括：
-        * "width"、等号后边可以跟着一个正整数或者文本"device-width"。定义你想网站被渲染到视窗的像素宽度。
-        * "height"、等号后边可以跟着一个正整数或者文本"device-height"。定义视窗的像素高度。还没有被任何浏览器使用过。
-        * "initial-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。定义设备尺寸与视窗大小的比例。当设备处于纵向时，是"device-width"与viewport值的比例；当设置处于横向时，是"device-height"与viewport值的比例。
-        * "maximum-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。可缩放的最大倍数。首先，该项必须大于或等于"minimum-scale"的值，否则该项将失效。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
-        * "minimum-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。可缩放的最小倍数。首先，该项必须小于或等于"maximum-scale"的值，否则该项将失效。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
-        * "user-scalable"、等号后边可以跟着"yes"或者"no"。如果设置为"no"，用户则不能在网页中进行缩放。默认值为"yes"。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
+  * "application-name"：定义网页中在运行的应用的名称。它有可能被浏览器用来指定特定的应用。它跟 TITLE 元素常常只包含应用的名称不一样，它还包含一些像文档名称或一个状态等信息。（简单的网页不应当使用application-name）
+  * "author"：文档作者的名字。
+  * "description"：该网页内容的一个简短精确的摘要。FireFox以及Opera等浏览器会使用该项作为收藏书签页的默认描述。
+  * "generator"：产生该网页的软件的识别码。
+  * "keywords"：与网页内容相关的关键词。关键词之间用逗号分隔。
+  * "referrer"：控制当前文档的请求中附加的 Referer HTTP 头部，这是一个实验性项。当几个冲突的策略同时被使用时，no-referrer策略将被应用。对应的content值可以为：
+    * "no-referrer"、不发送 Referer HTTP 头部；
+    * "origin"、发送当前文档的源；
+    * "no-referrer-when-downgrade"、当请求的URL的安全等级与当前网页一致时（https -> https），将源作为一个referrer附加到请求头上。但是，如果请求的安全等级低于当前网页时（https -> http），则不发送。这是默认行为。
+    * "origin-when-crossorigin"、对同源请求发送全URL（剥去了查询参数）。对于其他情况，则只发送源（协议 + Host + 端口）。
+    * "unsafe-URL"、无论对同源还是跨源请求，都发送全URL（剥去了查询参数）。
+  * 从这里开始则是一些比较少用到的项。
+  * "creator"：指定文档创建者的名字，例如一个组织或一个机构。如果创建者多于一个，则应当使用多 META 标签来分别指明。
+  * "googlebot"："robots"的一个同义词，只对谷歌的索引爬虫有用。
+  * "publisher"：指定文档发布者的名字。
+  * "robots"：指定协作型爬虫（机器人）在本页面的行为。对应的content值可以是一个以逗号分隔的列表：
+    * "index"、允许机器人添加该页面的索引（默认行为）。被所有搜索引擎支持。
+    * "noindex"、要求机器人别添加该页面的索引。被所有搜索引擎支持。
+    * "follow"、允许机器人追踪页面上的跳转链接（默认行为）。被所有搜索引擎支持。
+    * "nofollow"、要求机器人别追踪页面上的跳转链接。被所有搜索引擎支持。
+    * "none"、与"noindex,nofollow"等同。只被 Google 支持。
+    * "noodp"、如果有的话，阻止使用[打开目录对象]描述。因为页面描述将作为搜索引擎的收录描述。只被 Google、Yahoo、Bing 支持。
+    * "noarchive"、要求搜索引擎别缓存页面内容。只被 Google、Yahoo、Bing 支持。
+    * "nosnippet"、阻止搜索引擎结果显示页面的任何描述。只被 Google、Bing 支持。
+    * "noimageindex"、如果作为一个索引图片的相关页面，要求该页面不显示。只被 Google 支持。
+    * "nocache"、"noarchive"的同义词。只被 Bing 支持。
+  * "slurp"："robots"的一个同义词。但只对 Yahoo 搜索爬虫引擎Slurp有效。
+  * "viewport"：提示视窗最初范围的尺寸。只用在移动设备中。对应的content属性的值包括：
+    * "width"、等号后边可以跟着一个正整数或者文本"device-width"。定义你想网站被渲染到视窗的像素宽度。
+    * "height"、等号后边可以跟着一个正整数或者文本"device-height"。定义视窗的像素高度。还没有被任何浏览器使用过。
+    * "initial-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。定义设备尺寸与视窗大小的比例。当设备处于纵向时，是"device-width"与viewport值的比例；当设置处于横向时，是"device-height"与viewport值的比例。
+    * "maximum-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。可缩放的最大倍数。首先，该项必须大于或等于"minimum-scale"的值，否则该项将失效。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
+    * "minimum-scale"、等号后边可以跟着"0.0"到"10.0"之间的一个整数。可缩放的最小倍数。首先，该项必须小于或等于"maximum-scale"的值，否则该项将失效。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
+    * "user-scalable"、等号后边可以跟着"yes"或者"no"。如果设置为"no"，用户则不能在网页中进行缩放。默认值为"yes"。浏览器可能忽略该设置（例如IOS10+系统会默认忽略该设置）。
 * 注意事项：
 * 1、全局属性的name属性在 META 元素中有专门的意义。当一个 META 元素存在name、http-equiv或charset属性时，一定不能再为其设置itemprop属性。
 * 2、不要使用不兼容ASCII的编码集，因为浏览器不认识这些编码时，有可能会将其解析为有害的内容（如将非HTML内容解析为HTML），这些编码包括："JIS_C6226-1983"、"JIS_X0212-1990"、"HZ-GB-2312"、"JOHAB"、"ISO-2022"家族、"EBCDIC"家族。
@@ -1254,14 +1319,18 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 7、一个声明了charset属性的 META 标签是等同于HTML5前的另一个标签的：< meta http-equiv="Content-Type" content="text/html;charset=IANAcharset">。IANAcharset指代charset的值。该标签依然可用，只是不推荐使用了。
 * 8、别使用 META 标签设置为一个 XHTML 设置 MIME 类型。因为 META 元素不能改变 XHTML 文档或 HTML5 的XHTML序列化文档的文档类型。
 * 9、依赖于所设置的属性，元数据的种类可以分为：
-    * 一、如果设置了name属性，则其是文档级元数据，将被应用于整个网页；
-    * 二、如果设置了http-equiv属性，则其是编译指令，通常是由网站服务器给出的指导网页如何服务的信息；
-    * 三、如果设置了charset属性，则其是一个字符集声明，是网页使用的字符编码；
-    * 四、如果设置了itemprop属性，则其是用户定义元数据，当元数据的语义是用户指定时，其对于用户代理（浏览器）而言其是透明的。
+  * 一、如果设置了name属性，则其是文档级元数据，将被应用于整个网页；
+  * 二、如果设置了http-equiv属性，则其是编译指令，通常是由网站服务器给出的指导网页如何服务的信息；
+  * 三、如果设置了charset属性，则其是一个字符集声明，是网页使用的字符编码；
+  * 四、如果设置了itemprop属性，则其是用户定义元数据，当元数据的语义是用户指定时，其对于用户代理（浏览器）而言其是透明的。
 
 ## METER
 ```html
-<p>Heat the oven to <meter low="150" high="300" min="200" max="500" value="350">350 degrees</meter>.</p>
+<p>
+  Heat the oven to 
+  <meter low="150" high="300" min="200" max="500" value="350">350 degrees</meter>
+  .
+</p>
 ```
 用于表示一个已知范围中或一个片段值中的一个标量值（跟向量值相对）。
 * value————当前的数字值。如果设置了最小值（min 属性）和最大值（max 属性），该值必须位于最小值和最大值之间，否则会自动调整到这个区间的端点。如果没指定或指定的值不符合要求，则值为"0"。
@@ -1275,11 +1344,11 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ## NAV
 ```html
 <nav class="menu">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 </nav>
 ```
 用于展示网页中的导航链接部分（该导航链接可以是导向当前文档，奕可以导向其他网页）。通常的例子有 菜单、内容表格、索引等。
@@ -1292,8 +1361,8 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ## NOSCRIPT
 ```html
 <noscript>
-    <!-- anchor linking to external file -->
-    <a href="https://www.mozilla.com/">External Link</a>
+  <!-- anchor linking to external file -->
+  <a href="https://www.mozilla.com/">External Link</a>
 </noscript>
 <p>Rocks!</p>
 ```
@@ -1306,7 +1375,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 <object data="movie.swf" type="application/x-shockwave-flash"></object>
 <!-- Embed a flash movie with parameters -->
 <object data="movie.swf" type="application/x-shockwave-flash">
-    <param name="foo" value="bar">
+  <param name="foo" value="bar">
 </object>
 ```
 用于展示外部资源。只要资源能被当成 一个图片、一段嵌入式的浏览上下文或一份能被一个插件处理的内容 便可。
@@ -1323,28 +1392,28 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!--默认以阿拉伯数字作为序号类型，默认升序，默认开始值为 1-->
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 <!--以罗马数字作为序号类型，倒序，默认开始值为 5-->
 <ol type="i" start="5" reversed>
-    <li>foo</li>
-    <li>bar</li>
-    <li>spam</li>
+  <li>foo</li>
+  <li>bar</li>
+  <li>spam</li>
 </ol>
 ```
 用于展示一个有序列表，通常渲染为一个带有序号的列表。
 * reversed————布尔属性，用于指定列表是否以反序方式排列，通常来说，就是序号由大变小。(HTML5)
 * start————起始的整数值，无论序号类型是阿拉伯数字、罗马数字还是字母，均以数字代表。例如，为了将字母"C"作为开始序号，设置start为"3"即可。另外，该属性在HTML4中曾被抛弃，但在HTML5中又被重新引入。
 * type————用于指定数字类型
-    * 'a'：序号类型为小写字母；
-    * 'A'：序号类型为大写字母；
-    * 'i'：序号类型为小写罗马数字；
-    * 'I'：序号类型为大写罗马数字；
-    * '1'：序号类型为阿拉伯数字（默认值）。
-    * 注1：type所指定的类型集将应用于 OL 元素所包含的全部列表，除非内部的 LI 元素设置了自己的不同的type属性值。
-    * 注2：该属性在HTML4中曾被抛弃，但在HTML5中又被重新引入。除非列表的序号数字是相关的（例如在法律文档与技术文档中，条目是跟它的序号数字/字母相关的），否则应当以CSS中的list-style-type属性替代该属性的使用。
+  * 'a'：序号类型为小写字母；
+  * 'A'：序号类型为大写字母；
+  * 'i'：序号类型为小写罗马数字；
+  * 'I'：序号类型为大写罗马数字；
+  * '1'：序号类型为阿拉伯数字（默认值）。
+  * 注1：type所指定的类型集将应用于 OL 元素所包含的全部列表，除非内部的 LI 元素设置了自己的不同的type属性值。
+  * 注2：该属性在HTML4中曾被抛弃，但在HTML5中又被重新引入。除非列表的序号数字是相关的（例如在法律文档与技术文档中，条目是跟它的序号数字/字母相关的），否则应当以CSS中的list-style-type属性替代该属性的使用。
 * 注意事项：
 * 1、通常，有序列表条目以排序数字前置的方式显示，适合阿拉伯数字、字母、罗马数字甚至简单的子弹符号等任何形式。该排序数字样式并没有定义在页面的HTML描述中，但它与CSS的list-style-type属性相关。
 * 2、对于有序列表而言，是没有深度限制的。只按照能否实现来说的话，OL 和 UL 元素相互替代使用也是可以的。
@@ -1353,18 +1422,18 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ## OPTGROUP
 ```html
 <select>
-    <optgroup label="Group 1">
-        <option>Option 1.1</option>
-    </optgroup> 
-    <optgroup label="Group 2">
-        <option>Option 2.1</option>
-        <option>Option 2.2</option>
-    </optgroup>
-    <optgroup label="Group 3" disabled>
-        <option>Option 3.1</option>
-        <option>Option 3.2</option>
-        <option>Option 3.3</option>
-    </optgroup>
+  <optgroup label="Group 1">
+    <option>Option 1.1</option>
+  </optgroup> 
+  <optgroup label="Group 2">
+    <option>Option 2.1</option>
+    <option>Option 2.2</option>
+  </optgroup>
+  <optgroup label="Group 3" disabled>
+    <option>Option 3.1</option>
+    <option>Option 3.2</option>
+    <option>Option 3.3</option>
+  </optgroup>
 </select>
 ```
 用于在 SELECT 元素内创建一组选项（options）。
@@ -1376,10 +1445,11 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ## OPTION
 ```html
 <!-- The second value will be selected initially -->
-<select name="text"> <!--Supplement an id here instead of using 'text'-->
-    <option value="value1">Value 1</option> 
-    <option value="value2" selected>Value 2</option>
-    <option value="value3">Value 3</option>
+<!--Supplement an id here instead of using 'text'-->
+<select name="text">
+  <option value="value1">Value 1</option> 
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
 </select>
 ```
 用于在 SELECT、OPTGROUP 或 DATALIST 标签中定义一个选项。就其本身而言，OPTION 元素可以在一个HTML文档中表示弹出框中的菜单项以及其他条目列表。
@@ -1392,9 +1462,9 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!--output将显示名称为a和b的控件的值的和，可尝试改变这两控件的值，会发现output元素的值会随之改变-->
 <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-    <input type="range" name="b" value="50" /> +
-    <input type="number" name="a" value="10" /> =
-    <output name="result">60</output>
+  <input type="range" name="b" value="50" /> +
+  <input type="number" name="a" value="10" /> =
+  <output name="result">60</output>
 </form>
 ```
 一个容器元素。用于网站或APP中注入一个计算的结果或一个用户动作的输出。
@@ -1418,7 +1488,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!-- Embed a flash movie with parameters -->
 <object data="movie.swf" type="application/x-shockwave-flash">
-    <param name="foo" value="bar">
+  <param name="foo" value="bar">
 </object>
 ```
 用于为 OBJECT 元素定义参数。
@@ -1429,13 +1499,13 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!--通过media属性指定一个媒体查询，用户代理将根据屏幕尺寸决定是否选择该 SOURCE 元素。若媒体查询的结果为false，则 SOURCE 元素将被忽略-->
 <picture>
-    <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
-    <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+  <img src="mdn-logo-narrow.png" alt="MDN">
 </picture>
 <!--通过type属性为 SOURCE 元素指定一个MIME类型。如果用户代理不支持该给定类型，则 SOURCE 元素会被忽略-->
 <picture>
-    <source srcset="mdn-logo.svg" type="image/svg+xml">
-    <img src="mdn-logo.png" alt="MDN">
+  <source srcset="mdn-logo.svg" type="image/svg+xml">
+  <img src="mdn-logo.png" alt="MDN">
 </picture>
 ```
 作为零个至多个 SOURCE 元素以及后面跟着一个 IMG 标签的容器，以提供一张图片的不同尺寸版本。浏览器会根据每个 SOURCE 元素的所提供的图片来选择一张匹配得最好的，显示在 IMG 标签所占据的网页空间。如果没有匹配到合适的，则直接显示 IMG 标签所声明的图片（相当于回退功能）。为了选择到合适的图片，用户代理（浏览器）会检查每一个 SOURCE 元素的scrset、media和type属性，以匹配网页的当前布局、显示设备的特点等等。
@@ -1468,7 +1538,12 @@ body {
 
 ## Q
 ```html
-<p>According to Mozilla's website,<q cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0 was released in 2004 and became a big success.</q></p>
+<p>
+  According to Mozilla's website,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/">
+    Firefox 1.0 was released in 2004 and became a big success.
+  </q>
+</p>
 ```
 用于表示所包含的文本属于一个很短的内联的引用。大部分现代浏览器都是通过一组引号（通常是双引号）围起文本来实现这一点。该元素用于短引用，因此不需要段落换行。对于长引用而言，用 BLOCKQUOTE 元素更合适一些。
 * cite————该属性的值是一个为所引用的信息指明一个源文档或源消息的URL。该属性主要是为了指向解析所引用的文本的上下文的信息。
@@ -1501,12 +1576,12 @@ body {
 ## RTC
 ```html
 <div class="info">
-    <ruby>
-        <rb>旧</rb><rt>jiù</rt>
-        <rb>金</rb><rt>jīn</rt>
-        <rb>山</rb><rt>shān</rt>
-        <rtc>San Francisco</rtc>
-    </ruby>
+  <ruby>
+    <rb>旧</rb><rt>jiù</rt>
+    <rb>金</rb><rt>jīn</rt>
+    <rb>山</rb><rt>shān</rt>
+    <rtc>San Francisco</rtc>
+  </ruby>
 </div>
 ```
 即 Ruby Text Container 。用于包裹 RUBY 元素内的子元素 RB 标签内出现的字符语义附注。RB 元素内可以同时出现发音注解（RT 元素）和语义注解（RTC 元素）。现阶段只有火狐浏览器支持。
@@ -1530,8 +1605,12 @@ body {
 ## S
 ```html
 <!--下面两行文字的显示效果是一样的-->
-<s>Today's Special: Salmon</s> SOLD OUT<br>
-<span style="text-decoration:line-through;">Today's Special: Salmon</span> SOLD OUT
+<s>Today's Special: Salmon</s> 
+SOLD OUT<br>
+<span style="text-decoration:line-through;">
+  Today's Special: Salmon
+</span> 
+SOLD OUT
 ```
 即 Strikethrough 。渲染的效果就是用一根线来划过所包含的文本。S 元素主要用于表示某些东西不再相关或不再准确。但是 S 元素并不适用于指代文本编辑，DEL 元素更合适些。
 * 这个元素只有全局属性。
@@ -1540,17 +1619,19 @@ body {
 ```html
 <!--基础用法-->
 <p>
-    当这个过程完成后，屏幕将输出文本
-    <samp>扫描完成，<em>N</em>个结果被发现</samp>。
-    然后你可以继续下一步骤。
+  当这个过程完成后，屏幕将输出文本
+  <samp>扫描完成，<em>N</em>个结果被发现</samp>。
+  然后你可以继续下一步骤。
 </p>
 <!--包含用户输入的样例输出-->
 <pre>
-    <samp>
-        <span class="prompt">mike@interwebz:~$</span><kbd>md5 -s "Hello world"</kbd>
-        MD5 ("Hello world") = 3e25960a79dbc69b674cd4ec67a72c62
-        <span class="prompt">mike@interwebz:~$</span><span class="cursor">█</span>
-    </samp>
+  <samp>
+    <span class="prompt">mike@interwebz:~$</span>
+    <kbd>md5 -s "Hello world"</kbd>
+    MD5 ("Hello world") = 3e25960a79dbc69b674cd4ec67a72c62
+    <span class="prompt">mike@interwebz:~$</span>
+    <span class="cursor">█</span>
+  </samp>
 </pre>
 ```
 即 Sample 。用于包含从一段计算机程序中得出的样例（或援引）输出而成的内联文本。该标签的内容通常用浏览器的默认的等宽字体进行渲染。
@@ -1576,9 +1657,9 @@ body {
 * src————用于指定一份外部的脚本。该属性可用于替代在一份文档中直接嵌入一份脚本的方式。
 * text————像textContent属性一样，该属性是用于设置 SCRIPT 元素的文本内容的。但又跟textContent属性不同，在文本节点被插入到DOM中后，该属性的内容将作为可执行的代码。
 * type————指定脚本代表的类型。可能的值的种类包括，
-    * 省略不写或是一个JavaScript的MIME类型：对于兼容HTML5的浏览器而言，这类值就是表明脚本为JavaScript。HTML5规范强制要求网页作者省略该属性而不是提供一个累赘的MIME类型。对于早期的浏览器而言，这类值指定了嵌入或引入的代码（通过src属性）的脚本语言。
-    * module：对于兼容HTML5的浏览器而言，该标签内的代码将被看成是一个JavaScript模块。脚本内容的处理过程便不会被charset或defer属性所影响。（HTML5新增）
-    * 任意的其他的值：嵌入的内容将被当成一个不会被浏览器处理的数据块。开发者必须使用一个有效的不是一个JavaScript的MIME类型的MIME类型来指代数据块。应用了此类值后，src属性将被忽略。
+  * 省略不写或是一个JavaScript的MIME类型：对于兼容HTML5的浏览器而言，这类值就是表明脚本为JavaScript。HTML5规范强制要求网页作者省略该属性而不是提供一个累赘的MIME类型。对于早期的浏览器而言，这类值指定了嵌入或引入的代码（通过src属性）的脚本语言。
+  * module：对于兼容HTML5的浏览器而言，该标签内的代码将被看成是一个JavaScript模块。脚本内容的处理过程便不会被charset或defer属性所影响。（HTML5新增）
+  * 任意的其他的值：嵌入的内容将被当成一个不会被浏览器处理的数据块。开发者必须使用一个有效的不是一个JavaScript的MIME类型的MIME类型来指代数据块。应用了此类值后，src属性将被忽略。
 * 注意事项：
 * 1、如果src属性不存在时，async属性一定不能被使用，否则async属性会完全不起作用。
 * 2、动态插入的脚步默认是以异步的方式执行的。所以，如果希望其同步执行（即根据插入的顺序执行），那么应当为其设置"async=false"。
@@ -1592,8 +1673,8 @@ body {
 ```html
 <!--以前我们这么用-->
 <div>
-    <h1>Heading</h1>
-    <p>Bunch of awesome content</p>
+  <h1>Heading</h1>
+  <p>Bunch of awesome content</p>
 </div>
 <!--现在我们这么用-->
 <section>
@@ -1611,10 +1692,11 @@ body {
 ## SELECT
 ```html
 <!-- The second value will be selected initially -->
-<select name="text"> <!--Supplement an id here instead of using 'text'-->
-    <option value="value1">Value 1</option> 
-    <option value="value2" selected>Value 2</option>
-    <option value="value3">Value 3</option>
+<!--Supplement an id here instead of using 'text'-->
+<select name="text">
+  <option value="value1">Value 1</option> 
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
 </select>
 ```
 表示一个提供一组选项的控件。
@@ -1635,21 +1717,21 @@ body {
 ## SLOT
 ```html
 <template id="my-paragraph">
-    <style>
-        p {
-        color: white;
-        background-color: #666;
-        padding: 5px;
-        }
-    </style>
-    <p>My paragraph</p>
-    <slot name="my-text">My default text</slot>
+  <style>
+    p {
+    color: white;
+    background-color: #666;
+    padding: 5px;
+    }
+  </style>
+  <p>My paragraph</p>
+  <slot name="my-text">My default text</slot>
 </template>
 <my-paragraph>
-    <ul slot="my-text">
-        <li>Let's have some different text!</li>
-        <li>In a list!</li>
-    </ul>
+  <ul slot="my-text">
+    <li>Let's have some different text!</li>
+    <li>In a list!</li>
+  </ul>
 </my-paragraph>
 ```
 该元素仍然属于实验性元素（IE完全不支持，火狐不支持name属性）。作为网站组件化技术套件的一部分，它是一个网页组件的占位符，可以让开发者在其位置填充所需的标签，从而使得组件实现分离后又能合并到一起显示。
@@ -1671,23 +1753,23 @@ body {
 <!--末行的文字会在浏览器不支持 VIDEO 元素的资源时显示-->
 <!--如果浏览器不支持任何 SOURCE 元素中资源，则会触发一个error事件-->
 <video controls>
-    <source src="foo.webm" type="video/webm">
-    <source src="foo.ogg" type="video/ogg"> 
-    <source src="foo.mov" type="video/quicktime">
-    I'm sorry; your browser doesn't support HTML5 video.
+  <source src="foo.webm" type="video/webm">
+  <source src="foo.ogg" type="video/ogg"> 
+  <source src="foo.mov" type="video/quicktime">
+  I'm sorry; your browser doesn't support HTML5 video.
 </video>
 ```
 用于为 PICTURE、AUDIO、VIDEO 元素指定多媒体资源。这是一个空元素（不会有子节点）。通常用于为不同浏览器提供一份媒体的不同格式，以实现兼容。
 * sizes————实验性属性。是一组描述最终渲染的图片根据源而代表显示的宽度大小的列表。每个源大小由一组逗号分隔的媒体条件长度对组成。这份信息是用于浏览器在显示页面之前决定使用srcset属性中哪一张图片。只有当 SOURCE 元素是一个 PICTURE 元素的直接子元素时sizes属性才会生效。
 * src————当 SOURCE 元素属于 AUDIO 和 VIDEO 标签中的子元素时，该属性是必需的。当 SOURCE 元素放置于一个 PICTURE 元素时，该属性的值会被忽略。
 * srcset————实验性属性。一组由一个或多个用逗号分隔的字符串组成的列表，用于指定一组可能被浏览器使用的图片。每个字符串的成分由3种成分组合而成，
-    * 1、一张图片的URL。
-    * 2、一个宽度描述符，即一个正整数后面直接跟着'w'。如果省略该项，则默认值为无限大。
-    * 3、一个像素密度描述符，即一个正浮点数后面直接跟着'x'。如果省略该项，则默认值为'1x'。
-    * 注1：列表中的每个字符串必须至少有一个有效的宽度描述符或像素密度描述符。
-    * 注2：贯穿整个列表，包含相同的宽度描述符和像素密度描述符的元组只能有一个。
-    * 注3：浏览器在某一个特定的时间点会选择一张嘴合适的图片来显示。
-    * 注4：srcset属性只在 SOURCE 元素是一个 PICTURE 元素的直接子元素时有效。
+  * 1、一张图片的URL。
+  * 2、一个宽度描述符，即一个正整数后面直接跟着'w'。如果省略该项，则默认值为无限大。
+  * 3、一个像素密度描述符，即一个正浮点数后面直接跟着'x'。如果省略该项，则默认值为'1x'。
+  * 注1：列表中的每个字符串必须至少有一个有效的宽度描述符或像素密度描述符。
+  * 注2：贯穿整个列表，包含相同的宽度描述符和像素密度描述符的元组只能有一个。
+  * 注3：浏览器在某一个特定的时间点会选择一张嘴合适的图片来显示。
+  * 注4：srcset属性只在 SOURCE 元素是一个 PICTURE 元素的直接子元素时有效。
 * type————资源的MIME类型。可选带一个codecs参数。关于如何指定codecs，可参考 https://tools.ietf.org/html/rfc4281 。
 * media————实验性属性。资源的预定媒体的媒体查询。该属性只应在 PICTURE 内的 SOURCE 元素中使用。
 * 注意事项：
@@ -1697,8 +1779,8 @@ body {
 ## SPAN
 ```html
 <p>
-    <span class="some-styles">Some text</span>.
-    Other text.
+  <span class="some-styles">Some text</span>.
+  Other text.
 </p>
 ```
 一个通用的内联容器，天生不代表任何事物。可用于对其他元素进行分组以进行样式渲染（使用class或id属性），或者为组内的元素添加相同的属性值，如lang属性。只有在其他任何元素都不合适时才应使用该元素。它跟 DIV 元素很像，只是 DIV 是块级元素。
@@ -1706,7 +1788,10 @@ body {
 
 ## STRONG
 ```html
-<p>Before proceeding, <strong>make sure you put on your safety goggles</strong>.</p>
+<p>
+  Before proceeding, 
+  <strong>make sure you put on your safety goggles</strong>.
+</p>
 ```
 用于指定内容具有强烈的重要性、严重性或紧急性。浏览器通常以粗体类型来渲染本元素的内容。
 * 这个元素只有全局属性。
@@ -1734,35 +1819,44 @@ body {
 ## SUB
 ```html
 <!--用于脚注-->
-<p>According to the computations by Nakamura, Johnson, and
-Mason<sub>1</sub> this will result in the complete annihilation
-of both particles.</p>
+<p>
+  According to the computations by Nakamura, Johnson, and Mason
+  <sub>1</sub> 
+  this will result in the complete annihilation of both particles.
+</p>
 <!--用于变量下标-->
-<p>The horizontal coordinates' positions along the X-axis are
-represented as <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var>.</p>
+<p>
+  The horizontal coordinates' positions along the X-axis are represented as 
+  <var>x<sub>1</sub></var> 
+  ... 
+  <var>x<sub>n</sub></var>
+  .
+</p>
 <!--用于化学公式-->
-<p>Almost every developer's favorite molecule is
-C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is
-commonly known as "caffeine."</p>
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, 
+  which is commonly known as "caffeine."
+</p>
 ```
 用于单纯的排版，指定行内文本应当显示为下标。下标通常用一个更小的字号在更低的基线上渲染。
 * 这个元素只有全局属性。
 * 注意事项：
 * 1、只应由于排版上需要才使用 SUB 元素。不要仅仅因为显示或展现的原因而用该元素。例如，在企业商标上（的某些图案或文字）使用该元素实现就不合适，此时应使用CSS属性vertical-align来实现，或设置值为"sub"，或设置值为更精确的百分比或其他数字值。
 * 2、合适的用例包括但不限于，
-    * 1、标记脚注数值。
-    * 2、标记数学变量数字的下标。当然，开发者也可以使用MathML语言（ https://developer.mozilla.org/en-US/docs/Web/MathML ）来做到这一点，只是兼容性还不够好。
-    * 3、显示一个化学公式的原子的给定数字。
+  * 1、标记脚注数值。
+  * 2、标记数学变量数字的下标。当然，开发者也可以使用MathML语言（ https://developer.mozilla.org/en-US/docs/Web/MathML ）来做到这一点，只是兼容性还不够好。
+  * 3、显示一个化学公式的原子的给定数字。
 
 ## SUMMARY
 ```html
 <details open>
-    <summary>Overview</summary>
-    <ol>
-        <li>Cash on hand: $500.00</li>
-        <li>Current invoice: $75.30</li>
-        <li>Due date: 5/6/19</li>
-    </ol>
+  <summary>Overview</summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
 </details>
 ```
 指定一份摘要、说明文字或为一个 DETAILS 元素的公开盒子定义一段铭文（即一直会显示的内容）。点击 SUMMARY 元素会使父元素 DETAILS 不断的打开与关闭。该元素尚不能得到浏览器很好的支持。
@@ -1777,14 +1871,18 @@ commonly known as "caffeine."</p>
 ## SUP
 ```html
 <!--用于数学公式-->
-<p>One of the most common equations in all of physics is
-<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.<p>
+<p>
+  One of the most common equations in all of physics is
+  <var>E</var>=<var>m</var><var>c</var><sup>2</sup>.
+<p>
 <!--用于序号-->
-<p>The ordinal number "fifth" can be abbreviated in various
-languages as follows:</p>
+<p>
+  The ordinal number "fifth" can be abbreviated in various
+  languages as follows:
+</p>
 <ul>
-    <li>English: 5<sup>th</sup></li>
-    <li>French: 5<sup>ème</sup></li>
+  <li>English: 5<sup>th</sup></li>
+  <li>French: 5<sup>ème</sup></li>
 </ul>
 ```
 用于单纯的排版，指定行内文本应当显示为上标。上标通常用一个更小的字号在更高的基线上渲染。
@@ -1792,21 +1890,21 @@ languages as follows:</p>
 * 注意事项：
 * 1、只应由于排版上需要才使用 SUP 元素。不要仅仅因为显示或展现的原因而用该元素。例如，在企业商标上（的某些图案或文字）使用该元素实现就不合适，此时应使用CSS属性vertical-align来实现，或设置值为"sup"，或设置值为更精确的百分比或其他数字值。
 * 2、合适的用例包括但不限于，
-    * 1、展示指数，例如"X的3次方"。当然，开发者也可以使用MathML语言（ https://developer.mozilla.org/en-US/docs/Web/MathML ）来做到这一点，只是兼容性还不够好。
-    * 2、显示某些语言中的缩写的"更高级的字母"(superior lettering)。例如法语的单词"mademoiselle"的缩写形式，除了第一个字母是正常显示，其余的则显示成上标形式。
-    * 3、代表顺序数字，例如"第4"的数字加英文形式。
+  * 1、展示指数，例如"X的3次方"。当然，开发者也可以使用MathML语言（ https://developer.mozilla.org/en-US/docs/Web/MathML ）来做到这一点，只是兼容性还不够好。
+  * 2、显示某些语言中的缩写的"更高级的字母"(superior lettering)。例如法语的单词"mademoiselle"的缩写形式，除了第一个字母是正常显示，其余的则显示成上标形式。
+  * 3、代表顺序数字，例如"第4"的数字加英文形式。
 
 ## TABLE
 ```html
 <table>
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-    </tr>
-    <tr>
-        <td>John</td>
-        <td>10</td>
-    </tr>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>10</td>
+  </tr>
 </table>
 ```
 用于表示表格类型的数据，即展示在一个由行和列组合成单元格（用于包含数据）的二维表格的信息。
@@ -1817,69 +1915,69 @@ languages as follows:</p>
 ```html
 <!--包含 THEAD 和 TBODY-->
 <table>
-    <thead>
-        <tr>
-            <th>Student ID</th>
-            <th>Name</th>
-            <th>Major</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>3741255</td>
-            <td>Jones, Martha</td>
-            <td>Computer Science</td>
-        </tr>
-        <tr>
-            <td>3971244</td>
-            <td>Nim, Victor</td>
-            <td>Russian Literature</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Name</th>
+      <th>Major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Nim, Victor</td>
+      <td>Russian Literature</td>
+    </tr>
+  </tbody>
 </table>
 <!--包含多个 TBODY-->
 <table>
-    <thead>
-        <tr>
-            <th>Student ID</th>
-            <th>Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th colspan="2">Computer Science</th>
-        </tr>
-        <tr>
-            <td>3741255</td>
-            <td>Jones, Martha</td>
-        </tr>
-        <tr>
-            <td>4077830</td>
-            <td>Pierce, Benjamin</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <th colspan="2">Russian Literature</th>
-        </tr>
-        <tr>
-            <td>3971244</td>
-            <td>Nim, Victor</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-            <th colspan="2">Astrophysics</th>
-        </tr>
-        <tr>
-            <td>4100332</td>
-            <td>Petrov, Alexandra</td>
-        </tr>
-        <tr>
-            <td>8892377</td>
-            <td>Toyota, Hiroko</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="2">Computer Science</th>
+    </tr>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+    </tr>
+    <tr>
+      <td>4077830</td>
+      <td>Pierce, Benjamin</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th colspan="2">Russian Literature</th>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Nim, Victor</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th colspan="2">Astrophysics</th>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Petrov, Alexandra</td>
+    </tr>
+    <tr>
+      <td>8892377</td>
+      <td>Toyota, Hiroko</td>
+    </tr>
+  </tbody>
 </table>
 ```
 用于封装表格行 TR 元素的集合，即作为表格的主体(body)部分。TBODY 元素，跟其兄弟元素 THEAD 和 TFOOT 元素一起，在用于屏幕或打印机或其他可访问目的的渲染时，提供了有用的语义信息。
@@ -1895,20 +1993,20 @@ languages as follows:</p>
 ## TD
 ```html
 <table>
-    <thead>
-        <tr>
-            <th>Student ID</th>
-            <th>Name</th>
-            <th>Major</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>3741255</td>
-            <td>Jones, Martha</td>
-            <td>Computer Science</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Name</th>
+      <th>Major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+      <td>Computer Science</td>
+    </tr>
+  </tbody>
 </table>
 ```
 用于定义表格的一个包含数据的单元格。单元格是表格模型的参与者、构造者。
@@ -1919,47 +2017,47 @@ languages as follows:</p>
 ## TEMPLATE
 ```html
 <table id="producttable">
-    <thead>
-        <tr>
-            <td>UPC_Code</td>
-            <td>Product_Name</td>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- existing data could optionally be included here -->
-    </tbody>
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- existing data could optionally be included here -->
+  </tbody>
 </table>
 
 <template id="productrow">
-    <tr>
-        <td class="record"></td>
-        <td></td>
-    </tr>
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
 </template>
 
 <script>
 // Test to see if the browser supports the HTML template element by checking
 // for the presence of the template element's content attribute.
 if ('content' in document.createElement('template')) {
-    // Instantiate the table with the existing HTML tbody
-    // and the row with the template
-    var t = document.querySelector('#productrow'),
-    td = t.content.querySelectorAll("td");
-    td[0].textContent = "1235646565";
-    td[1].textContent = "Stuff";
-    // Clone the new row and insert it into the table
-    var tb = document.querySelector("tbody");
-    var clone = document.importNode(t.content, true);
-    tb.appendChild(clone);
-    // Create a new row
-    td[0].textContent = "0384928528";
-    td[1].textContent = "Acme Kidney Beans";
-    // Clone the new row and insert it into the table
-    var clone2 = document.importNode(t.content, true);
-    tb.appendChild(clone2);
+  // Instantiate the table with the existing HTML tbody
+  // and the row with the template
+  var t = document.querySelector('#productrow'),
+  td = t.content.querySelectorAll("td");
+  td[0].textContent = "1235646565";
+  td[1].textContent = "Stuff";
+  // Clone the new row and insert it into the table
+  var tb = document.querySelector("tbody");
+  var clone = document.importNode(t.content, true);
+  tb.appendChild(clone);
+  // Create a new row
+  td[0].textContent = "0384928528";
+  td[1].textContent = "Acme Kidney Beans";
+  // Clone the new row and insert it into the table
+  var clone2 = document.importNode(t.content, true);
+  tb.appendChild(clone2);
 } else {
-    // Find another way to add the rows to the table because 
-    // the HTML template element is not supported.
+  // Find another way to add the rows to the table because 
+  // the HTML template element is not supported.
 }
 </script>
 ```
@@ -1972,14 +2070,14 @@ if ('content' in document.createElement('template')) {
 ```
 用于表示一个多行的平白文本编辑控件。
 * autocapitalize————非标准属性，只有 IOS 系统的浏览器支持。用于指定该控件能否与如何根据用户输入（编辑）的内容来自动使首字母大写化。以下值能被IOS5以上的系统支持：
-    * none：完全禁止自动使首字母大写化。
-    * sentences：自动使句子的首字母变成大写的。
-    * words：自动使单词的首字母都变成大写的。
-    * characters：使所有字母都自动变成大写的。
+  * none：完全禁止自动使首字母大写化。
+  * sentences：自动使句子的首字母变成大写的。
+  * words：自动使单词的首字母都变成大写的。
+  * characters：使所有字母都自动变成大写的。
 * autocomplete————这是一个HTML5新增属性。指定文本域元素是否默认被浏览器自动完成值的填写。可能的值有：
-    * "off"：指定用户在每次使用文本域时，都必须明确地输入值，又或者文档本身提供自己的自动完成方法（浏览器是不会自动完成输入的）。
-    * "on"：浏览器会根据用户以前在改文本域中输入的内容，自动将其输入填充到输入框中。
-    * 注1：当 TEXTAREA 元素没有指定autocomplete属性时，浏览器会使用 TEXTAREA 元素所属的 FORM 元素的autocomplete属性。
+  * "off"：指定用户在每次使用文本域时，都必须明确地输入值，又或者文档本身提供自己的自动完成方法（浏览器是不会自动完成输入的）。
+  * "on"：浏览器会根据用户以前在改文本域中输入的内容，自动将其输入填充到输入框中。
+  * 注1：当 TEXTAREA 元素没有指定autocomplete属性时，浏览器会使用 TEXTAREA 元素所属的 FORM 元素的autocomplete属性。
 * autofocus————用于指定页面刚加载完成时，某个表单控件是否应当拥有输入焦点（除非用户改变了输入焦点，例如在别的控件中打字）。一个表单只能有一个控件拥有autofocus属性。(HTML5)
 * cols————用于指定文本的可见宽度（每单位指字符的平均宽度）。值必须为一个正整数。在HTML5中，该默认值为"20"。
 * disabled————该布尔属性用于指定用户能否与本控件交互。如果不指定该属性，则控件会从包含它的元素（例如 FIELDSET 元素）继承该设置。如果包含它的元素也没设置该属性，那么控件就是可用的。
@@ -1993,9 +2091,9 @@ if ('content' in document.createElement('template')) {
 * rows————指定本控件的可见行数。
 * spellcheck————该属性值设置为"true"时，表示 TEXTAREA 元素需要进行拼写和语法检查。值为"default"时，指定元素根据默认的情况选择相应的检查行为（可能基于父级元素的spellcheck属性值）。值为"false"时，指定元素不应当进行检查。(HTML5)
 * wrap————这是一个HTML5新增属性。用于指定本控件如何缠绕文本。可能的值有：
-    * hard：浏览器自动插入换行符（CR+LF）以使每行的宽度都不会超过本控件的宽度。前提是必须设定了cols属性。
-    * soft：浏览器确保值中的所有换行都由CR+LF对组成，但不会插入任何额外的换行。（默认值）
-    * off：类似于"soft"，但会改变控件的面貌为"white-space: pre;"。所以当某行超出cols指定的宽度时，该行将不会包裹，从而该区域变成可以横向滚动的。
+  * hard：浏览器自动插入换行符（CR+LF）以使每行的宽度都不会超过本控件的宽度。前提是必须设定了cols属性。
+  * soft：浏览器确保值中的所有换行都由CR+LF对组成，但不会插入任何额外的换行。（默认值）
+  * off：类似于"soft"，但会改变控件的面貌为"white-space: pre;"。所以当某行超出cols指定的宽度时，该行将不会包裹，从而该区域变成可以横向滚动的。
 * 注意事项：
 * 1、Gecko 2.0引入了对可重置大小的文本域的支持。该功能通过CSS属性resize控制。默认上，文本域是可重置大小的。
 * 2、从CSS角度来说，一个 TEXTAREA 是一个可被替代的元素。HTML规范并没有指定一个 TEXTAREA 标签的基线在哪里。不同的浏览器把基线设置在了不同的位置。对于Gecko引擎来说，文本域的基线就是里面第一行文本所在的基线。对于其他浏览器来说，文本域的基线可能被设置在了 TEXTAREA 盒子的底部。因此，不要在 TEXTAREA 元素上使用"vertical-align: baseline;"，否则其行为可能变得不可预测。
@@ -2004,24 +2102,24 @@ if ('content' in document.createElement('template')) {
 ## TFOOT
 ```html
 <table>
-    <thead>
-        <tr>
-            <th>Header content 1</th>
-            <th>Header content 2</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Body content 1</td>
-            <td>Body content 2</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td>Footer content 1</td>
-            <td>Footer content 2</td>
-        </tr>
-    </tfoot>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
 </table>
 ```
 用于包裹一个行的集合，来定义表格各列的总结、概括。
@@ -2032,18 +2130,18 @@ if ('content' in document.createElement('template')) {
 ## TH
 ```html
 <table>
-    <tr>
-        <th>First name</th>
-        <th>Last name</th>
-    </tr>
-    <tr>
-        <td>John</td>
-        <td>Doe</td>
-    </tr>
-    <tr>
-        <td>Jane</td>
-        <td>Doe</td>
-    </tr>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Doe</td>
+  </tr>
 </table>
 ```
 用于定义一组表格单元格的头部（即表头）。该组的确切性质由属性scope和headers定义。
@@ -2051,11 +2149,11 @@ if ('content' in document.createElement('template')) {
 * headers————该属性的值为一组以空格分隔的字符串，每一个对应于关联本 TH 元素的其他 TH 元素的id属性值。
 * rowspan————该属性的值为一个正整数，用于指定该单元格跨过多少行。默认值为"1"。值大于"65534"时，会自动被缩减为"65534"。
 * scope————该可枚举属性用于指定头部（定义在本 TH 元素中）所关联的单元格集合。可能的值包括：（注意，已经不建议再使用该属性了）
-    * row：表头关联到一行中所有的单元格。
-    * col：表头关联到一列中所有的单元格。
-    * rowgroup：表头关联到一个行组中所有的单元格。这些单元格可以根据 TABLE 元素中的dir属性值而被放置在头部的右边或左边。
-    * colgroup：表头关联到一个列组中所有的单元格。
-    * auto：自动。
+  * row：表头关联到一行中所有的单元格。
+  * col：表头关联到一列中所有的单元格。
+  * rowgroup：表头关联到一个行组中所有的单元格。这些单元格可以根据 TABLE 元素中的dir属性值而被放置在头部的右边或左边。
+  * colgroup：表头关联到一个列组中所有的单元格。
+  * auto：自动。
 * 注意事项：
 * 1、colspan属性在以前是可以设为"0"的，则本 TH 单元格会跨到 COLGROUP 标签里面的最后一个元素。但主流浏览器均不支持"0"值了，因此一般看不到效果。
 * 2、rowspan属性在以前是可以设为"0"的，则本 TH 单元格会跨到表格部分（THEAD、THBODY、TFOOT 算是一个表格部分）的最后一个元素。但主流浏览器均不支持"0"值了，因此一般看不到效果。
@@ -2063,18 +2161,18 @@ if ('content' in document.createElement('template')) {
 ## THEAD
 ```html
 <table>
-    <thead>
-        <tr>
-            <th>Header content 1</th>
-            <th>Header content 2</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Body content 1</td>
-            <td>Body content 2</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+  </tbody>
 </table>
 ```
 用于包裹一个行的集合，来定义表格各列的头部（信息）。
@@ -2085,9 +2183,17 @@ if ('content' in document.createElement('template')) {
 ## TIME
 ```html
 <!--简单的使用-->
-<p>The concert starts at <time>20:00</time>.</p>
+<p>
+  The concert starts at 
+  <time>20:00</time>
+  .
+</p>
 <!--含有日期时间值-->
-<p>The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.</p>
+<p>
+  The concert took place on 
+  <time datetime="2001-05-15T19:00">May 15</time>
+  .
+</p>
 ```
 用于表示：一个24小时时钟的时刻（或时间）、公历日历上的一个精确日期（带有可选的时间和时区信息）、一个有效的时间片段。
 * datetime————用于指定本元素的时间与日期。值必须为一个有效的可带有一个时间字符串的日期字符串。如果该值不能被正确解析，则本元素不会拥有一个相关的时间戳。
@@ -2108,14 +2214,14 @@ if ('content' in document.createElement('template')) {
 ## TR
 ```html
 <table>
-    <tr>
-        <th>First name</th>
-        <th>Last name</th>
-    </tr>
-    <tr>
-        <td>John</td>
-        <td>Doe</td>
-    </tr>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
 </table>
 ```
 定义表格的一行（单元格集合）。行中的单元格可以是 TD 元素和 TH 元素的混合。
@@ -2126,39 +2232,39 @@ if ('content' in document.createElement('template')) {
 ## TRACK
 ```html
 <video controls poster="/images/sample.gif">
-    <source src="sample.mp4" type="video/mp4">
-    <source src="sample.ogv" type="video/ogv">
-    <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-    <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en">
-    <track kind="chapters" src="sampleChapters.vtt" srclang="en">
-    <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
-    <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
-    <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
-    <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
-    <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1">
-    <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2">
-    <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3">
-    <!-- Fallback -->
-    ...
+  <source src="sample.mp4" type="video/mp4">
+  <source src="sample.ogv" type="video/ogv">
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en">
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en">
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en">
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1">
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2">
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3">
+  <!-- Fallback -->
+  ...
 </video>
 ```
 作为媒体元素（AUDIO 或 VIDEO）的子元素，用于指定时控文本轨道（或者称基于时间的数据），例如用来自动处理字幕（subtitles）。轨道的格式为WebVTT（文件后缀为".vtt"），即网络视频文本轨道（Web Video Text Tracks）。
 * default————该属性用于指定本轨道应该是可用的除非用户偏好指定了另外一个更合适的轨道。在每个媒体元素中，该属性仅应用在一个 TRACK 元素上。
 * kind————指出文本轨道要如何使用。如果省略该属性则默认值为"subtitles"。如果值是无效的，则会使用"metadata"（在早于52版本的Chrome会使用"subtitles"）。可能的关键词有，
-    * subtitles：
-        * (1)、字幕提供了观看者不能理解的内容的翻译。例如西方电影的中文字幕。
-        * (2)、字幕可能包含额外的内容，通常是额外的背景信息。例如《星球大战》中的某些场景的日期时间信息、位置信息等。
-    * captions：
-        * (1)、隐藏的带有解释意味的字幕（closed captions）提供了一份抄写本或为音频提供了一份翻译。
-        * (2)、它可能包含了重要的非言语交际的信息，例如音乐提示或声音效果。它也可能指出提示（cue）的源头（例如 音乐、文本、字符）。
-        * (3)、适合耳聋的用户或声音为静音状态时的使用者。
-    * descriptions：
-        * (1)、视频内容的文本描述。
-        * (2)、适合眼瞎的用户或视频为看不见的状态时的使用者。
-    * chapters：
-        * (1)、当用户导航到该媒体资源时所打算使用的章节标题。
-    * metadata：
-        * (1)、被脚本使用的轨道。对用户是不可见的。
+  * subtitles：
+    * (1)、字幕提供了观看者不能理解的内容的翻译。例如西方电影的中文字幕。
+    * (2)、字幕可能包含额外的内容，通常是额外的背景信息。例如《星球大战》中的某些场景的日期时间信息、位置信息等。
+  * captions：
+    * (1)、隐藏的带有解释意味的字幕（closed captions）提供了一份抄写本或为音频提供了一份翻译。
+    * (2)、它可能包含了重要的非言语交际的信息，例如音乐提示或声音效果。它也可能指出提示（cue）的源头（例如 音乐、文本、字符）。
+    * (3)、适合耳聋的用户或声音为静音状态时的使用者。
+  * descriptions：
+    * (1)、视频内容的文本描述。
+    * (2)、适合眼瞎的用户或视频为看不见的状态时的使用者。
+  * chapters：
+    * (1)、当用户导航到该媒体资源时所打算使用的章节标题。
+  * metadata：
+    * (1)、被脚本使用的轨道。对用户是不可见的。
 * label————一个用户可读的（浏览器在列可用的文本轨道时所用到的）文本轨道标题。
 * src————轨道（".vtt"文件）的地址。要求值必须为一个有效的URL。该属性为必填。
 * srclang————轨道文本数据的语言。值必须为一个有效的BCP 47语言标签。如果kind属性被设置为"subtitles"，则srclang属性必填。
@@ -2179,21 +2285,21 @@ if ('content' in document.createElement('template')) {
 * 2、U 元素的语义为：标记应用了某些非文本格式注释的文本。
 * 3、应用场合包括 为拼读错误添加注解、应用一个合适的名字记号来指示合适的中文名、其他注解形式。
 * 4、下面再回顾一下各种语义下应如何选择标签：
-    * EM：代表压力强调。
-    * B：为文本获取注意力。
-    * MARK：标记关键词或短语。
-    * STRONG：支持有强烈重要性的文本。
-    * CITE：标记书籍或其他发行物的标题。
-    * I：指代技术术语、字（音）译、想法、西方的船舶名称。
-    * RUBY：提供文本注释。
-    * U：提供非文本注释。
+  * EM：代表压力强调。
+  * B：为文本获取注意力。
+  * MARK：标记关键词或短语。
+  * STRONG：支持有强烈重要性的文本。
+  * CITE：标记书籍或其他发行物的标题。
+  * I：指代技术术语、字（音）译、想法、西方的船舶名称。
+  * RUBY：提供文本注释。
+  * U：提供非文本注释。
 
 ## UL
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 表示一个无序列表，常常被渲染为一个子强调符号开头的列表。
@@ -2216,12 +2322,12 @@ if ('content' in document.createElement('template')) {
 ```html
 <!-- 简单的视频案例 -->
 <video src="videofile.webm" autoplay poster="posterimage.jpg">
-    很抱歉，您的浏览器不支持内嵌视频，但不必担心，您可以<a href="videofile.webm">下载该视频</a>并用您喜欢的视频播放器打开它
+  很抱歉，您的浏览器不支持内嵌视频，但不必担心，您可以<a href="videofile.webm">下载该视频</a>并用您喜欢的视频播放器打开它
 </video>
 <!-- 带有字幕的视频 -->
 <video src="foo.webm">
-    <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
-    <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
 </video>
 <!-- 支持多个播放格式的视频 -->
 <video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif" >
@@ -2236,21 +2342,21 @@ if ('content' in document.createElement('template')) {
 * buffered————通过该属性获取已缓冲的资源的时间段信息。该属性包含一个TimeRanges对象（对象包含length属性、start()方法、end()方法）。
 * controls————如果该属性出现在标签中，浏览器便会为读者提供控制条（通常包括音量、进度拖动条、暂停/重播）。
 * crossorigin————这是一个HTML5新增属性。表明是否必须使用CORS完成相关图像的抓取。启用CORS的图像在 CANVAS 元素中可以重复使用而不会被污染。允许的值有：
-    * 1、anonymous：执行一个跨域的请求（比如，请求头部带有 Origin: HTTP header）。但不发送证书（比如，没有 cookie，没有 X.509 证书，没有HTTP基本的授权认证）。如果服务器没有给源站证书（没有设置Access-Control-Allow-Origin: HTTP头），视频帧会被污染而且它的使用会被限制。
-    * 2、use-credentials：一个有证书的跨域请求（比如，请求头部带有 Origin: HTTP header）被发送 （比如，有 cookie, 有 certificate, 有HTTP基本的授权认证）。如果服务器没有给源站发送证书（通过Access-Control-Allow-Credentials: HTTP header），视频帧将会被污染，且它的使用会受限制。
-    * 3、不设置该属性：默认不使用CORS发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在 CANVAS 中的使用。
-    * 4、如果值无效，则值会被当成是"anonymous"。
+  * 1、anonymous：执行一个跨域的请求（比如，请求头部带有 Origin: HTTP header）。但不发送证书（比如，没有 cookie，没有 X.509 证书，没有HTTP基本的授权认证）。如果服务器没有给源站证书（没有设置Access-Control-Allow-Origin: HTTP头），视频帧会被污染而且它的使用会被限制。
+  * 2、use-credentials：一个有证书的跨域请求（比如，请求头部带有 Origin: HTTP header）被发送 （比如，有 cookie, 有 certificate, 有HTTP基本的授权认证）。如果服务器没有给源站发送证书（通过Access-Control-Allow-Credentials: HTTP header），视频帧将会被污染，且它的使用会受限制。
+  * 3、不设置该属性：默认不使用CORS发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在 CANVAS 中的使用。
+  * 4、如果值无效，则值会被当成是"anonymous"。
 * height————指定 VIDEO 元素块的高度（只支持像素单位，只支持绝对值，不支持百分比）。
 * loop————该布尔属性用于指定当播放进度到达视频的结尾时，自动回到开头继续播放。
 * muted————该布尔属性用于指定视频中的音频的默认设置。如果出现了该属性，则在初始化时音频是静音的。默认为不静音。
 * played————一个TimeRanges对象，表示所有已播放的视频片段。
 * preload————可能的值有：
-    * "none"：指定声音不应当自动加载。
-    * "metadata"：指定只自动加载声音的元数据（例如声音长度信息）。
-    * "auto"：自动加载整个声音文件。
-    * ""：跟"auto"一样。
-    * 注1：如果设置了autoplay属性，preload属性则无效。
-    * 注2：规范并没有强迫浏览器遵循该属性的值。这仅仅是一个参考。
+  * "none"：指定声音不应当自动加载。
+  * "metadata"：指定只自动加载声音的元数据（例如声音长度信息）。
+  * "auto"：自动加载整个声音文件。
+  * ""：跟"auto"一样。
+  * 注1：如果设置了autoplay属性，preload属性则无效。
+  * 注2：规范并没有强迫浏览器遵循该属性的值。这仅仅是一个参考。
 * poster————一个URL，用于指定用户播放该视频前的封面。如果不指定该属性，则在视频的第一帧可用前，什么也不会显示在界面上。当第一帧下载完毕后，将作为封面帧。
 * src————被嵌入的视频的URL。这是一个可选属性。因为开发者可在 VIDEO 标签内使用 SOURCE 元素来指定嵌入的视频。
 * height————指定 VIDEO 元素块的宽度（只支持像素单位，只支持绝对值，不支持百分比）。
