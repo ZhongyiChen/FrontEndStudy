@@ -1,4 +1,4 @@
-# 所有标签
+## 所有标签
 * 所有标签对应的元素拥有以下属性（全局属性）的几个或全部：
 * asscesskey————指定一个(组)键盘快捷键来访问该元素，可使用该属性的元素包括 A、AREA（逐渐被遗弃了，尽量别用）、BUTTON、INPUT、LABEL、LEGEND、TEXTAREA。
 * class————为元素指定的CSS类。在JS的元素中，可通过className属性访问。
@@ -15,7 +15,7 @@
 * tabindex————值必须是一个整数。指定按下tab键时，元素(可获取焦点元素)能否获取焦点或获取焦点的顺序：负值表示元素能通过鼠标但不能通过tab键获取焦点、0表示可通过鼠标和tab键到达元素并获取焦点但顺序由平台决定、正值则表示以增值排序的方式获取焦点（如果值相同，则按照元素出现的先后顺序决定获取焦点的顺序）。在排序的键盘导航单上，如果一个元素的tabindex的值是一个0或者无效值或没有该属性，那么它应该被放在值是正数的element后边。
 * title————有关元素的附加说明信息，一般鼠标移到标签上方时，信息会通过工具提示条显示出来。
 
-# A
+## A
 ```html
 <a href="https://www.google.com">这是一个超链接</a>
 ```
@@ -29,7 +29,7 @@
 * 无障碍建议：锚点标签常常通过将 href 属性设置为 "#" 或 "javascript:void(0)" 来创造一个能阻止页面刷新的伪按钮的方式被滥用。 这些属性值会在拖动/复制链接时导致意外行为、在新窗口/新标签打开链接、加入书签以及JavaScript仍在下载时会出现错误或被禁用。这也会向辅助技术（如屏幕阅读器）传达不正确的语义。在这些情况下，推荐使用 BUTTON 来代替。通常情况下，您应该只将锚点用于正常的 URL 导航。 
 * 注意事项：A 不能与 A 产生嵌套关系。否则会被解析成非嵌套关系。
 
-# ABBR
+## ABBR
 ```html
 <abbr title="Internationalization">I18N</abbr>
 ```
@@ -37,13 +37,13 @@
 * 这个元素只有全局属性。
 * 注意事项：在默认样式方面，一般的浏览器就会跟 SPAN 一样。Opera、Firefox和其他一些浏览器给这个元素的内容添加一条点状下划线 。一些浏览器不仅添加点状下划线，而且还把元素的内容添加小写大写字母的样式。为了避免这个样式，在CSS中添加font-variant: none 。
 
-# ACRONYM
+## ACRONYM
 ```html
 <acronym title="World Wide Web">WWW</acronym>
 ```
 功能基本和 ABBR 一致。已过时，请使用 ABBR 代替。
 
-# ADDRESS
+## ADDRESS
 ```html
 <address>
     <p>Chris Mills, Manchester, The Grim North, UK</p>
@@ -54,7 +54,7 @@
 * 这个元素只有全局属性。
 * 注意事项：ADDRESS 不能与 ADDRESS 产生嵌套关系。
 
-# AREA
+## AREA
 ```html
 <img src="mm.jpg" alt="美女" usemap="#MM" width="256" height="191">
 <map id="MM" name="MM">
@@ -76,7 +76,7 @@
 * target————指定在何处显示链接的资源。取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。常用值：_self、_blank、_parent、_top。使用target时，可添加 rel="noopener norefferrer" 以防止针对window.opener API的恶意行为。
 * 注意事项：这个元素只能在 MAP 元素中使用（不必是直接子元素）。
 
-# ARTICLE
+## ARTICLE
 ```html
 <article class="film_review">
     <header>
@@ -99,7 +99,7 @@
 * 2、ARTICLE 元素的作者信息可通过 ADDRESS 元素提供，但是不适用于嵌套的 ARTICLE 元素。 
 * 3、ARTICLE 元素的发布日期和时间可通过 TIME 元素的datetime属性表示（pubdate属性已废弃）。
 
-# ASIDE
+## ASIDE
 ```html
 <article>
     <p>The Disney movie <cite>The Little Mermaid</cite> was first released to theatres in 1989.</p>
@@ -113,7 +113,7 @@
 * 这个元素只有全局属性。
 * 注意事项：不要在圆括号中的文本中使用 ASIDE 标签，因为这种文本会被浏览器当做主要内容的一部分。
 
-# AUDIO
+## AUDIO
 ```html
 <audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
     Your browser does not support the <code>audio</code> element.
@@ -144,7 +144,7 @@
 * 2、时间偏移量目前是指定为float类型的值，表示偏移的秒数，但时间偏移量值的定义还没有完成，有可能会变更。
 * 3、VIDEO 标签可以通过嵌入 TRACK 元素包含子标题和字幕，但 AUDIO 不可以。
 
-# B
+## B
 ```html
 <b class="text_bold">这是加粗字体</b>
 ```
@@ -152,7 +152,7 @@
 * 这个元素只有全局属性。
 * 注意事项：如果是为了突出内容的重要性，那么建议使用 STRONG 代替。如果只是单纯为了加粗字体，才使用该标签（最好加以class属性来同时设置font-weight为"bold"值，以防止下一版本废弃该标签）。
 
-# BASE
+## BASE
 ```html
 <base target="_blank" href="http://www.example.com/">
 ```
@@ -164,7 +164,7 @@
 * 1、一个文档只能拥有一个 BASE 元素（如果设置了多个，则只是第一个有效，其余的会被忽略）。
 * 2、OpenGraph元标签不认识 BASE 标签，因此需要一直使用全路径。
 
-# BDO
+## BDO
 ```html
 <bdo dir="rtl">感谢您对HTML的支持</bdo>
 ```
@@ -172,7 +172,7 @@
 * dir————值有两个："ltr"，文字从左到右；"rtl"，文字从右到左。
 * 注意事项：HTML4不支持对 BDO 标签添加事件监听器。
 
-# BLOCKQUOTE
+## BLOCKQUOTE
 ```html
 <blockquote cite="http://developer.mozilla.org">
     <p>This is a quotation taken from the Mozilla Developer Center.</p>
@@ -183,7 +183,7 @@
 * cite————指定一个标注引用的信息的来源文档或者相关信息的URL。通常用来描述能够解释引文的上下文或者引用的信息。
 * 注意事项：如果想要使用短引用（行间引用），可以使用 Q 标签。若要以文本的形式告知读者引文的出处（引用出处）时，可以通过 CITE 元素。
 
-# BODY
+## BODY
 ```html
 <html>
     <head>
@@ -214,7 +214,7 @@
 * onundo————指定本文档在用户后退(历史记录)时的回调函数。
 * onunload————指定本文档在页面卸载时的回调函数。
 
-# BR
+## BR
 ```html
 <br>
 ```
@@ -222,7 +222,7 @@
 * 这个元素只有全局属性。
 * 注意事项：如果只是单纯的为了增加文本段落之间的间隔，不要用 BR ，而应当用margin属性来实现。
 
-# BUTTON
+## BUTTON
 ```html
 <button type="submit" name="myButton" value="foo">Click me</button>
 ```
@@ -249,7 +249,7 @@
 * 3、IE6就更多BUG了。除了会搞错submit按钮的键值对，还会出现点击一个表单中的提交按钮，其他表单也会发生提交的情况。
 * 4、火狐浏览器同样有几个特殊情况：::-moz-focus-inner样式设置了按钮获得焦点时出现小点边框(可通过修改该伪类的样式重置)、按钮动态变成disabled后刷新不能恢复可点击状态(可通过设置autocomplete属性为off来解决)、低于35版本的安卓版会默认设置了background-image渐变(可通过设置按钮的样式属性background-image为none来重置)。
 
-# CANVAS
+## CANVAS
 ```html
 <canvas id="canvas" width="300" height="300">
     <p>你的浏览器不支持画布哦</p>
@@ -264,7 +264,7 @@
 * 3、可以通过css样式来改变 CANVAS 的大小。但如果画布因此出现模糊的情况，则应当只设置 CANVAS 的width和height属性来确定画布的大小。
 * 3、如果画布不需要使用透明度，则可以告诉浏览器该画布是非透明的以优化渲染效率。即将  var ctx = canvas.getContext('2d');  修改成  var ctx = canvas.getContext('2d', { alpha: false });  。
 
-# CAPTION
+## CAPTION
 ```html
 <table>
     <caption>这是表格的标题</caption>
@@ -282,7 +282,7 @@
 * 它的样式以及相对于表格的位置可以通过css的属性caption-size和text-align改变（不要再使用 CAPTION 的属性align）。
 * 注意事项：如果 TABLE 元素是 CAPTION 的父元素，而 CAPTION 又是 FIGURE 元素的唯一后代时，则应当使用 FIGCAPTION 元素替代 CAPTION 元素。
 
-# CITE
+## CITE
 ```html
 <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
 ```
@@ -294,7 +294,7 @@
 * 3、应当在 BLOCKQUOTE 元素或 Q 元素上使用cite属性来标明所引用的材料。
 * 4、CITE 元素的默认样式是font-style为italics。可以通过css设置font-style来重置该样式。
 
-# CODE
+## CODE
 ```html
 <p>The function <code>selectAll()</code> highlights all the text in the input field so the user can, for example, copy or delete the text.</p>
 ```
@@ -302,7 +302,7 @@
 * 这个元素只有全局属性。
 * 注意事项：css规则可以覆盖浏览器默认的 CODE 标签字体样式。但用户设置的浏览器字体选项可能会超过css的优先级，使之无效。
 
-# COL
+## COL
 ```html
 <table>
     <colgroup>
@@ -329,7 +329,7 @@
 * 2、关于同一列的text-align属性，可以通过css伪类:nth-child(an+b)来实现，如：td:nth-child(2) { text-align: right; }。
 * 3、关于同一列的text-align属性，如果 TABLE 里面（的 TD ）有设置colspan属性为n，也可以通过 td[colspan=n] { text-align: right; } 来实现。
 
-# COLGROUP
+## COLGROUP
 ```html
 <table>
     <colgroup>
@@ -352,10 +352,10 @@
 * span————值为一个正整数，指定 COLGROUP 连续跨了多少列（如果 COLGROUP 里面有一个或多个 COL 标签，则此属性无效）。默认值为"1"。
 * 注意事项：和 COL 元素一样。
 
-# CONTENT
+## CONTENT
 已废弃，请用 SLOT 元素代替。html
 
-# DATA
+## DATA
 ```html
 <p>新产品</p>
 <ul>
@@ -368,7 +368,7 @@
 * 如果该内容是与时间或日期相关的，则应当使用 TIME 元素。
 * value————该属性指定元素内容对应的机器可读的翻译。
 
-# DATALIST
+## DATALIST
 ```html
 <label>
     Choose a browser from this list: 
@@ -387,7 +387,7 @@
 * 这个元素只有全局属性。
 * 注意事项：该标签只在IE10以上的浏览器支持，为了提高兼容性，使用时应加入Polyfill：https://github.com/mfranzke/datalist-polyfill 。
 
-# DD
+## DD
 ```html
 <dl>
     <dt>Firefox</dt>
@@ -399,7 +399,7 @@
 * nowrap————"yes"表示描述文本不会被包裹。默认值为"no"。（此属性为非标准属性）
 * 注意事项：该元素只能作为 DL 元素的子元素出现，并且必须跟着一个 DT 元素。
 
-# DEL
+## DEL
 ```html
 <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
@@ -409,7 +409,7 @@
 * cite————指定一个解释该变化的源头的URI。
 * datetime————指定变化的日期以及时间。值必须是一个有效的日期时间字符串。
 
-# DETAILS
+## DETAILS
 ```html
 <details>
     <p>这里没有指定摘要或标签信息，因此标签会使用浏览器提供的默认信息：英文是"Details"，中文则是"详细信息"。</p>
@@ -429,7 +429,7 @@
 * open————指定是否显示详情。默认值为"false"，即 DETAILS 不可见。（相应的DOM事件名称为"toggle"）
 * 注意事项：现在有一个bug，即 DETAILS 带有css的animation值的时候，改变open属性是无法打开详情的。
 
-# DFN
+## DFN
 ```html
 <p><strong>HTML定义元素</strong>(<strong><dfn id"definition-dfn">&lt;dfn&gt;</dfn></strong>)用于指定一个定义语句或段落的被定义术语。</p>
 <p>你可以通过点击<code><a href="#definition-dfn">&lt;dfn&gt;</a></code>元素跳到相应词条的解析。</p>
@@ -443,7 +443,7 @@
 * 1、如果 DFN 上有id属性，那么你可以通过 A 标签来连接该 DFN 元素。这样的连接可以用于帮助读者快速导航到术语的定义之处（为 A 标签指定href="#id"，使其能跳转到 DNF 标签的位置）。
 * 2、被定义术语的具体值需根据title属性及其标签包含的内容决定：DFN 标签有title属性，那么被定义术语就是该title属性的值；若 DFN 标签包含有 ABBR 元素且 ABBR 元素含有title属性，则被定义术语是 ABBR 元素上的title属性的值；否则，被定义术语就 DFN 包含的文本。
 
-# DIALOG
+## DIALOG
 ```html
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog open id="favDialog">
@@ -492,7 +492,7 @@
 * 2、FORM 元素可以被结合到一个对话框内，只需要为 FORM 元素指定一个属性method="dialog"即可。当这样一个表单被提交时，对话框将会被关闭，同时 DIOLOG 的属性returnValue会被设置成提交按钮的value值。
 * 3、DIALOG 元素的css伪类::backdrop可以被样式化，例如在对话框处于活跃状态时使不可访问的内容变得灰暗。
 
-# DIV
+## DIV
 ```html
 <div id="textBox">
     <p>Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!</p>
@@ -505,7 +505,7 @@
 * 这个元素只有全局属性。
 * 注意事项：DIV 元素只应在完全找不到合适的语义化标签（例如 ARTICLE 或 NAV ）时才使用。
 
-# DL
+## DL
 ```html
 <dl>
     <dt>Name</dt>    
@@ -542,7 +542,7 @@
 * 这个元素只有全局属性。
 * 注意事项：根据语义化的原则，不要拿 DL 或 UL 元素仅仅用于实现内容的在页面的缩进（应当通过css样式来实现）。
 
-# DT
+## DT
 ```html
 <dl>
     <dt>Firefox</dt>
@@ -556,7 +556,7 @@
 * 1、该元素只能作为 DL 元素的子元素出现，并且需要出现在 DT 元素或者 DD 元素之前。
 * 2、多个 DT 元素出现在同一行则意味着它们都被接下来的 DD 元素所定义。
 
-# EM
+## EM
 ```html
 <p>
     In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.
@@ -572,7 +572,7 @@
 * 4、EM 元素常常用于指示一个含蓄或者明确的对比。
 * 5、和 I 标签的比较：EM 标签压力强调其包含的内容；I 标签则表示从正常的散文中区分出的文本，一个外来词(通常有别于文本主要语言)，虚构的人物思考，或者当文本指的是一个词的定义而不是其本身代表的语义。如果是电影或书籍的名字，则应当使用 CITE 标签。
 
-# EMBED
+## EMBED
 ```html
 <embed type="video/quicktime" src="movie.mov" width="640" height="480">
 ```
@@ -586,7 +586,7 @@
 * 1、大多数现代浏览器已经弃用并取消了对浏览器插件的支持，所以如果您希望您的网站可以在普通用户的浏览器上运行，那么依靠 EMBED 通常是不明智的。
 * 2、不同浏览器之间显示有差异。Blink内核浏览器（Chrome，Opera）会显示HTML资源的内容，但Firefox会显示一条通知消息，指出内容需要一个插件。建议使用 OBJECT 或 IFRAME 元素。
 
-# FIELDSET
+## FIELDSET
 ```html
 <form action="test.php" method="post">
     <fieldset>
@@ -605,7 +605,7 @@
 * 2、使用 FIELDSET 元素会形成一个新的块级上下文。
 * 3、在IE11中，并不是所有在设置了禁用属性的 FIELDSET 元素中的表单控件都会合适地被禁用：例如input[type="file"]在设置了禁用的 FIELDSET 中就不被禁用，input[type="text"]也可以继续编辑。
 
-# FIGCAPTION
+## FIGCAPTION
 ```html
 <figure>
     <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
@@ -616,7 +616,7 @@
 * 这意味着 FIGCAPTION 标签在 FIGURE 块里是第一个或最后一个子元素。同时 FIGCAPTION 元素是可选的；如果没有该元素，这个父节点的图片只是会没有说明/标题。
 * 这个元素只有全局属性。
 
-# FIGURE
+## FIGURE
 ```html
 <!-- Just a figure -->
 <figure>
@@ -636,7 +636,7 @@
 * 1、当它属于主体(main flow)时，它的位置独立于主体。这个标签经常是在主文中引用的图片、插图、表格、代码段等等，当这部分转移到附录中或者其他页面时不会影响到主体。
 * 2、作为一个分片内容的根，FIGURE 元素内容的纲要是被文档的主纲要排除在外的。
 
-# FOOTER
+## FOOTER
 ```html
 <footer>
     Some copyright info or perhaps some author info for an &lt;article&gt;?
@@ -648,7 +648,7 @@
 * 1、FOOTER 元素中的有关于作者的信息应当包含在 ADDRESS 标签中。
 * 2、FOOTER 元素并不属于分片内容，因此不会为文档纲要引入一个新的章节。
 
-# FORM
+## FORM
 ```html
 <!-- Simple form which will send a POST request -->
 <form action="" method="post">
@@ -678,12 +678,12 @@
 * 2、如果是由于文档本身提供了自己的自动完成方法而使你设置 FORM 元素的autocomplete属性为"off"，那么你也应当为表单中的每一个输入框设置autocomplete属性为"off"。
 * 3、对于谷歌的Chrome浏览器来说，如果只在表单设置了autocomplete为"off"，但输入框没设置，则浏览器会提示说"该表单禁用了自动完成功能"。因此，最好对每个输入框都设置自定义的autocomplete属性，以增强用户体验。
 
-# H1
-# H2
-# H3
-# H4
-# H5
-# H6
+## H1
+## H2
+## H3
+## H4
+## H5
+## H6
 ```html
 <h1>Heading level 1</h1>
 <h2>Heading level 2</h2>
@@ -701,7 +701,7 @@
 * 4、使用 SECTION 元素的时候，为了方便起见你应该考虑着去避免重复在一个页面上使用 H1 。
 * 5、H1 应该用来表示页面的标题，其他的标题当从 H2 开始。 使用 SECTION 元素的时候，应当在每个 SECTION 中都使用一个 H2 。
 
-# HEAD
+## HEAD
 ```html
 <html>
     <head>
@@ -714,7 +714,7 @@
 * 注意事项：
 * 1、如果在文档中省略了 HEAD 元素，现代的兼容HTML5的浏览器会自动为文档构建一个。（旧版的浏览器不支持这一点）
 
-# HEADER
+## HEADER
 ```html
 <!--属于页面的 HEADER -->
 <header>
@@ -737,7 +737,7 @@
 * 注意事项：
 1、HEADER 元素不属于分片内容，因此不会为文档纲要引入一个新的章节。（也就是说，一个 HEADER 元素常常会被用来包含周围章节的标题(H1-H6元素)，但这并不是必须的）
 
-# HR
+## HR
 ```html
 <p>This is the first paragraph of text.</p>
 <hr>
@@ -747,7 +747,7 @@
 * 历史上，这个元素会生成一根水平线（现在可能也会）。但这个元素由于被赋予了语义化功能，所以，如果你仅仅是希望画一根水平线，可以考虑用css样式来实现。
 * 这个元素只有全局属性。
 
-# HTML
+## HTML
 ```html
 <!DOCTYPE html>
 <html>
@@ -758,7 +758,7 @@
 用于表示一个HTML文档的根(最高层级元素)。所有其他元素都必须是 HTML 元素的后代。
 * xmlns————指定文档的XML命名空间，默认值是 "http://www.w3.org/1999/xhtml" 。在XML解析器中，这个属性是必须的；在TEXT/HTML文档中，这个则是可选的。
 
-# I
+## I
 ```html
 <p>The Latin phrase <i class="latin">Veni, vidi, vici</i> is often mentioned in music, art, and literature.</p>
 ```
@@ -774,7 +774,7 @@
     * 使用 DFN 标签来表示一个术语的定义实例。
 * 3、用class属性来指出该元素为何被使用是一个好的做法。毕竟 I 标签现在不一定需要显示成斜体，程序员可以修改它的样式。
 
-# IFRAME
+## IFRAME
 ```html
 <iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300">
     <p>Your browser does not support iframes.</p>
@@ -810,7 +810,7 @@
 * 3、通过访问window.parent，脚本可以从框架中引用它的父框架的window。
 * 4、脚本试图访问的框架内容必须遵守同源策略，并且无法访问非同源的window对象的几乎所有属性。同源策略同样适用于子窗体访问父窗体的window对象。跨域通信可以通过window.postMessage来实现。
 
-# IMG
+## IMG
 ```html
 <!--以下例子中，当浏览器支持srcset属性时，图像的src属性将被忽略。因为srcset属性的值包含了宽度描述符('w')-->
 <!--当媒体查询条件(max-width: 600px)命中时，图片将显示200px宽。其余情况下，图片将显示出视窗的一半的宽度-->
@@ -848,7 +848,7 @@
 * 3、一个图像是否有固有的宽度和高度，取决于它的类型。以svg图片为例，如果其根元素 SVG 没有设置width和height属性，那其作为图片就没有固有的维度（宽度和高度）。
 * 4、当加载或渲染一张图片时，有几种情况会触发 IMG 元素的onerror事件：src属性没有设置或者设置为null；src属性值等于当前网页的URL；某些因素导致了图片的加载中止；图片的元数据加载被中止而导致图片没办法获取它的维度（宽度和高度），而且 IMG 元素的属性中也没设置相应的维度；用户代理（浏览器）压根不支持URL所指图片的格式。
 
-# INPUT
+## INPUT
 ```html
 <label for="textInput">Note the red caret:</label>
 <input id="textInput" class="custom" size="32"/>
@@ -1015,7 +1015,7 @@
 * 3、由于安全原因，文件 INPUT 元素的value属性的值不能获取源文件的真实路径（绝对路径）。通常只能拿到文件名。但通过webkitdirectory属性指定只能选择文件夹，则可以获取从所选的文件夹开始的相对路径。
 * 4、关于更多不同type的 INPUT 元素的细节，请到 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input 中选择相应的章节查看。
 
-# INS
+## INS
 ```html
 <ins>This text has been inserted</ins>
 ```
@@ -1023,7 +1023,7 @@
 * cite————用于指定这些变化（为何需要插入这些文本）的解释资料的URI。例如一个会议纪要的链接(a link to meeting minutes)或者一个故障诊断系统的客服(a ticket in a troubleshooting sytem)。
 * datetime————用于指定变化的日期和时间。值必须是一个有效的日期（时间是可选的）字符串。如果值不能被解析为一个可附带时间的日期的字符串，那么 INS 元素不会拥有一个管理的时间戳。
 
-# KBD
+## KBD
 ```html
 <!--单独使用-->
 <p>使用命令 <kbd>help mycommand</kbd> 查看"mycommand"命令的文档。</p>
@@ -1047,10 +1047,10 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
     * (2)：在 SAMP 元素中嵌套一个 KBD 元素表示系统对用户输入回应的结果。
     * (3)：在 KBD 元素中嵌套一个 SAMP 元素表示用户接下来的输入应当基于系统的输出。例如菜单或者菜单项的名称、显示在屏幕上的按钮的名称。
 
-# KEYGEN
+## KEYGEN
 被废弃了。勿用。
 
-# LABEL
+## LABEL
 ```html
 <label>Click me <input type="text"></label>
 ```
@@ -1061,7 +1061,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 2、LABEL 元素自身不会直接与表单进行关联。它们仅仅通过与它们关联的控件来间接关键表单。
 * 3、当一个 LABEL 元素被点击或触碰时，若它关联了一个表单控件，则click事件也会出现在所关联的控件上。
 
-# LEGEND
+## LEGEND
 ```html
 <!-- Form with fieldset, legend, and label -->
 <form action="" method="post">
@@ -1075,7 +1075,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 表示它的父级元素 FIELDSET 的内容的一个标题(caption)。
 * 这个元素只有全局属性。
 
-# LI
+## LI
 ```html
 <ol>
     <li value="3">third item</li>
@@ -1087,7 +1087,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * LI 元素必须被包含在一个有序列表(OL)、一个无序列表(UL)、一个菜单(MENU)中。在菜单和无序列表中，列表项常常用着重点（实心圆点）来展示。在有序列表中，它们则常常在左边带有一个升序的计算器，例如一个数字或字母。
 * value————值为一个整数，用于指定在 OL 元素中的当前列表项的原始值。不管列表是以罗马数字或字母来展示，该属性允许的值只能是一个数字。从该项开始的列表项将以该整数为始点进行递增（如果后面的列表项不包含value属性的话）。该属性对 UL 或 MENU 元素的列表没意义。该属性在HTML4规范中被移除，但在HTML5规范中又被重新引入。另外，在Gecko 9.0之前的版本，负值会被不正确地转换为0，但从Gecko 9.0开始，所有整数值都能被正确地解析。
 
-# LINK
+## LINK
 ```html
 <!--普通的使用方式-->
 <link href="style.css" rel="stylesheet">
@@ -1130,7 +1130,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 4、HTML和XHTML规范都为 LINK 元素定义了事件句柄（event handlers），但没说清楚这些句柄应当如何使用。
 * 5、XHTML 1.0版本以前，空元素如 LINK 要求带有一个末尾斜杠：< link /> 。
 
-# MAIN
+## MAIN
 ```html
 <!-- other content -->
 <main role="main"><!-- role的作用是为了让旧版的 IE 浏览器也能识别 MAIN 元素 -->
@@ -1160,7 +1160,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
     * (1)、WHATWG当前标准允许一个页面存在多个 MAIN 元素，但W3C规范只允许存在一个，除非其他的 MAIN 元素使用了hidden属性隐藏起来了。
     * (2)、WHATWG规范允许 MAIN 元素在任何文档流允许存在的地方使用。但是，W3C规范版本就不允许 MAIN 元素作为 ARTICLE、ASIDE、FOOTER、HEADER、NAV 等元素的后代元素。
 
-# MAP
+## MAP
 ```html
 <map name="primary">
     <area shape="circle" coords="75,75,75" href="left.html">
@@ -1171,7 +1171,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 与 AREA 元素共同使用以定义一个图片地图（image map），即一个可点击的链接区域。
 * name————用于给地图（map）一个名称，这样它就能被关联了。该属性是必须出现的，而且必须有一个非空值（值也不能带有空格字符）。同一个文档中，同样的 MAP 元素中，该属性值不能(经过小写转换后)是同样的。如果id属性也存在，那么id和name的值必须是一模一样的。
 
-# MARK
+## MARK
 ```html
 <!--MARK元素用于引用块中，表示文本对用户有特别的意义-->
 <blockquote>
@@ -1191,13 +1191,13 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 3、如果只是为了使文本高亮，不要使用 MARK 元素，相反，应当使用 SPAN 元素加上css样式实现。
 * 4、不要将 MARK 元素和 STRONG 元素搞混，MARK 元素用于指代有一定程度相关性的内容，而 STRONG 元素用于指定具有重要性的文本的跨度。
 
-# MENU
+## MENU
 废弃元素，不要使用。
 
-# MENUITEM
+## MENUITEM
 废弃元素，不要使用。
 
-# META
+## META
 ```html
 <meta charset="utf-8">
 <!-- Redirect page after 3 seconds -->
@@ -1259,7 +1259,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
     * 三、如果设置了charset属性，则其是一个字符集声明，是网页使用的字符编码；
     * 四、如果设置了itemprop属性，则其是用户定义元数据，当元数据的语义是用户指定时，其对于用户代理（浏览器）而言其是透明的。
 
-# METER
+## METER
 ```html
 <p>Heat the oven to <meter low="150" high="300" min="200" max="500" value="350">350 degrees</meter>.</p>
 ```
@@ -1272,7 +1272,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * optimum————用来指示最优/最佳取值。它必须在正确的值域内（由最小值属性和最大值属性定义）。当使用了low和high属性时，它指明哪一个取值范围是更好的。例如，假设它介于最小值和low之间，那么lower区间就被认为是更佳的取值范围。
 * form————用来将 METER 元素与一个 FORM 元素（与该 METER 元素相关）连结起来。例如，一个 METER 元素可能被用于展示一个type为number的 INPUT 元素的值的范围。如果该 METER 元素本身属于 FORM 元素的后代，则可省略该属性。
 
-# NAV
+## NAV
 ```html
 <nav class="menu">
     <ul>
@@ -1289,7 +1289,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 2、一个文档可能有多个 NAV 元素，例如一个用于网站导航，一个用于页面内导航。
 * 3、用户代理，例如为残疾用户服务的屏幕播音器，可以根据该元素决定是否忽略仅有导航内容的初始解析。
 
-# NOSCRIPT
+## NOSCRIPT
 ```html
 <noscript>
     <!-- anchor linking to external file -->
@@ -1300,7 +1300,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 用于定义插入到不支持脚本类型或暂时关闭脚本功能的 HTML 文档中的内容。当浏览器支持脚本执行时，NOSCRIPT 的内容不会出现在文档中；反之，NOSCRIPT 的内容便会添加到文档中并显示。
 * 这个元素只有全局属性。
 
-# OBJECT
+## OBJECT
 ```html
 <!-- Embed a flash movie -->
 <object data="movie.swf" type="application/x-shockwave-flash"></object>
@@ -1319,7 +1319,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * usemap————用于指定关联到一个 MAP 元素的哈希名称（hash-name）。值的结构为 一个"#"后面跟着一个 MAP 元素的name属性的值。
 * width————所展示的资源的宽度，单位为像素。（只支持绝对值，不支持百分比）
 
-# OL
+## OL
 ```html
 <!--默认以阿拉伯数字作为序号类型，默认升序，默认开始值为 1-->
 <ol>
@@ -1350,7 +1350,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 2、对于有序列表而言，是没有深度限制的。只按照能否实现来说的话，OL 和 UL 元素相互替代使用也是可以的。
 * 3、OL 和 UL 都代表了一堆条目的列表。不同之处在于，对于 OL 元素而言，顺序是有意义的。至于决定使用哪一个，可以这么考虑：尝试改变各项的顺序，如果整个列表的意思改变了，则应该使用 OL 标签，反之，使用 UL 是比较合适的。
 
-# OPTGROUP
+## OPTGROUP
 ```html
 <select>
     <optgroup label="Group 1">
@@ -1373,7 +1373,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 注意事项：
 * 1、OPTGROUP 元素不应当嵌套使用。
 
-# OPTION
+## OPTION
 ```html
 <!-- The second value will be selected initially -->
 <select name="text"> <!--Supplement an id here instead of using 'text'-->
@@ -1388,7 +1388,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * selected————若出现该布尔属性属性，则表明该选项在开始时是被选中的。如果 OPTION 元素是一个 SELECT 元素的后代，而 SELECT 元素又没有设置multiple属性的话，那么该 SELECT 元素的后代 OPTION 元素中只有一个可以拥有selected属性。
 * value————该属性的内容表示当本 OPTION 被选中时，其在表单中将被提交的值。如果省略了该属性，则 OPTION 元素包含的文本内容将作为value属性的值。
 
-# OUTPUT
+## OUTPUT
 ```html
 <!--output将显示名称为a和b的控件的值的和，可尝试改变这两控件的值，会发现output元素的值会随之改变-->
 <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
@@ -1402,7 +1402,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * form————指定与 OUTPUT 元素关联的 FROM 元素（即本 OUTPUT 元素属于哪一个 FORM 元素）。值为在同一个文档中的 FORM 元素的ID值。如果没定义该属性，则 OUTPUT 元素必须是一个 FORM 元素的后代。
 * name————本 OUTPUT 元素的名称。
 
-# P
+## P
 ```html
 <p>This is the first paragraph of text.
   This is the first paragraph of text.</p>
@@ -1414,7 +1414,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 注意事项：
 * 1、align属性已经废弃。不要再使用它。
 
-# PARAM
+## PARAM
 ```html
 <!-- Embed a flash movie with parameters -->
 <object data="movie.swf" type="application/x-shockwave-flash">
@@ -1425,7 +1425,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * name————参数的名称。
 * value————为产生指定的值。
 
-# PICTURE
+## PICTURE
 ```html
 <!--通过media属性指定一个媒体查询，用户代理将根据屏幕尺寸决定是否选择该 SOURCE 元素。若媒体查询的结果为false，则 SOURCE 元素将被忽略-->
 <picture>
@@ -1443,7 +1443,7 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 * 注意事项：
 * 1、可以使用object-position属性在元素的框框内调整图片的定位。可以使用object-fit属性来控制图片以调整其在框框大小。
 
-# PRE
+## PRE
 ```html
 <!--显示CSS代码-->
 <pre>
@@ -1455,7 +1455,7 @@ body {
 用于原样显示写在HTML中（在 PRE 元素内）的文本。元素内部的文本默认以“非等比”字体(例如 等宽字体)渲染。空白（空格、制表符、回车）会原样显示，不会删减。
 * 这个元素只有全局属性。
 
-# PROGRESS
+## PROGRESS
 ```html
 <progress value="70" max="100">70 %</progress>
 ```
@@ -1466,7 +1466,7 @@ body {
 * 1、对于 PROGRESS 元素而言，最小值永远是"0"，因此不允许设置min属性。对于火狐浏览器而言，可以使用CSS属性-moz-orient属性来指定进度条是渲染成水平方向（默认的）还是垂直方向。
 * 2、伪类 :indeterminate 可用于匹配模糊的进度条。根据上述，移除 PROGRESS 元素的value属性后（可通过 element.removeAttribute("value") 的方式移除），进度条即变成模糊进度条。
 
-# Q
+## Q
 ```html
 <p>According to Mozilla's website,<q cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0 was released in 2004 and became a big success.</q></p>
 ```
@@ -1475,7 +1475,7 @@ body {
 * 注意事项：
 * 1、大部分现代浏览器会自动为一个 Q 元素内的文本加上引号（通常是双引号）。因此，在老旧的浏览器中，可能需要添加相应的样式规则来模拟引号的效果。
 
-# RP
+## RP
 ```html
 <!--显示每个汉字的读音-->
 <ruby>
@@ -1488,7 +1488,7 @@ body {
 * 注意事项：
 * 1、Ruby注释用于显示东亚字符的读音（正常情况下，该读音会显示在字符的二维上方），例如日本的汉字注音和中国的汉字拼音。RP 元素则用于在浏览器缺失对 RUBY 元素支持的情况下，显示一些字符以表明 RT 的内容，这些字符通常是括号。
 
-# RT
+## RT
 ```html
 <ruby>
   漢 <rt>Kan</rt>
@@ -1498,7 +1498,7 @@ body {
 即 Ruby Text 。指定一个ruby注解的文本组件，以用于提供发音、翻译或东亚印刷文字的字译信息。该元素必须被包含在一个 RUBY 元素内。
 * 这个元素只有全局属性。
 
-# RTC
+## RTC
 ```html
 <div class="info">
     <ruby>
@@ -1512,7 +1512,7 @@ body {
 即 Ruby Text Container 。用于包裹 RUBY 元素内的子元素 RB 标签内出现的字符语义附注。RB 元素内可以同时出现发音注解（RT 元素）和语义注解（RTC 元素）。现阶段只有火狐浏览器支持。
 * 这个元素只有全局属性。
 
-# RUBY
+## RUBY
 ```html
 <!--汉字字符-->
 <ruby>
@@ -1527,7 +1527,7 @@ body {
 用于表示一个ruby注释。ruby注释则用于显示东亚字符的读音。现代浏览器均支持该元素。在英语中，ruby除了作为红宝石的意思，还有细铅字的意思。
 * 这个元素只有全局属性。
 
-# S
+## S
 ```html
 <!--下面两行文字的显示效果是一样的-->
 <s>Today's Special: Salmon</s> SOLD OUT<br>
@@ -1536,7 +1536,7 @@ body {
 即 Strikethrough 。渲染的效果就是用一根线来划过所包含的文本。S 元素主要用于表示某些东西不再相关或不再准确。但是 S 元素并不适用于指代文本编辑，DEL 元素更合适些。
 * 这个元素只有全局属性。
 
-# SAMP
+## SAMP
 ```html
 <!--基础用法-->
 <p>
@@ -1559,7 +1559,7 @@ body {
 * 1、可用CSS规则（指CSS属性 font-family ）来覆盖浏览器对 SAMP 元素所使用的默认字体。但是，有可能浏览器的优先权会比你使用的CSS样式的优先权要高。
 * 2、如果你需要一个容器用于承载你的网站或APP的JavaScript代码的输出结果，你应当使用 OUTPUT 元素进行替代。
 
-# SCRIPT
+## SCRIPT
 ```html
 <!-- HTML4 以及 XHTML 引入外部脚本的方式-->
 <script type="text/javascript" src="javascript.js"></script>
@@ -1588,7 +1588,7 @@ body {
 * 6、不带有async、defer属性的脚本，以及内联脚本，都会在获取后立即执行，执行完毕后才会继续解析后面的页面。
 * 7、脚本本应当带有MIME类型"text/javascript"。但浏览器是很宽容的，只有当脚本带上了一个图片类型"image/*"、一个视频类型"video/*"、一个音频类型"audio/*"或"text/csv"时，才会阻塞它们。如果脚本被阻塞住了，那么一个错误事件将被发送到元素中，否则，一个加载完成事件将被发送到元素中。
 
-# SECTION
+## SECTION
 ```html
 <!--以前我们这么用-->
 <div>
@@ -1608,7 +1608,7 @@ body {
 * 2、如果将一个 SECTION 元素的内容分别联合起来也是有意义的，那么请使用一个 ARTICLE 元素替代它。
 * 3、不要使用 SECTION 标签作为一个通用的容器。这个是 DIV 的职责所在，尤其是当这个部分只是用于赋予样式的目的时。一个很赞的规则是一个部分（SECTION）逻辑上应当出现在一个文档的大纲上。
 
-# SELECT
+## SELECT
 ```html
 <!-- The second value will be selected initially -->
 <select name="text"> <!--Supplement an id here instead of using 'text'-->
@@ -1629,10 +1629,10 @@ body {
 * 1、根据HTML5规范，size属性的默认值应当为"1"。但在实际中，这种情况会影响到某些网站，因此暂时没有浏览器支持这一点。
 * 2、SELECT 元素的内容是静态的、不可编辑的。
 
-# SHADOW
+## SHADOW
 已废弃，勿用。
 
-# SLOT
+## SLOT
 ```html
 <template id="my-paragraph">
     <style>
@@ -1657,7 +1657,7 @@ body {
 * 注意事项：
 * 1、本元素的具体用法请参考（通常与 TEMPLATE 元素配套使用）： https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots 和 https://developer.mozilla.org/en-US/docs/Web/Web_Components 。
 
-# SMALL
+## SMALL
 ```html
 <p>This is the first sentence. <small>This whole sentence is in small letters.</small></p>
 ```
@@ -1666,7 +1666,7 @@ body {
 * 注意事项：
 * 1、尽管 SMALL 元素跟 B 和 I 元素一样，可能被认为破坏了"结构与样式分离"的原则，但是这三者在HTML5中都有效。笔者鼓励在是否使用 SMALL 元素还是CSS样式时，做出最优的判断后再进行抉择。
 
-# SOURCE
+## SOURCE
 ```html
 <!--末行的文字会在浏览器不支持 VIDEO 元素的资源时显示-->
 <!--如果浏览器不支持任何 SOURCE 元素中资源，则会触发一个error事件-->
@@ -1694,7 +1694,7 @@ body {
 * 1、如果type属性没有指定，媒体的类型就会从服务器中获取，然后就会被检查是否能被用户代理处理。如果该资源不能被渲染，则下一个 SOURCE 元素就会进入检查阶段。
 * 2、如果指定了type属性，那么该type属性的值就会被拿来跟可以显示的类型进行比较。如果type的值不能被识别，则不会再从服务器获取下一步的查询，相反，下一个 SOURCE 元素会立即进入检查阶段。
 
-# SPAN
+## SPAN
 ```html
 <p>
     <span class="some-styles">Some text</span>.
@@ -1704,7 +1704,7 @@ body {
 一个通用的内联容器，天生不代表任何事物。可用于对其他元素进行分组以进行样式渲染（使用class或id属性），或者为组内的元素添加相同的属性值，如lang属性。只有在其他任何元素都不合适时才应使用该元素。它跟 DIV 元素很像，只是 DIV 是块级元素。
 * 这个元素只有全局属性。
 
-# STRONG
+## STRONG
 ```html
 <p>Before proceeding, <strong>make sure you put on your safety goggles</strong>.</p>
 ```
@@ -1717,7 +1717,7 @@ body {
 * 4、使用 EM 元素标记有着压力强调的文本。通常用于改变一句话的重心（或强调动作、或强调事物），直白说就是改变一句话的语气。
 * 5、另外一个适合 STRONG 标签的用途是作为一份页面文本的笔记段落或警告段落的标签。
 
-# STYLE
+## STYLE
 ```html
 <style type="text/css">
 body {
@@ -1731,7 +1731,7 @@ body {
 * nonce————在样式地址的内容安全策略下的一份白名单。值为一个加密随机数（一个只用一次的数字）。每次服务器传送一份策略时，它都必须生成一个独一无二的nonce值。严格要求所提供的nonce值是不能被猜测的，否则传递一份资源的策略（证书）就变得毫无意义。
 * title————该属性用于指定一个替代样式表集合。
 
-# SUB
+## SUB
 ```html
 <!--用于脚注-->
 <p>According to the computations by Nakamura, Johnson, and
@@ -1754,7 +1754,7 @@ commonly known as "caffeine."</p>
     * 2、标记数学变量数字的下标。当然，开发者也可以使用MathML语言（ https://developer.mozilla.org/en-US/docs/Web/MathML ）来做到这一点，只是兼容性还不够好。
     * 3、显示一个化学公式的原子的给定数字。
 
-# SUMMARY
+## SUMMARY
 ```html
 <details open>
     <summary>Overview</summary>
@@ -1774,7 +1774,7 @@ commonly known as "caffeine."</p>
 * 4、在每个HTML规范中，SUMMARY 元素的默认样式都包括了"display: list-item;"。这使得改变或移除标签旁边的默认的公示小部件(disclosure widget)变得有可能（该小部件通常是一个三角形）。
 * 5、浏览器厂商尚不能很好的支持该元素（IE跟移动端的Safari完全不支持该元素，除了火狐外的浏览器均不支持修改"display: list-item;"）。因此，该元素未适合引入到产品中去。
 
-# SUP
+## SUP
 ```html
 <!--用于数学公式-->
 <p>One of the most common equations in all of physics is
@@ -1796,7 +1796,7 @@ languages as follows:</p>
     * 2、显示某些语言中的缩写的"更高级的字母"(superior lettering)。例如法语的单词"mademoiselle"的缩写形式，除了第一个字母是正常显示，其余的则显示成上标形式。
     * 3、代表顺序数字，例如"第4"的数字加英文形式。
 
-# TABLE
+## TABLE
 ```html
 <table>
     <tr>
@@ -1813,7 +1813,7 @@ languages as follows:</p>
 * 注意事项：
 * 1、该元素的专有属性（align、bgcolor、border、cellpadding、cellspacing、frame、rules、summary、width）均从规范中移除，不要再使用。
 
-# TBODY
+## TBODY
 ```html
 <!--包含 THEAD 和 TBODY-->
 <table>
@@ -1892,7 +1892,7 @@ languages as follows:</p>
 * 5、当一份表格是出现在屏幕上下文中（例如 window）而屏幕不能大到显示整个表格时，用户代理可能会让用户在同一个父级 TABLE 元素中分别滚动 THEAD、TBODY、TFOOT、CAPTION 的内容。
 * 6、开发者可以在一个 TABLE 元素中使用多个 TBODY 元素，只要所有的 TBODY 元素是连续的就好。这使得程序员可在一大表格中将各行分成不同的部分，而每部分可以根据需要采用不同的格式展示。
 
-# TD
+## TD
 ```html
 <table>
     <thead>
@@ -1916,7 +1916,7 @@ languages as follows:</p>
 * headers————该属性包含了一个用空格隔开的字符串的列表，每个字符串分别对应于应用了该 TD 元素的 TH 元素的id属性值。
 * rowspan————值为非负整数。用于指定该单元格跨过多少行。默认值为"1"。如果设置的值为"0"，则该 TD 元素会一直跨越到表格部分（包括 THEAD、TBODY、TFOOT 元素）的末尾。如果设置的值大于"65534"，则值会被重置缩减为"65534"。
 
-# TEMPLATE
+## TEMPLATE
 ```html
 <table id="producttable">
     <thead>
@@ -1966,7 +1966,7 @@ if ('content' in document.createElement('template')) {
 用于一种保持客户端的内容在页面加载时不会被渲染但可以通过JavaScript在运行时不断实例化的机制。
 * 这个元素只有全局属性。
 
-# TEXTAREA
+## TEXTAREA
 ```html
 <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
@@ -2001,7 +2001,7 @@ if ('content' in document.createElement('template')) {
 * 2、从CSS角度来说，一个 TEXTAREA 是一个可被替代的元素。HTML规范并没有指定一个 TEXTAREA 标签的基线在哪里。不同的浏览器把基线设置在了不同的位置。对于Gecko引擎来说，文本域的基线就是里面第一行文本所在的基线。对于其他浏览器来说，文本域的基线可能被设置在了 TEXTAREA 盒子的底部。因此，不要在 TEXTAREA 元素上使用"vertical-align: baseline;"，否则其行为可能变得不可预测。
 * 3、跟光栅图片一样，一个文本域是有其内在尺寸的。
 
-# TFOOT
+## TFOOT
 ```html
 <table>
     <thead>
@@ -2029,7 +2029,7 @@ if ('content' in document.createElement('template')) {
 * 注意事项：
 * 1、该元素的专有属性（align、char、charoff、valign）均从规范中移除，不要再使用。属性bgcolor只有IE支持，也不应使用。
 
-# TH
+## TH
 ```html
 <table>
     <tr>
@@ -2060,7 +2060,7 @@ if ('content' in document.createElement('template')) {
 * 1、colspan属性在以前是可以设为"0"的，则本 TH 单元格会跨到 COLGROUP 标签里面的最后一个元素。但主流浏览器均不支持"0"值了，因此一般看不到效果。
 * 2、rowspan属性在以前是可以设为"0"的，则本 TH 单元格会跨到表格部分（THEAD、THBODY、TFOOT 算是一个表格部分）的最后一个元素。但主流浏览器均不支持"0"值了，因此一般看不到效果。
 
-# THEAD
+## THEAD
 ```html
 <table>
     <thead>
@@ -2082,7 +2082,7 @@ if ('content' in document.createElement('template')) {
 * 注意事项：
 * 1、该元素的专有属性（align、char、charoff、valign）均从规范中移除，不要再使用。属性bgcolor只有IE支持，也不应使用。
 
-# TIME
+## TIME
 ```html
 <!--简单的使用-->
 <p>The concert starts at <time>20:00</time>.</p>
@@ -2096,7 +2096,7 @@ if ('content' in document.createElement('template')) {
 * 2、本元素不适用于不能被计算的专用日期。也不适用于用来表示比公历日历更早的日期（因为计算那些日期相当复杂）。
 * 3、日期时间值（机器可读的日期时间值），即本元素的datetime属性值，必须以合适的格式来表示。如果本元素没有设置datetime属性，则本元素必须用不能包含任何子孙元素，这时，元素的文本内容（the element's child text content）便是日期时间值。
 
-# TITLE
+## TITLE
 ```html
 <title>网页的标题</title>
 ```
@@ -2105,7 +2105,7 @@ if ('content' in document.createElement('template')) {
 * 注意事项：
 * 1、TITLE 元素总是用在网页的 HEAD 块中。
 
-# TR
+## TR
 ```html
 <table>
     <tr>
@@ -2123,7 +2123,7 @@ if ('content' in document.createElement('template')) {
 * 注意事项：
 * 1、该元素的专有属性（align、char、charoff、valign）均从规范中移除，不要再使用。属性bgcolor只有IE支持，也不应使用。
 
-# TRACK
+## TRACK
 ```html
 <video controls poster="/images/sample.gif">
     <source src="sample.mp4" type="video/mp4">
@@ -2167,7 +2167,7 @@ if ('content' in document.createElement('template')) {
 * 2、本元素指出了当用户需要其他的数据时包含给浏览器曝露的时控文本的源文本。
 * 3、一个媒体元素不能包含多余一个的带有相同kind、srclang、label属性值的 TRACK 元素。
 
-# U
+## U
 ```html
 <!--指出拼读错误-->
 <p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
@@ -2188,7 +2188,7 @@ if ('content' in document.createElement('template')) {
     * RUBY：提供文本注释。
     * U：提供非文本注释。
 
-# UL
+## UL
 ```html
 <ul>
     <li>first item</li>
@@ -2203,7 +2203,7 @@ if ('content' in document.createElement('template')) {
 * 2、在 OL 和 UL 元素中，嵌套列表的深度和更迭是没有限制的。
 * 3、OL 和 UL 都代表了项目的列表。不同之处在于，对于 OL 元素而言，顺序是有意义的。至于决定使用哪一个，可以这么考虑：尝试改变各项的顺序，如果整个列表的意思改变了，则应该使用 OL 标签，反之，使用 UL 是比较合适的。
 
-# VAR
+## VAR
 ```html
 <p>A simple equation: <var>x</var> = <var>y</var> + 2 </p>
 ```
@@ -2212,7 +2212,7 @@ if ('content' in document.createElement('template')) {
 * 注意事项：
 * 1、VAR 元素通常用在 CODE、KBD、SAMP 等元素上下文中
 
-# VIDEO
+## VIDEO
 ```html
 <!-- 简单的视频案例 -->
 <video src="videofile.webm" autoplay poster="posterimage.jpg">
@@ -2263,7 +2263,7 @@ if ('content' in document.createElement('template')) {
 * 5、指定一个视频源时，可使用src属性或内嵌 SOURCE 元素，浏览器会根据需要选出最合适的一个。
 * 6、可以使用CSS的object-position属性来调整视频在元素框内的位置，可以使用CSS的object-fit属性来控制框内的视频的大小。
 
-# WBR
+## WBR
 ```html
 <!-- 显示的结果为网页右边 456,123 -->
 <div dir=rtl>123,<wbr>456</div>
