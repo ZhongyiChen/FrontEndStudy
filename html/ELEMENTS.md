@@ -47,7 +47,8 @@
 ```html
 <address>
   <p>Chris Mills, Manchester, The Grim North, UK</p>
-  If you see any bugs, please <a href="mailto:webmaster@somedomain.com">contact webmaster</a>
+  If you see any bugs, please 
+  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>
 </address>
 ```
 用于描述文章编写者或网站拥有者(组织)的联系信息。内容可包括物理地址，URL，email地址，电话号码，社交媒体链接，地理坐标等待。
@@ -60,7 +61,10 @@
 <map id="MM" name="MM">
   <area shape="rect" coords="20,20,80,80" href="#rect" alt="矩形">
   <area shape="circle" coords="200,50,50" href="#circle" alt="圆形">
-  <area shape="poly" coords="150,100,200,120,180,130,190,180,150,150,100,160,140,120,100,110" href="#poly" alt="多边形">
+  <area shape="poly" 
+    coords="150,100,200,120,180,130,190,180,150,150,100,160,140,120,100,110" 
+    href="#poly" 
+    alt="多边形">
 </map>
 ```
 结合 MAP 使用，用于为图片生成热点区域。
@@ -102,7 +106,11 @@
 ## ASIDE
 ```html
 <article>
-  <p>The Disney movie <cite>The Little Mermaid</cite> was first released to theatres in 1989.</p>
+  <p>
+    The Disney movie 
+    <cite>The Little Mermaid</cite> 
+    was first released to theatres in 1989.
+  </p>
   <aside>
     <p>The movie earned $87 million during its initial release.</p>
   </aside>
@@ -633,8 +641,14 @@
 ## FIGCAPTION
 ```html
 <figure>
-  <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
-  <p>"If debugging is the process of removing software bugs,<br />then programming must be the process of putting them in"</p>
+  <figcaption>
+    <cite>Edsger Dijkstra :-</cite>
+  </figcaption>
+  <p>
+    "If debugging is the process of removing software bugs,
+    <br />
+    then programming must be the process of putting them in"
+  </p>
 </figure>
 ```
 用于标记一句与一副图像或一则说明(插画)（图像、插画、说明通常跟随在 FIGCAPTION 标签后面）相关的说明/标题，FIGURE 标签就是 FIGCAPTION 标签的直接父元素。
@@ -805,7 +819,10 @@
 
 ## IFRAME
 ```html
-<iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300">
+<iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" 
+title="iframe example 1" 
+width="400" 
+height="300">
   <p>Your browser does not support iframes.</p>
 </iframe>
 ```
@@ -843,7 +860,10 @@
 ```html
 <!--以下例子中，当浏览器支持srcset属性时，图像的src属性将被忽略。因为srcset属性的值包含了宽度描述符('w')-->
 <!--当媒体查询条件(max-width: 600px)命中时，图片将显示200px宽。其余情况下，图片将显示出视窗的一半的宽度-->
-<img src="clock-demo-thumb-200.png" alt="Clock" srcset="clock-demo-thumb-200.png 200w,clock-demo-thumb-400.png 400w" sizes="(max-width: 600px) 200px, 50vw">
+<img src="clock-demo-thumb-200.png" 
+  alt="Clock" 
+  srcset="clock-demo-thumb-200.png 200w,clock-demo-thumb-400.png 400w" 
+  sizes="(max-width: 600px) 200px, 50vw">
 ```
 用于在文档中嵌入一张图片。
 * alt————用于定义描述图片的替代文本。如果图片地址错误、图片格式不被支持、图片没有完全下载好，这些文本就会显示出来。如果图片本身不是关键内容（可省略的那种），则应当设置值为空字符串""，那样，在非可视化浏览器中在渲染的时候可能会忽略它。
@@ -1006,11 +1026,13 @@
 * tabindex————已升级为全局属性。
 * value————控件的初始值。该属性是可选属性。
   * 注1、在type为"radio"或"checkbox"时，该属性的值用于指定某项被选中，在提交表单时，name属性的值会与value属性的值一起组成键值对。
-```
+```html
     <!--情况1：radio带value属性-->
-    <input type="radio" id="contactChoice1" name="contact" value="email"><!--如果该被选中，则提交表单时会产生键值对：[contact: email]-->
+    <input type="radio" id="contactChoice1" name="contact" value="email">
+    <!--如果该被选中，则提交表单时会产生键值对：[contact: email]-->
     <!--情况2：radio不带value属性-->
-    <input type="radio" id="contactChoice2" name="contact"><!--如果该被选中，则提交表单时会产生键值对：[contact: on]-->
+    <input type="radio" id="contactChoice2" name="contact">
+    <!--如果该被选中，则提交表单时会产生键值对：[contact: on]-->
 ```
   * 因此，相同name的radio有多项时，务必分别为每项设置value属性。
   * 注2、在重新加载页面前，如果value属性值发生了改变，那么刷新页面后，Gecko和IE类型浏览器会忽略HTML代码上的那个value属性指定的值。
@@ -1072,7 +1094,10 @@
   创建一个新的文档。
 </p>
 <!--对应串联场景(2)-->
-<p>If a syntax error occurs, the tool will output the initial command you typed for your review:</p>
+<p>
+  If a syntax error occurs, 
+  the tool will output the initial command you typed for your review:
+</p>
 <blockquote>
   <samp>
     <kbd>custom-git ad my-new-file.cpp</kbd>
@@ -1240,13 +1265,29 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 ```html
 <!--MARK元素用于引用块中，表示文本对用户有特别的意义-->
 <blockquote>
-  It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil
-  Galactic Empire. During the battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s ultimate weapon,
-  the DEATH STAR, an armored space station with enough power to destroy an entire planet.
+  It is a period of civil war. 
+  Rebel spaceships, striking from a hidden base, 
+  have won their first victory against the evil
+  Galactic Empire. During the battle, 
+  <mark>Rebel spies managed to steal secret plans</mark> 
+  to the Empire’s ultimate weapon,
+  the DEATH STAR, 
+  an armored space station with enough power to destroy an entire planet.
 </blockquote>
 <!--MARK元素用于其他地方，表示与用户活动相关的部分，例如搜索结果中匹配的关键词-->
-<p>It is a dark time for the Rebellion. Although the Death Star has been destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel forces from their hidden base and pursued them across the galaxy.</p>
-<p>Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the remote ice world of Hoth.</p>
+<p>
+  It is a dark time for the Rebellion. 
+  Although the Death Star has been destroyed, 
+  <mark class="match">Imperial</mark> 
+  troops have driven the Rebel forces from their hidden base 
+  and pursued them across the galaxy.
+</p>
+<p>
+  Evading the dreaded 
+  <mark class="match">Imperial</mark> Starfleet, 
+  a group of freedom fighters led by Luke Skywalker 
+  has established a new secret base on the remote ice world of Hoth.
+</p>
 ```
 用于表示在围住的上下文中，由于相关性或重要性而被作记号或被高亮的文本，以示引用或标记。
 * 这个元素只有全局属性。
@@ -1497,12 +1538,14 @@ HTML键盘输入元素(KeyBoarD)。用于提示用户应当或可以从一个键
 
 ## PICTURE
 ```html
-<!--通过media属性指定一个媒体查询，用户代理将根据屏幕尺寸决定是否选择该 SOURCE 元素。若媒体查询的结果为false，则 SOURCE 元素将被忽略-->
+<!--通过media属性指定一个媒体查询，用户代理将根据屏幕尺寸决定是否选择该 SOURCE 元素。-->
+<!-- 若媒体查询的结果为false，则 SOURCE 元素将被忽略 -->
 <picture>
   <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
   <img src="mdn-logo-narrow.png" alt="MDN">
 </picture>
-<!--通过type属性为 SOURCE 元素指定一个MIME类型。如果用户代理不支持该给定类型，则 SOURCE 元素会被忽略-->
+<!--通过type属性为 SOURCE 元素指定一个MIME类型。-->
+<!-- 如果用户代理不支持该给定类型，则 SOURCE 元素会被忽略 -->
 <picture>
   <source srcset="mdn-logo.svg" type="image/svg+xml">
   <img src="mdn-logo.png" alt="MDN">
@@ -2322,7 +2365,9 @@ if ('content' in document.createElement('template')) {
 ```html
 <!-- 简单的视频案例 -->
 <video src="videofile.webm" autoplay poster="posterimage.jpg">
-  很抱歉，您的浏览器不支持内嵌视频，但不必担心，您可以<a href="videofile.webm">下载该视频</a>并用您喜欢的视频播放器打开它
+  很抱歉，您的浏览器不支持内嵌视频，但不必担心，您可以
+  <a href="videofile.webm">下载该视频</a>
+  并用您喜欢的视频播放器打开它
 </video>
 <!-- 带有字幕的视频 -->
 <video src="foo.webm">
@@ -2376,7 +2421,9 @@ if ('content' in document.createElement('template')) {
 <!-- 显示的结果为网页右边 123,456 -->
 <div dir=rtl>123,456</div>
 <!-- 避免符合结尾处换行 -->
-<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+<p>
+  http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages
+</p>
 ```
 表示一个单词换行机会。指文本中一个浏览器可以拿来换行的位置，虽然浏览器不一定在该位置实现换行。
 * 这个元素只有全局属性。
